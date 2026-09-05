@@ -1,0 +1,6 @@
+{
+  "name": "Vectofi",
+  "description": "Developer-first SVG icon library with static and animated icons, interactive SVG laboratory, framework code generators, and vector art design system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
