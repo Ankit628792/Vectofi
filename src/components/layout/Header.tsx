@@ -98,8 +98,8 @@ export const Header: React.FC<HeaderProps> = ({
         </nav>
 
         {/* Right Action Bar */}
-        <div className="flex items-center gap-2 sm:gap-3">
-          {/* Search Trigger matching Design HTML */}
+        <div className="flex items-center gap-1.5 sm:gap-2.5">
+          {/* Search Trigger matching Design HTML (expanded on desktop, compact on tablet) */}
           <div
             onClick={onOpenCommandPalette}
             className="relative group cursor-pointer hidden sm:flex items-center"
@@ -109,8 +109,8 @@ export const Header: React.FC<HeaderProps> = ({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-full py-1.5 pl-9 pr-12 text-xs w-52 lg:w-64 text-white/60 group-hover:border-blue-500/50 group-hover:bg-white/[0.08] transition-all flex items-center justify-between">
-              <span>Search 110+ icons...</span>
+            <div className="bg-white/5 border border-white/10 rounded-full py-1.5 pl-9 pr-10 text-xs w-44 md:w-56 lg:w-64 text-white/60 group-hover:border-blue-500/50 group-hover:bg-white/[0.08] transition-all flex items-center justify-between">
+              <span className="truncate">Search 110+ icons...</span>
               <kbd className="absolute right-2.5 top-1.5 text-[10px] bg-white/10 px-1.5 py-0.5 rounded text-white/40 border border-white/10 font-mono">
                 ⌘K
               </kbd>
@@ -121,8 +121,8 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={onOpenCommandPalette}
-            className="sm:hidden p-2 rounded-lg bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-colors"
-            aria-label="Search"
+            className="sm:hidden min-w-[38px] min-h-[38px] p-2 rounded-xl bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-colors flex items-center justify-center"
+            aria-label="Search icons"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -133,7 +133,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={() => onNavigate('/favorites')}
-            className={`relative p-2 rounded-xl border transition-colors ${
+            className={`relative min-w-[38px] min-h-[38px] p-2 rounded-xl border transition-colors flex items-center justify-center ${
               currentRoute === '/favorites'
                 ? 'bg-rose-500/20 text-rose-400 border-rose-500/40'
                 : 'bg-white/5 border-white/10 text-white/70 hover:text-rose-400 hover:bg-white/10'
@@ -151,11 +151,11 @@ export const Header: React.FC<HeaderProps> = ({
             )}
           </button>
 
-          {/* Reduced Motion Toggle Button */}
+          {/* Reduced Motion Toggle Button (hidden on extra small phones, accessible in mobile drawer) */}
           <button
             type="button"
             onClick={onToggleReducedMotion}
-            className={`p-2 rounded-xl border transition-colors ${
+            className={`hidden sm:flex min-w-[38px] min-h-[38px] p-2 rounded-xl border transition-colors items-center justify-center ${
               reducedMotion
                 ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
                 : 'bg-white/5 border-white/10 text-white/70 hover:text-white hover:bg-white/10'
@@ -179,16 +179,16 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={onToggleDarkMode}
-            className="p-2 rounded-xl bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-colors"
-            title={darkMode ? 'Switch Theme' : 'Switch Theme'}
-            aria-label="Toggle Color Theme"
+            className="min-w-[38px] min-h-[38px] p-2 rounded-xl bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-colors flex items-center justify-center cursor-pointer"
+            title={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            aria-label={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
           >
             {darkMode ? (
               <svg className="w-4 h-4 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
               </svg>
             ) : (
-              <svg className="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg className="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <circle cx="12" cy="12" r="5" />
                 <line x1="12" y1="1" x2="12" y2="3" />
                 <line x1="12" y1="21" x2="12" y2="23" />
@@ -206,17 +206,18 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={() => onNavigate('/icons')}
-            className="hidden sm:inline-flex bg-white text-black font-semibold text-xs px-4 py-2 rounded-full hover:bg-blue-400 hover:text-black transition-colors shrink-0 shadow-sm cursor-pointer"
+            className="hidden lg:inline-flex bg-white text-black font-semibold text-xs px-4 py-2 rounded-full hover:bg-blue-400 hover:text-black transition-colors shrink-0 shadow-sm cursor-pointer"
           >
             Browse Library
           </button>
 
-          {/* Mobile Menu Toggle Button */}
+          {/* Mobile Menu Toggle Button (Touch Friendly) */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-white/70"
+            className="md:hidden min-w-[42px] min-h-[42px] p-2 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:text-white flex items-center justify-center transition-colors"
             aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               {mobileMenuOpen ? (
@@ -229,41 +230,86 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Mobile Drawer Navigation */}
+      {/* Mobile Drawer Navigation with Enhanced Layout */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-white/10 bg-[#0a0a0a] px-4 pt-3 pb-5 space-y-1">
-          {navLinks.map(link => (
+        <div className="md:hidden border-t border-white/10 bg-[#0a0a0a]/98 backdrop-blur-xl px-4 pt-3 pb-6 space-y-2 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-150">
+          <div className="space-y-1">
+            {navLinks.map(link => (
+              <button
+                key={link.route}
+                type="button"
+                onClick={() => {
+                  onNavigate(link.route);
+                  setMobileMenuOpen(false);
+                }}
+                className={`w-full text-left px-3.5 py-2.5 rounded-xl text-sm font-medium flex items-center justify-between transition-colors min-h-[44px] ${
+                  currentRoute === link.route
+                    ? 'bg-blue-600/20 text-blue-400 font-semibold border border-blue-500/30'
+                    : 'text-white/80 hover:bg-white/5 hover:text-white'
+                }`}
+              >
+                <span>{link.label}</span>
+                {link.badge && (
+                  <span className="px-2 py-0.5 text-[10px] font-mono rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30">
+                    {link.badge}
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
+
+          {/* Quick Mobile Action Utilities */}
+          <div className="pt-3 border-t border-white/10 grid grid-cols-3 gap-2">
             <button
-              key={link.route}
+              type="button"
+              onClick={() => onToggleDarkMode()}
+              className="px-2 py-2 rounded-xl text-xs font-mono border border-white/10 bg-white/5 text-white/70 hover:text-white hover:bg-white/10 flex items-center justify-center gap-1 min-h-[44px] cursor-pointer"
+            >
+              <span>{darkMode ? '☀️ Light' : '🌙 Dark'}</span>
+            </button>
+
+            <button
               type="button"
               onClick={() => {
-                onNavigate(link.route);
-                setMobileMenuOpen(false);
+                onToggleReducedMotion();
               }}
-              className={`w-full text-left px-3 py-2 rounded-xl text-sm font-medium flex items-center justify-between ${
-                currentRoute === link.route
-                  ? 'bg-blue-600/20 text-blue-400 font-semibold border border-blue-500/30'
-                  : 'text-white/70 hover:bg-white/5 hover:text-white'
+              className={`px-2 py-2 rounded-xl text-xs font-mono border transition-colors flex items-center justify-center gap-1 min-h-[44px] cursor-pointer ${
+                reducedMotion
+                  ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
+                  : 'bg-white/5 border-white/10 text-white/60 hover:text-white'
               }`}
             >
-              <span>{link.label}</span>
-              {link.badge && (
-                <span className="px-2 py-0.5 text-[10px] font-mono rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30">
-                  {link.badge}
-                </span>
-              )}
+              <span>{reducedMotion ? 'Play' : 'Pause'}</span>
             </button>
-          ))}
-          <button
-            type="button"
-            onClick={() => {
-              onOpenShortcuts();
-              setMobileMenuOpen(false);
-            }}
-            className="w-full text-left px-3 py-2 rounded-xl text-xs text-white/40 hover:bg-white/5 hover:text-white font-mono"
-          >
-            Keyboard Shortcuts (press ?)
-          </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                onOpenShortcuts();
+                setMobileMenuOpen(false);
+              }}
+              className="px-2 py-2 rounded-xl text-xs font-mono border border-white/10 bg-white/5 text-white/60 hover:text-white hover:bg-white/10 flex items-center justify-center gap-1 min-h-[44px] cursor-pointer"
+            >
+              <span>Keys (?)</span>
+            </button>
+          </div>
+
+          <div className="pt-2">
+            <button
+              type="button"
+              onClick={() => {
+                onNavigate('/icons');
+                setMobileMenuOpen(false);
+              }}
+              className="w-full py-2.5 rounded-xl text-xs font-bold font-mono bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center gap-2 shadow-md shadow-blue-600/20 min-h-[44px]"
+            >
+              <span>Browse 110+ SVG Library</span>
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+          </div>
         </div>
       )}
     </header>

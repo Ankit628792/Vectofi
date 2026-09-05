@@ -9,6 +9,10 @@ import { CategoriesPage } from './pages/CategoriesPage';
 import { CollectionsPage } from './pages/CollectionsPage';
 import { FavoritesPage } from './pages/FavoritesPage';
 import { DocsPage } from './pages/DocsPage';
+import { NotFoundPage } from './pages/NotFoundPage';
+import { ErrorPage } from './pages/ErrorPage';
+import { ErrorBoundary } from './components/ui/ErrorBoundary';
+import { InitialLoader } from './components/ui/InitialLoader';
 import { IconDetailLaboratory } from './components/laboratory/IconDetailLaboratory';
 import { CommandPalette } from './components/ui/CommandPalette';
 import { KeyboardShortcutsModal } from './components/ui/KeyboardShortcutsModal';
@@ -116,6 +120,9 @@ export default function App() {
 
   // Toast Notifications
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
+
+  // Initial loader on enter
+  const [showInitialLoader, setShowInitialLoader] = useState<boolean>(true);
 
   // Apply dark mode class to html element
   useEffect(() => {
@@ -283,8 +290,26 @@ export default function App() {
     });
   };
 
+  const knownRoutes = [
+    '/',
+    '/icons',
+    '/animated',
+    '/categories',
+    '/collections',
+    '/favorites',
+    '/docs',
+    '/license',
+    '/error',
+  ];
+  const isKnownRoute = knownRoutes.includes(currentRoute);
+
   return (
-    <div className={`min-h-screen flex flex-col bg-[#050505] text-[#e5e5e5] selection:bg-blue-600/30 selection:text-white transition-colors ${reducedMotion ? 'vector-reduced-motion' : ''}`}>
+    <div className={`min-h-screen flex flex-col bg-[#050505] text-[#e5e5e5] selection:bg-blue-600/30 selection:text-white transition-colors duration-200 ${reducedMotion ? 'vector-reduced-motion' : ''}`}>
+      {/* Initial Entry Loader */}
+      {showInitialLoader && (
+        <InitialLoader onComplete={() => setShowInitialLoader(false)} />
+      )}
+
       {/* Header */}
       <Header
         currentRoute={currentRoute}
@@ -304,104 +329,114 @@ export default function App() {
         onOpenShortcuts={() => setShortcutsModalOpen(true)}
       />
 
-      {/* Main Routed Page Content */}
+      {/* Main Routed Page Content wrapped in Error Boundary */}
       <main className="flex-1">
-        {currentRoute === '/' && (
-          <HomePage
-            icons={ICONS}
-            favorites={favorites}
-            onToggleFavorite={handleToggleFavorite}
-            onSelectIcon={setSelectedIcon}
-            onQuickCopy={handleQuickCopy}
-            onQuickDownload={handleQuickDownload}
-            onNavigate={navigateTo}
-            onFilterCategory={catId => {
-              setFilters(f => ({ ...f, category: catId as any }));
-            }}
-            onOpenSearch={() => setCommandPaletteOpen(true)}
-          />
-        )}
+        <ErrorBoundary>
+          {currentRoute === '/' && (
+            <HomePage
+              icons={ICONS}
+              favorites={favorites}
+              onToggleFavorite={handleToggleFavorite}
+              onSelectIcon={setSelectedIcon}
+              onQuickCopy={handleQuickCopy}
+              onQuickDownload={handleQuickDownload}
+              onNavigate={navigateTo}
+              onFilterCategory={catId => {
+                setFilters(f => ({ ...f, category: catId as any }));
+              }}
+              onOpenSearch={() => setCommandPaletteOpen(true)}
+            />
+          )}
 
-        {currentRoute === '/icons' && (
-          <IconsPage
-            icons={ICONS}
-            filters={filters}
-            onFilterChange={setFilters}
-            favorites={favorites}
-            onToggleFavorite={handleToggleFavorite}
-            onSelectIcon={setSelectedIcon}
-            onQuickCopy={handleQuickCopy}
-            onQuickDownload={handleQuickDownload}
-            globalAnimated={globalAnimated}
-            onToggleGlobalAnimated={() => setGlobalAnimated(!globalAnimated)}
-            onResetFilters={resetFilters}
-            title="All SVG Icons"
-            subtitle="Explore 110+ precision vector icons across 14 functional categories."
-          />
-        )}
+          {currentRoute === '/icons' && (
+            <IconsPage
+              icons={ICONS}
+              filters={filters}
+              onFilterChange={setFilters}
+              favorites={favorites}
+              onToggleFavorite={handleToggleFavorite}
+              onSelectIcon={setSelectedIcon}
+              onQuickCopy={handleQuickCopy}
+              onQuickDownload={handleQuickDownload}
+              globalAnimated={globalAnimated}
+              onToggleGlobalAnimated={() => setGlobalAnimated(!globalAnimated)}
+              onResetFilters={resetFilters}
+              title="All SVG Icons"
+              subtitle="Explore 110+ precision vector icons across 14 functional categories."
+            />
+          )}
 
-        {currentRoute === '/animated' && (
-          <IconsPage
-            icons={ICONS}
-            filters={{ ...filters, hasAnimation: 'animated' }}
-            onFilterChange={setFilters}
-            favorites={favorites}
-            onToggleFavorite={handleToggleFavorite}
-            onSelectIcon={setSelectedIcon}
-            onQuickCopy={handleQuickCopy}
-            onQuickDownload={handleQuickDownload}
-            globalAnimated={globalAnimated}
-            onToggleGlobalAnimated={() => setGlobalAnimated(!globalAnimated)}
-            onResetFilters={resetFilters}
-            title="Animated SVG Icons"
-            subtitle="Self-contained animated vector icons powered by encapsulated CSS keyframes."
-          />
-        )}
+          {currentRoute === '/animated' && (
+            <IconsPage
+              icons={ICONS}
+              filters={{ ...filters, hasAnimation: 'animated' }}
+              onFilterChange={setFilters}
+              favorites={favorites}
+              onToggleFavorite={handleToggleFavorite}
+              onSelectIcon={setSelectedIcon}
+              onQuickCopy={handleQuickCopy}
+              onQuickDownload={handleQuickDownload}
+              globalAnimated={globalAnimated}
+              onToggleGlobalAnimated={() => setGlobalAnimated(!globalAnimated)}
+              onResetFilters={resetFilters}
+              title="Animated SVG Icons"
+              subtitle="Self-contained animated vector icons powered by encapsulated CSS keyframes."
+            />
+          )}
 
-        {currentRoute === '/categories' && (
-          <CategoriesPage
-            icons={ICONS}
-            onSelectCategory={catId => {
-              setFilters(f => ({ ...f, category: catId as any }));
-              navigateTo('/icons');
-            }}
-            onSelectIcon={setSelectedIcon}
-          />
-        )}
+          {currentRoute === '/categories' && (
+            <CategoriesPage
+              icons={ICONS}
+              onSelectCategory={catId => {
+                setFilters(f => ({ ...f, category: catId as any }));
+                navigateTo('/icons');
+              }}
+              onSelectIcon={setSelectedIcon}
+            />
+          )}
 
-        {currentRoute === '/collections' && (
-          <CollectionsPage
-            icons={ICONS}
-            collections={collections}
-            onCreateCollection={handleCreateCollection}
-            onDeleteCollection={handleDeleteCollection}
-            onRemoveFromCollection={handleRemoveFromCollection}
-            favorites={favorites}
-            onToggleFavorite={handleToggleFavorite}
-            onSelectIcon={setSelectedIcon}
-            onQuickCopy={handleQuickCopy}
-            onQuickDownload={handleQuickDownload}
-            onShowToast={showToast}
-          />
-        )}
+          {currentRoute === '/collections' && (
+            <CollectionsPage
+              icons={ICONS}
+              collections={collections}
+              onCreateCollection={handleCreateCollection}
+              onDeleteCollection={handleDeleteCollection}
+              onRemoveFromCollection={handleRemoveFromCollection}
+              favorites={favorites}
+              onToggleFavorite={handleToggleFavorite}
+              onSelectIcon={setSelectedIcon}
+              onQuickCopy={handleQuickCopy}
+              onQuickDownload={handleQuickDownload}
+              onShowToast={showToast}
+            />
+          )}
 
-        {currentRoute === '/favorites' && (
-          <FavoritesPage
-            icons={ICONS}
-            favorites={favorites}
-            onToggleFavorite={handleToggleFavorite}
-            onSelectIcon={setSelectedIcon}
-            onQuickCopy={handleQuickCopy}
-            onQuickDownload={handleQuickDownload}
-            onClearFavorites={() => setFavorites([])}
-            onShowToast={showToast}
-            onNavigate={navigateTo}
-          />
-        )}
+          {currentRoute === '/favorites' && (
+            <FavoritesPage
+              icons={ICONS}
+              favorites={favorites}
+              onToggleFavorite={handleToggleFavorite}
+              onSelectIcon={setSelectedIcon}
+              onQuickCopy={handleQuickCopy}
+              onQuickDownload={handleQuickDownload}
+              onClearFavorites={() => setFavorites([])}
+              onShowToast={showToast}
+              onNavigate={navigateTo}
+            />
+          )}
 
-        {(currentRoute === '/docs' || currentRoute === '/license') && (
-          <DocsPage />
-        )}
+          {(currentRoute === '/docs' || currentRoute === '/license') && (
+            <DocsPage />
+          )}
+
+          {currentRoute === '/error' && (
+            <ErrorPage onNavigate={navigateTo} />
+          )}
+
+          {!isKnownRoute && (
+            <NotFoundPage currentPath={currentRoute} onNavigate={navigateTo} />
+          )}
+        </ErrorBoundary>
       </main>
 
       {/* Footer */}

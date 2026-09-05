@@ -58,8 +58,8 @@ export const IconCard: React.FC<IconCardProps> = ({
           }}
           className={`p-1.5 rounded-lg transition-all ${
             isFavorite
-              ? 'text-rose-500 bg-rose-500/20'
-              : 'text-white/30 hover:text-rose-400 hover:bg-white/10 opacity-0 group-hover:opacity-100 focus:opacity-100'
+              ? 'text-rose-500 bg-rose-500/20 opacity-100'
+              : 'text-white/40 hover:text-rose-400 hover:bg-white/10 opacity-70 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100'
           }`}
           title={isFavorite ? 'Remove from favorites' : 'Save to favorites'}
           aria-label={isFavorite ? 'Remove from favorites' : 'Save to favorites'}
@@ -77,7 +77,7 @@ export const IconCard: React.FC<IconCardProps> = ({
       </div>
 
       {/* Main Icon Stage */}
-      <div className="relative py-6 flex items-center justify-center text-white/80 group-hover:text-blue-400 transition-colors">
+      <div className="relative py-4 sm:py-6 flex items-center justify-center text-white/80 group-hover:text-blue-400 transition-colors">
         {/* Subtle grid pattern background on hover */}
         <div className="absolute inset-0 bg-vector-grid-blue opacity-0 group-hover:opacity-60 transition-opacity rounded-xl pointer-events-none" />
 
@@ -92,8 +92,8 @@ export const IconCard: React.FC<IconCardProps> = ({
       </div>
 
       {/* Card Footer: Name & Action Buttons */}
-      <div className="mt-3 pt-2.5 border-t border-white/5 flex items-center justify-between">
-        <div className="min-w-0 pr-2">
+      <div className="mt-2.5 pt-2.5 border-t border-white/5 flex items-center justify-between">
+        <div className="min-w-0 pr-1.5 flex-1">
           <p className="text-xs font-medium text-white/90 truncate group-hover:text-white transition-colors">
             {icon.name}
           </p>
@@ -112,11 +112,11 @@ export const IconCard: React.FC<IconCardProps> = ({
         </div>
 
         {/* Quick Copy & Download buttons */}
-        <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity">
+        <div className="flex items-center gap-0.5 opacity-80 sm:opacity-0 sm:group-hover:opacity-100 focus-within:opacity-100 transition-opacity shrink-0">
           <button
             type="button"
             onClick={e => onQuickCopy(icon, e)}
-            className="p-1.5 rounded-lg text-white/40 hover:text-white hover:bg-white/10 transition-colors"
+            className="p-1.5 rounded-lg text-white/50 hover:text-white hover:bg-white/10 transition-colors"
             title="Copy SVG code (C)"
             aria-label={`Copy ${icon.name} SVG`}
           >
@@ -128,7 +128,7 @@ export const IconCard: React.FC<IconCardProps> = ({
           <button
             type="button"
             onClick={e => onQuickDownload(icon, e)}
-            className="p-1.5 rounded-lg text-white/40 hover:text-white hover:bg-white/10 transition-colors"
+            className="p-1.5 rounded-lg text-white/50 hover:text-white hover:bg-white/10 transition-colors"
             title="Download SVG file (D)"
             aria-label={`Download ${icon.name} SVG`}
           >

@@ -184,7 +184,7 @@ export const VectorSystemShowcase: React.FC = () => {
             <span className="text-[11px] font-bold uppercase tracking-wider text-white/40 block px-1">
               Select Vector Decoration
             </span>
-            <div className="space-y-1.5 max-h-[480px] overflow-y-auto pr-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-1.5 max-h-[320px] sm:max-h-[360px] lg:max-h-[520px] overflow-y-auto pr-1">
               {VECTOR_SPECS.map(spec => {
                 const isSelected = spec.key === selectedComp;
                 return (
@@ -195,7 +195,7 @@ export const VectorSystemShowcase: React.FC = () => {
                       setSelectedComp(spec.key);
                       setVariantIdx(1);
                     }}
-                    className={`w-full text-left p-3 rounded-xl border transition-all cursor-pointer flex items-center justify-between ${
+                    className={`w-full text-left p-3 rounded-xl border transition-all cursor-pointer flex items-center justify-between min-h-[44px] ${
                       isSelected
                         ? 'bg-blue-600/15 border-blue-500/50 text-white shadow-lg shadow-blue-500/5'
                         : 'bg-white/5 border-white/10 text-white/70 hover:border-white/20 hover:bg-white/8 hover:text-white'
@@ -225,9 +225,9 @@ export const VectorSystemShowcase: React.FC = () => {
           </div>
 
           {/* Right: Live Interactive Canvas & Code Inspector (8 cols) */}
-          <div className="lg:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-2xl p-6 space-y-6">
+          <div className="lg:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-2xl p-4 sm:p-6 space-y-4 sm:space-y-6">
             {/* Canvas Header Controls */}
-            <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4">
               <div>
                 <h3 className="font-display font-bold text-lg text-white">
                   {currentSpec.name}
@@ -236,7 +236,7 @@ export const VectorSystemShowcase: React.FC = () => {
               </div>
 
               {/* Controls bar */}
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                 {/* Color Selector */}
                 <div className="flex items-center gap-1.5 p-1 rounded-lg bg-white/5 border border-white/10">
                   {colorPresets.map(preset => (
@@ -259,7 +259,7 @@ export const VectorSystemShowcase: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setAnimated(!animated)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-mono border transition-all cursor-pointer flex items-center gap-1.5 ${
+                  className={`px-3 py-1.5 rounded-lg text-xs font-mono border transition-all cursor-pointer flex items-center gap-1.5 min-h-[32px] ${
                     animated
                       ? 'bg-blue-500/20 border-blue-500/40 text-blue-300'
                       : 'bg-white/5 border-white/10 text-white/50 hover:text-white'
@@ -278,7 +278,7 @@ export const VectorSystemShowcase: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setVariantIdx(v => (v + 1) % 4)}
-                    className="px-3 py-1.5 rounded-lg text-xs font-mono border border-white/10 bg-white/5 hover:bg-white/10 text-white/70 transition-all cursor-pointer"
+                    className="px-3 py-1.5 rounded-lg text-xs font-mono border border-white/10 bg-white/5 hover:bg-white/10 text-white/70 transition-all cursor-pointer min-h-[32px]"
                   >
                     Variant #{variantIdx + 1}
                   </button>

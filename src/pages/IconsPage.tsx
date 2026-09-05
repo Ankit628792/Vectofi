@@ -85,10 +85,10 @@ export const IconsPage: React.FC<IconsPageProps> = ({
   });
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-[#e5e5e5]">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 text-[#e5e5e5]">
       {/* Page Header */}
-      <div className="mb-8">
-        <h1 className="font-display font-light text-3xl sm:text-4xl text-white tracking-tight">
+      <div className="mb-6 sm:mb-8">
+        <h1 className="font-display font-light text-2xl sm:text-4xl text-white tracking-tight">
           {title.includes('Gallery') || title.includes('Library') ? (
             <>
               SVG <span className="font-bold">Icon Gallery</span>
@@ -97,7 +97,7 @@ export const IconsPage: React.FC<IconsPageProps> = ({
             title
           )}
         </h1>
-        <p className="text-sm sm:text-base text-white/50 mt-2 max-w-2xl leading-relaxed">
+        <p className="text-sm sm:text-base text-white/50 mt-1.5 sm:mt-2 max-w-2xl leading-relaxed">
           {subtitle}
         </p>
       </div>
@@ -115,7 +115,7 @@ export const IconsPage: React.FC<IconsPageProps> = ({
 
       {/* Icons Grid or Empty State */}
       {sortedIcons.length > 0 ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
           {sortedIcons.map(icon => (
             <IconCard
               key={icon.slug}

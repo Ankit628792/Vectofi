@@ -95,16 +95,16 @@ export const CollectionsPage: React.FC<CollectionsPageProps> = ({
         </button>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        {/* Left Sidebar: Collection Tabs (4 cols) */}
-        <div className="lg:col-span-4 space-y-2">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+        {/* Left Sidebar: Collection Tabs (4 cols) with mobile horizontal scroll strip */}
+        <div className="lg:col-span-4 flex lg:flex-col overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0 gap-2.5 scrollbar-none touch-pan-x">
           {collections.map(col => {
             const isActive = col.id === activeCollection?.id;
             return (
               <div
                 key={col.id}
                 onClick={() => setActiveCollectionId(col.id)}
-                className={`p-4 rounded-2xl border transition-all cursor-pointer select-none flex items-start justify-between ${
+                className={`p-3.5 sm:p-4 rounded-2xl border transition-all cursor-pointer select-none flex items-start justify-between shrink-0 w-[240px] sm:w-[280px] lg:w-full min-h-[44px] ${
                   isActive
                     ? 'border-blue-500/50 bg-blue-600/10 text-white shadow-md'
                     : 'border-white/10 bg-[#0a0a0a] hover:border-white/20'
@@ -131,8 +131,9 @@ export const CollectionsPage: React.FC<CollectionsPageProps> = ({
                       e.stopPropagation();
                       onDeleteCollection(col.id);
                     }}
-                    className="text-white/40 hover:text-rose-400 p-1 cursor-pointer"
+                    className="text-white/40 hover:text-rose-400 p-1.5 cursor-pointer min-w-[32px] min-h-[32px] flex items-center justify-center shrink-0"
                     title="Delete collection"
+                    aria-label="Delete collection"
                   >
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <polyline points="3 6 5 6 21 6" />
@@ -150,7 +151,7 @@ export const CollectionsPage: React.FC<CollectionsPageProps> = ({
           {activeCollection ? (
             <div className="space-y-6">
               {/* Collection header banner */}
-              <div className="p-6 rounded-2xl border border-white/10 bg-[#0a0a0a] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="p-4 sm:p-6 rounded-2xl border border-white/10 bg-[#0a0a0a] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
                   <div className="flex items-center gap-2">
                     <h2 className="font-display font-bold text-xl text-white">
@@ -171,7 +172,7 @@ export const CollectionsPage: React.FC<CollectionsPageProps> = ({
                   <button
                     type="button"
                     onClick={handleBatchDownload}
-                    className="px-4 py-2 rounded-xl text-xs font-mono font-medium bg-blue-600 hover:bg-blue-500 text-white transition-colors flex items-center gap-2 shrink-0 shadow-lg shadow-blue-600/20 cursor-pointer"
+                    className="w-full sm:w-auto px-4 py-2.5 rounded-xl text-xs font-mono font-medium bg-blue-600 hover:bg-blue-500 text-white transition-colors flex items-center justify-center gap-2 shrink-0 shadow-lg shadow-blue-600/20 cursor-pointer min-h-[40px]"
                   >
                     <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
@@ -185,7 +186,7 @@ export const CollectionsPage: React.FC<CollectionsPageProps> = ({
 
               {/* Icons list */}
               {collectionIcons.length > 0 ? (
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
                   {collectionIcons.map(icon => (
                     <div key={icon.slug} className="relative group">
                       <IconCard
@@ -200,7 +201,7 @@ export const CollectionsPage: React.FC<CollectionsPageProps> = ({
                         <button
                           type="button"
                           onClick={() => onRemoveFromCollection(activeCollection.id, icon.slug)}
-                          className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-rose-500 text-white text-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-md z-10 cursor-pointer"
+                          className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-rose-500 text-white text-xs flex items-center justify-center opacity-80 sm:opacity-0 group-hover:opacity-100 transition-opacity shadow-md z-10 cursor-pointer"
                           title="Remove from collection"
                         >
                           &times;
