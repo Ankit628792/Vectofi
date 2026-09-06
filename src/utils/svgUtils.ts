@@ -1,4 +1,7 @@
 import { IconItem, AnimationType, LaboratorySettings } from '../types';
+import { getAnimationCss, parseSvgBodyToMorphablePaths } from './animations';
+
+export * from './animations';
 
 export interface SvgRenderOptions {
   size?: number | string;
@@ -9,98 +12,6 @@ export interface SvgRenderOptions {
   viewBox?: string;
   className?: string;
   id?: string;
-}
-
-/**
- * Returns self-contained CSS keyframes and element binding for standalone animated SVG
- */
-export function getAnimationCss(
-  animationType: AnimationType | string = 'pulse',
-  speed: number = 1
-): string {
-  const duration = (2 / Math.max(0.2, speed)).toFixed(2);
-
-  switch (animationType) {
-    case 'spin':
-      return `
-        @keyframes svg-spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-        .anim-element {
-          transform-origin: 12px 12px;
-          animation: svg-spin ${duration}s linear infinite;
-        }
-      `;
-    case 'bounce':
-      return `
-        @keyframes svg-bounce {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-4px); }
-        }
-        .anim-element {
-          animation: svg-bounce ${duration}s ease-in-out infinite;
-        }
-      `;
-    case 'pulse':
-      return `
-        @keyframes svg-pulse {
-          0%, 100% { transform: scale(1); opacity: 1; }
-          50% { transform: scale(1.12); opacity: 0.85; }
-        }
-        .anim-element {
-          transform-origin: 12px 12px;
-          animation: svg-pulse ${duration}s ease-in-out infinite;
-        }
-      `;
-    case 'shake':
-      return `
-        @keyframes svg-shake {
-          0%, 100% { transform: rotate(0deg); }
-          20% { transform: rotate(-10deg); }
-          40% { transform: rotate(10deg); }
-          60% { transform: rotate(-6deg); }
-          80% { transform: rotate(6deg); }
-        }
-        .anim-element {
-          transform-origin: 12px 12px;
-          animation: svg-shake ${duration}s ease-in-out infinite;
-        }
-      `;
-    case 'slide':
-      return `
-        @keyframes svg-slide {
-          0%, 100% { transform: translateX(0); }
-          50% { transform: translateX(3px); }
-        }
-        .anim-element {
-          animation: svg-slide ${duration}s ease-in-out infinite;
-        }
-      `;
-    case 'draw':
-      return `
-        @keyframes svg-draw {
-          0% { stroke-dashoffset: 60; }
-          50% { stroke-dashoffset: 0; }
-          100% { stroke-dashoffset: 60; }
-        }
-        .anim-element path, .anim-element polyline, .anim-element line {
-          stroke-dasharray: 60;
-          animation: svg-draw ${duration}s ease-in-out infinite;
-        }
-      `;
-    case 'float':
-    default:
-      return `
-        @keyframes svg-float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-3px); }
-        }
-        .anim-element {
-          animation: svg-float ${duration}s ease-in-out infinite;
-        }
-      `;
-  }
 }
 
 /**
@@ -122,7 +33,8 @@ export function generateStaticSvg(
 }
 
 /**
- * Generates a self-contained animated SVG document string with encapsulated @keyframes
+ * Generates a self-contained animated SVG document string with native SVG path morphing
+ * showing the creation of the final icon from none.
  */
 export function generateAnimatedSvg(
   icon: Pick<IconItem, 'name' | 'slug' | 'body' | 'viewBox' | 'animationType' | 'hasAnimation'>,
@@ -132,19 +44,20 @@ export function generateAnimatedSvg(
   const color = options.color ?? 'currentColor';
   const strokeWidth = options.strokeWidth ?? 2;
   const viewBox = icon.viewBox || options.viewBox || '0 0 24 24';
-  const animType = icon.animationType || 'pulse';
   const speed = options.speed ?? 1;
+  const durationSec = Math.max(0.6, 2.4 / Math.max(0.2, speed)).toFixed(2);
 
-  const css = getAnimationCss(animType, speed);
+  const morphPaths = parseSvgBodyToMorphablePaths(icon.body, icon.slug, 14);
+
+  const pathsMarkup = morphPaths.length > 0
+    ? morphPaths.map(p => `  <path d="${p.originalD}" stroke="${p.stroke || color}" stroke-width="${p.strokeWidth || strokeWidth}" fill="${p.fill || 'none'}" stroke-linecap="${p.strokeLinecap || 'round'}" stroke-linejoin="${p.strokeLinejoin || 'round'}">
+    <animate attributeName="d" dur="${durationSec}s" repeatCount="indefinite" values="${p.valuesString}" />
+  </path>`).join('\n')
+    : `  <g>${icon.body}</g>`;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="${viewBox}" fill="none" stroke="${color}" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round">
-  <!-- Animated ${icon.name} Icon (${animType}) -->
-  <style>
-${css}
-  </style>
-  <g class="anim-element">
-    ${icon.body}
-  </g>
+  <!-- Morphed SVG ${icon.name} Icon (Creation from None) -->
+${pathsMarkup}
 </svg>`;
 }
 

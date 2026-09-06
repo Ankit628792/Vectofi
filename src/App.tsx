@@ -71,13 +71,27 @@ export default function App() {
   // Selected Icon for Laboratory modal
   const [selectedIcon, setSelectedIcon] = useState<IconItem | null>(null);
 
-  // Favorites (persisted in localStorage)
+  // Favorites (persisted in localStorage, initialized to empty)
   const [favorites, setFavorites] = useState<string[]>(() => {
     try {
-      const saved = localStorage.getItem('vectofi_favorites') || localStorage.getItem('vectorcraft_favorites');
-      return saved ? JSON.parse(saved) : ['heart', 'play', 'code', 'sparkles', 'rocket'];
+      // Remove any legacy mock keys
+      localStorage.removeItem('vectorcraft_favorites');
+      const saved = localStorage.getItem('vectofi_favorites');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) {
+          // If the user previously had the hardcoded 5 mock favorites from early development, reset to empty
+          const isOldMock =
+            parsed.length === 5 &&
+            ['heart', 'play', 'code', 'sparkles', 'rocket'].every(s =>
+              parsed.includes(s)
+            );
+          if (!isOldMock) return parsed;
+        }
+      }
+      return [];
     } catch {
-      return ['heart', 'play', 'code', 'sparkles', 'rocket'];
+      return [];
     }
   });
 

@@ -3,6 +3,7 @@ import { IconItem, FilterState } from '../types';
 import { IconCard } from '../components/icons/IconCard';
 import { FilterBar } from '../components/icons/FilterBar';
 import { EmptyState } from '../components/ui/EmptyState';
+import { VectorGrid } from '../components/vectors/VectorGrid';
 
 interface IconsPageProps {
   icons: IconItem[];
@@ -87,19 +88,27 @@ export const IconsPage: React.FC<IconsPageProps> = ({
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 text-[#e5e5e5]">
       {/* Page Header */}
-      <div className="mb-6 sm:mb-8">
-        <h1 className="font-display font-light text-2xl sm:text-4xl text-white tracking-tight">
-          {title.includes('Gallery') || title.includes('Library') ? (
-            <>
-              SVG <span className="font-bold">Icon Gallery</span>
-            </>
-          ) : (
-            title
-          )}
-        </h1>
-        <p className="text-sm sm:text-base text-white/50 mt-1.5 sm:mt-2 max-w-2xl leading-relaxed">
-          {subtitle}
-        </p>
+      <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <h1 className="font-display font-light text-2xl sm:text-4xl text-white tracking-tight">
+            {title.includes('Gallery') || title.includes('Library') ? (
+              <>
+                SVG <span className="font-bold">Icon Gallery</span>
+              </>
+            ) : (
+              title
+            )}
+          </h1>
+          <p className="text-sm sm:text-base text-white/50 mt-1.5 sm:mt-2 max-w-2xl leading-relaxed">
+            {subtitle}
+          </p>
+        </div>
+
+        {/* Technical Layout Precision Indicator */}
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 self-start sm:self-auto text-xs font-mono text-blue-400">
+          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+          <span>Precision Magnet Grid Active</span>
+        </div>
       </div>
 
       {/* Filter and Search Bar */}
@@ -115,19 +124,40 @@ export const IconsPage: React.FC<IconsPageProps> = ({
 
       {/* Icons Grid or Empty State */}
       {sortedIcons.length > 0 ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
-          {sortedIcons.map(icon => (
-            <IconCard
-              key={icon.slug}
-              icon={icon}
-              isFavorite={favorites.includes(icon.slug)}
-              onToggleFavorite={onToggleFavorite}
-              onSelectIcon={onSelectIcon}
-              onQuickCopy={onQuickCopy}
-              onQuickDownload={onQuickDownload}
-              globalAnimated={globalAnimated}
+        <div className="relative group/library-grid">
+          {/* Interactive Architectural VectorGrid with Magnet Points */}
+          <div className="absolute -inset-3 sm:-inset-5 lg:-inset-6 pointer-events-none overflow-hidden rounded-2xl z-0">
+            <VectorGrid
+              className="w-full h-full"
+              gridSize={48}
+              strokeColor="#3b82f6"
+              accentColor="#38bdf8"
+              strokeWidth={0.75}
+              crosshairs={true}
+              dots={true}
+              opacity={0.12}
+              interactive={true}
+              magnetPoints={true}
+              snapRadius={90}
+              showCoordinates={true}
+              showTether={true}
             />
-          ))}
+          </div>
+
+          <div className="relative z-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
+            {sortedIcons.map(icon => (
+              <IconCard
+                key={icon.slug}
+                icon={icon}
+                isFavorite={favorites.includes(icon.slug)}
+                onToggleFavorite={onToggleFavorite}
+                onSelectIcon={onSelectIcon}
+                onQuickCopy={onQuickCopy}
+                onQuickDownload={onQuickDownload}
+                globalAnimated={globalAnimated}
+              />
+            ))}
+          </div>
         </div>
       ) : (
         <EmptyState

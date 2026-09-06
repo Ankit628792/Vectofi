@@ -257,7 +257,7 @@ export const IconDetailLaboratory: React.FC<IconDetailLaboratoryProps> = ({
                       }`}
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-blue-300 animate-ping" />
-                      Animated ({icon.animationType})
+                      Morph from None
                     </button>
                   </div>
                 ) : (
@@ -288,7 +288,7 @@ export const IconDetailLaboratory: React.FC<IconDetailLaboratoryProps> = ({
                   {/* Static Preview Box */}
                   <div className="flex flex-col items-center justify-center p-6 sm:p-8 rounded-2xl border border-white/10 bg-black relative min-h-44 sm:min-h-56">
                     <span className="absolute top-2 left-2 text-[10px] font-mono text-white/40">
-                      STATIC
+                      FINAL ICON (STATIC)
                     </span>
                     <AnimatedIconRenderer
                       icon={icon}
@@ -301,7 +301,7 @@ export const IconDetailLaboratory: React.FC<IconDetailLaboratoryProps> = ({
                   {/* Animated Preview Box */}
                   <div className="flex flex-col items-center justify-center p-6 sm:p-8 rounded-2xl border border-blue-500/40 bg-blue-950/20 relative min-h-44 sm:min-h-56">
                     <span className="absolute top-2 left-2 text-[10px] font-mono text-blue-400">
-                      ANIMATED
+                      MORPHING (FROM NONE)
                     </span>
                     <AnimatedIconRenderer
                       icon={icon}

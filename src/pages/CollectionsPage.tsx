@@ -215,7 +215,9 @@ export const CollectionsPage: React.FC<CollectionsPageProps> = ({
                   title="This collection is empty"
                   description="Open any icon laboratory and click 'Collect' to add icons into this collection."
                   actionLabel="Browse icons"
-                  onAction={() => (window.location.hash = '#/icons')}
+                  onAction={() => {
+                    window.location.hash = '/icons';
+                  }}
                   iconType="collection"
                 />
               )}

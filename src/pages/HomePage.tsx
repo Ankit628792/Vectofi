@@ -324,13 +324,37 @@ export const HomePage: React.FC<HomePageProps> = ({
       <VectorSystemShowcase />
 
       {/* SECTION 4: FEATURED ICONS GRID */}
-      <section className="py-16 bg-[#0a0a0a] border-y border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 bg-[#0a0a0a] border-y border-white/10 overflow-hidden">
+        {/* Interactive precision VectorGrid with magnet points */}
+        <div className="absolute inset-0 pointer-events-none">
+          <VectorGrid
+            className="w-full h-full"
+            gridSize={48}
+            strokeColor="#3b82f6"
+            accentColor="#38bdf8"
+            opacity={0.12}
+            crosshairs={true}
+            dots={true}
+            interactive={true}
+            magnetPoints={true}
+            snapRadius={90}
+            showCoordinates={true}
+            showTether={true}
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
             <div>
-              <h2 className="text-2xl font-bold text-white font-display">
-                Featured Icons
-              </h2>
+              <div className="flex items-center gap-2">
+                <h2 className="text-2xl font-bold text-white font-display">
+                  Featured Icons
+                </h2>
+                <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[10px] font-mono text-blue-400">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+                  Magnet Grid
+                </span>
+              </div>
               <p className="text-sm text-white/50">
                 A selection of popular vector assets across interface, development, and commerce.
               </p>

@@ -1,17 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { VectorStars, VectorOrbit, VectorDots } from './VectorDecorations';
+import { calculateCreationFromNoneFrames } from '../../utils/animations';
 
 interface VectorHeroIllustrationProps {
   className?: string;
   onExploreClick?: () => void;
 }
 
+const HERO_ICON_PATHS = {
+  sparkle: 'M 12 2 L 14.5 9.5 L 22 12 L 14.5 14.5 L 12 22 L 9.5 14.5 L 2 12 L 9.5 9.5 Z',
+  heart: 'M 12 21.35 C 5.4 15.36 2 12.28 2 8.5 C 2 5.42 4.42 3 7.5 3 C 9.24 3 10.91 3.81 12 5.09 C 13.09 3.81 14.76 3 16.5 3 C 19.58 3 22 5.42 22 8.5 C 22 12.28 18.6 15.36 12 21.35 Z',
+  arrow: 'M 5 12 L 19 12 M 13 6 L 19 12 L 13 18',
+};
+
 export const VectorHeroIllustration: React.FC<VectorHeroIllustrationProps> = ({
   className = '',
   onExploreClick,
 }) => {
   const [isAnimated, setIsAnimated] = useState(true);
-  const [activeTab, setActiveTab] = useState<'transform' | 'pulse' | 'path'>('transform');
+  const [activeTab, setActiveTab] = useState<'sparkle' | 'heart' | 'arrow'>('sparkle');
+
+  // Precalculate intermediate SVG morph frames showing creation of final icon from none
+  const sparkleValues = useMemo(() => {
+    return calculateCreationFromNoneFrames(HERO_ICON_PATHS.sparkle, 14).join(';');
+  }, []);
+
+  const heartValues = useMemo(() => {
+    return calculateCreationFromNoneFrames(HERO_ICON_PATHS.heart, 14).join(';');
+  }, []);
+
+  const arrowValues = useMemo(() => {
+    return calculateCreationFromNoneFrames(HERO_ICON_PATHS.arrow, 14).join(';');
+  }, []);
+
+  const currentFinalPath = HERO_ICON_PATHS[activeTab];
+  const currentValues =
+    activeTab === 'sparkle'
+      ? sparkleValues
+      : activeTab === 'heart'
+      ? heartValues
+      : arrowValues;
 
   return (
     <div className={`relative flex flex-col items-center justify-center select-none ${className}`}>
@@ -101,66 +129,34 @@ export const VectorHeroIllustration: React.FC<VectorHeroIllustrationProps> = ({
             <div className="absolute w-28 h-28 rounded-full border border-indigo-500/20 dark:border-indigo-400/20 pointer-events-none" />
           </div>
 
-          {/* Interactive Icon Demonstration */}
+          {/* Interactive Icon Demonstration with Native SVG Path Morphing from None */}
           <div className="relative z-10 w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center text-indigo-600 dark:text-indigo-400 transition-transform group-hover:scale-105">
-            {activeTab === 'transform' ? (
-              <svg
-                className="w-full h-full"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.75"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                {/* Dynamic arrow / rocket vector with SVG motion */}
-                {isAnimated ? (
-                  <g className="origin-center animate-bounce">
-                    <path d="M5 12h14M12 5l7 7-7 7" className="animate-vector-dash" />
-                    <circle cx="12" cy="12" r="9" strokeDasharray="3 3" opacity="0.4" />
-                  </g>
-                ) : (
-                  <g>
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                    <circle cx="12" cy="12" r="9" opacity="0.3" />
-                  </g>
-                )}
-              </svg>
-            ) : activeTab === 'pulse' ? (
-              <svg
-                className={`w-full h-full ${isAnimated ? 'animate-vector-pulse' : ''}`}
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.75"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+            <svg
+              key={`${activeTab}-${isAnimated ? 'anim' : 'static'}`}
+              className="w-full h-full"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.75"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d={currentFinalPath}>
                 {isAnimated && (
-                  <circle cx="12" cy="11" r="3" fill="currentColor" fillOpacity="0.2" />
+                  <animate
+                    attributeName="d"
+                    dur="2.4s"
+                    repeatCount="indefinite"
+                    values={currentValues}
+                  />
                 )}
-              </svg>
-            ) : (
-              <svg
-                className={`w-full h-full ${isAnimated ? 'animate-spin' : ''}`}
-                style={{ animationDuration: '4s' }}
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.75"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-                <polyline points="21 3 21 9 15 9" />
-              </svg>
-            )}
+              </path>
+            </svg>
           </div>
 
           {/* Quick interactive hint badge */}
           <div className="relative z-10 mt-4 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-white dark:bg-zinc-800 text-slate-600 dark:text-zinc-300 border border-slate-200 dark:border-zinc-700 shadow-xs group-hover:border-indigo-400">
-            <span>{isAnimated ? '✦ Motion Active' : '○ Static Path'}</span>
+            <span>{isAnimated ? '✦ Morph: Creation from None' : '○ Static Final Icon'}</span>
             <span className="text-slate-400 dark:text-zinc-500">• click to toggle</span>
           </div>
         </div>
@@ -170,20 +166,20 @@ export const VectorHeroIllustration: React.FC<VectorHeroIllustrationProps> = ({
           <div className="flex items-center gap-1.5">
             <button
               type="button"
-              onClick={() => setActiveTab('transform')}
+              onClick={() => setActiveTab('sparkle')}
               className={`px-2 py-1 text-xs rounded font-mono transition-colors ${
-                activeTab === 'transform'
+                activeTab === 'sparkle'
                   ? 'bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 font-semibold'
                   : 'text-slate-500 dark:text-zinc-400 hover:text-slate-800'
               }`}
             >
-              Arrow
+              Sparkle Star
             </button>
             <button
               type="button"
-              onClick={() => setActiveTab('pulse')}
+              onClick={() => setActiveTab('heart')}
               className={`px-2 py-1 text-xs rounded font-mono transition-colors ${
-                activeTab === 'pulse'
+                activeTab === 'heart'
                   ? 'bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 font-semibold'
                   : 'text-slate-500 dark:text-zinc-400 hover:text-slate-800'
               }`}
@@ -192,19 +188,19 @@ export const VectorHeroIllustration: React.FC<VectorHeroIllustrationProps> = ({
             </button>
             <button
               type="button"
-              onClick={() => setActiveTab('path')}
+              onClick={() => setActiveTab('arrow')}
               className={`px-2 py-1 text-xs rounded font-mono transition-colors ${
-                activeTab === 'path'
+                activeTab === 'arrow'
                   ? 'bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 font-semibold'
                   : 'text-slate-500 dark:text-zinc-400 hover:text-slate-800'
               }`}
             >
-              Sync
+              Arrow
             </button>
           </div>
 
           <div className="text-[11px] font-mono text-slate-400 dark:text-zinc-500">
-            24x24 • viewBox
+            None → Final Icon
           </div>
         </div>
       </div>

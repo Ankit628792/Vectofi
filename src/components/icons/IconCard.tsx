@@ -101,7 +101,7 @@ export const IconCard: React.FC<IconCardProps> = ({
             {icon.hasAnimation ? (
               <span className="inline-flex items-center gap-1 text-[10px] font-mono text-blue-400 font-medium">
                 <span className="w-1 h-1 rounded-full bg-blue-500 animate-ping" />
-                {icon.animationType || 'animated'}
+                morph
               </span>
             ) : (
               <span className="text-[10px] font-mono text-white/40">

@@ -1,5 +1,6 @@
-import React from 'react';
-import { IconItem, AnimationType } from '../../types';
+import React, { useMemo } from 'react';
+import { IconItem } from '../../types';
+import { parseSvgBodyToMorphablePaths } from '../../utils/animations';
 
 interface AnimatedIconRendererProps {
   icon: IconItem;
@@ -23,39 +24,55 @@ export const AnimatedIconRenderer: React.FC<AnimatedIconRendererProps> = ({
   forceStatic = false,
 }) => {
   const shouldAnimate = !forceStatic && animated && icon.hasAnimation;
-  const animationType: AnimationType = icon.animationType || 'pulse';
 
-  // Dynamic animation class mapping
-  let animationClass = '';
-  let customStyle: React.CSSProperties = {
-    animationDuration: `${(2 / speed).toFixed(2)}s`,
-  };
+  // Parse SVG geometric elements into normalized morphable path descriptors
+  const morphablePaths = useMemo(() => {
+    return parseSvgBodyToMorphablePaths(icon.body, icon.slug, 14);
+  }, [icon.body, icon.slug]);
 
-  if (shouldAnimate) {
-    switch (animationType) {
-      case 'spin':
-        animationClass = 'animate-spin';
-        break;
-      case 'bounce':
-        animationClass = 'animate-bounce';
-        break;
-      case 'pulse':
-        animationClass = 'animate-vector-pulse';
-        break;
-      case 'draw':
-        animationClass = 'animate-vector-dash';
-        break;
-      case 'shake':
-        animationClass = 'animate-wiggle';
-        break;
-      case 'slide':
-        animationClass = 'animate-pulse';
-        break;
-      case 'float':
-      default:
-        animationClass = 'animate-vector-float';
-        break;
-    }
+  // Duration in seconds (scaled by speed prop)
+  const durationSec = Math.max(0.6, 2.4 / Math.max(0.2, speed));
+
+  // If not animating, render authentic source SVG markup with 100% fidelity
+  if (!shouldAnimate) {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={size}
+        height={size}
+        viewBox={icon.viewBox || '0 0 24 24'}
+        fill="none"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={`transition-colors inline-block ${className}`}
+        aria-label={icon.name}
+      >
+        <g dangerouslySetInnerHTML={{ __html: icon.body }} />
+      </svg>
+    );
+  }
+
+  // Fallback: If no paths could be parsed, render static SVG body safely
+  if (morphablePaths.length === 0) {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={size}
+        height={size}
+        viewBox={icon.viewBox || '0 0 24 24'}
+        fill="none"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={`transition-colors inline-block ${className}`}
+        aria-label={icon.name}
+      >
+        <g dangerouslySetInnerHTML={{ __html: icon.body }} />
+      </svg>
+    );
   }
 
   return (
@@ -72,11 +89,27 @@ export const AnimatedIconRenderer: React.FC<AnimatedIconRendererProps> = ({
       className={`transition-colors inline-block ${className}`}
       aria-label={icon.name}
     >
-      <g
-        className={shouldAnimate ? animationClass : ''}
-        style={shouldAnimate ? customStyle : undefined}
-        dangerouslySetInnerHTML={{ __html: icon.body }}
-      />
+      <g>
+        {morphablePaths.map(p => (
+          <path
+            key={`${p.id}-anim`}
+            d={p.originalD}
+            stroke={p.stroke || color}
+            strokeWidth={p.strokeWidth || strokeWidth}
+            fill={p.fill || 'none'}
+            strokeLinecap={p.strokeLinecap || 'round'}
+            strokeLinejoin={p.strokeLinejoin || 'round'}
+            opacity={p.opacity}
+          >
+            <animate
+              attributeName="d"
+              dur={`${durationSec.toFixed(2)}s`}
+              repeatCount="indefinite"
+              values={p.valuesString}
+            />
+          </path>
+        ))}
+      </g>
     </svg>
   );
 };
