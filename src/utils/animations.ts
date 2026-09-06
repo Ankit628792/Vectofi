@@ -371,8 +371,244 @@ export function formatPathCommands(commands: PathCommand[], precision: number = 
 }
 
 /**
- * Normalizes two path command lists so they have the exact same command types and lengths,
- * allowing point-by-point linear interpolation without shape clipping or jumps.
+ * Calculates Gravesen's approximation of cubic Bézier curve arc length
+ */
+function getCubicArcLength(
+  p0x: number,
+  p0y: number,
+  cp1x: number,
+  cp1y: number,
+  cp2x: number,
+  cp2y: number,
+  p3x: number,
+  p3y: number
+): number {
+  const chord = Math.hypot(p3x - p0x, p3y - p0y);
+  const poly =
+    Math.hypot(cp1x - p0x, cp1y - p0y) +
+    Math.hypot(cp2x - cp1x, cp2y - cp1y) +
+    Math.hypot(p3x - cp2x, p3y - cp2y);
+  return (chord + poly) / 2;
+}
+
+/**
+ * Splits a cubic Bézier curve at parameter t using de Casteljau's algorithm,
+ * creating two new cubic curves that together follow the exact original geometry.
+ */
+function splitCubicDeCasteljau(
+  p0x: number,
+  p0y: number,
+  cp1x: number,
+  cp1y: number,
+  cp2x: number,
+  cp2y: number,
+  p3x: number,
+  p3y: number,
+  t: number = 0.5
+): [PathCommand, PathCommand] {
+  const lerp = (ax: number, ay: number, bx: number, by: number) => ({
+    x: ax + (bx - ax) * t,
+    y: ay + (by - ay) * t,
+  });
+
+  const q0 = lerp(p0x, p0y, cp1x, cp1y);
+  const q1 = lerp(cp1x, cp1y, cp2x, cp2y);
+  const q2 = lerp(cp2x, cp2y, p3x, p3y);
+
+  const r0 = lerp(q0.x, q0.y, q1.x, q1.y);
+  const r1 = lerp(q1.x, q1.y, q2.x, q2.y);
+
+  const s0 = lerp(r0.x, r0.y, r1.x, r1.y);
+
+  return [
+    { type: 'C', values: [q0.x, q0.y, r0.x, r0.y, s0.x, s0.y] },
+    { type: 'C', values: [r1.x, r1.y, q2.x, q2.y, p3x, p3y] },
+  ];
+}
+
+/**
+ * Splits a list of path commands into contiguous subpaths delimited by 'M' commands
+ */
+function splitCommandsIntoSubpaths(commands: PathCommand[]): PathCommand[][] {
+  const subpaths: PathCommand[][] = [];
+  let current: PathCommand[] = [];
+
+  for (const cmd of commands) {
+    if (cmd.type === 'M' && current.length > 0) {
+      subpaths.push(current);
+      current = [];
+    }
+    current.push(cmd);
+  }
+  if (current.length > 0) {
+    subpaths.push(current);
+  }
+  return subpaths;
+}
+
+/**
+ * Calculates visual centroid (cx, cy) of a subpath for dynamic positioning of missing elements
+ */
+function getSubpathBoundingCenter(subpath: PathCommand[]): { cx: number; cy: number } {
+  let minX = Infinity;
+  let maxX = -Infinity;
+  let minY = Infinity;
+  let maxY = -Infinity;
+
+  for (const cmd of subpath) {
+    for (let i = 0; i < cmd.values.length; i += 2) {
+      const x = cmd.values[i];
+      const y = cmd.values[i + 1];
+      if (x !== undefined && y !== undefined) {
+        if (x < minX) minX = x;
+        if (x > maxX) maxX = x;
+        if (y < minY) minY = y;
+        if (y > maxY) maxY = y;
+      }
+    }
+  }
+
+  return {
+    cx: isFinite(minX) && isFinite(maxX) ? (minX + maxX) / 2 : 12,
+    cy: isFinite(minY) && isFinite(maxY) ? (minY + maxY) / 2 : 12,
+  };
+}
+
+/**
+ * Dynamically subdivides a subpath to target segment count by repeatedly splitting
+ * the longest segment at t = 0.5 via de Casteljau's algorithm. This generates missing points
+ * dynamically along the path geometry, maintaining visual consistency without clustering points at vertices.
+ */
+function subdivideSubpathToCount(subpath: PathCommand[], targetCount: number): PathCommand[] {
+  if (subpath.length === 0) return [];
+
+  const hasM = subpath[0].type === 'M';
+  const startCmd: PathCommand = hasM ? { ...subpath[0], values: [...subpath[0].values] } : { type: 'M', values: [0, 0] };
+  const hasZ = subpath[subpath.length - 1]?.type === 'Z';
+
+  const segments: PathCommand[] = [];
+  for (let i = hasM ? 1 : 0; i < (hasZ ? subpath.length - 1 : subpath.length); i++) {
+    if (subpath[i].type === 'C') {
+      segments.push({ type: 'C', values: [...subpath[i].values] });
+    }
+  }
+
+  // If subpath had no curve segments (e.g. a point or empty), populate with collapsed segments at startCmd
+  if (segments.length === 0) {
+    const sx = startCmd.values[0] || 12;
+    const sy = startCmd.values[1] || 12;
+    for (let i = 0; i < targetCount; i++) {
+      segments.push({ type: 'C', values: [sx, sy, sx, sy, sx, sy] });
+    }
+  }
+
+  // Dynamically generate missing points by subdividing the longest segments first
+  while (segments.length < targetCount) {
+    let maxLen = -1;
+    let maxIdx = 0;
+    let prevX = startCmd.values[0];
+    let prevY = startCmd.values[1];
+
+    for (let i = 0; i < segments.length; i++) {
+      const seg = segments[i];
+      const len = getCubicArcLength(
+        prevX,
+        prevY,
+        seg.values[0],
+        seg.values[1],
+        seg.values[2],
+        seg.values[3],
+        seg.values[4],
+        seg.values[5]
+      );
+      if (len > maxLen) {
+        maxLen = len;
+        maxIdx = i;
+      }
+      prevX = seg.values[4];
+      prevY = seg.values[5];
+    }
+
+    // Determine starting coordinate of the segment to split
+    let segStartX = startCmd.values[0];
+    let segStartY = startCmd.values[1];
+    for (let i = 0; i < maxIdx; i++) {
+      segStartX = segments[i].values[4];
+      segStartY = segments[i].values[5];
+    }
+
+    const targetSeg = segments[maxIdx];
+    const [c1, c2] = splitCubicDeCasteljau(
+      segStartX,
+      segStartY,
+      targetSeg.values[0],
+      targetSeg.values[1],
+      targetSeg.values[2],
+      targetSeg.values[3],
+      targetSeg.values[4],
+      targetSeg.values[5],
+      0.5
+    );
+
+    segments.splice(maxIdx, 1, c1, c2);
+  }
+
+  const result = [startCmd, ...segments];
+  if (hasZ) {
+    result.push({ type: 'Z', values: [] });
+  }
+  return result;
+}
+
+/**
+ * Circularly shifts closed subpaths to minimize point-to-point transition distances,
+ * preventing unnatural twisting during linear interpolation.
+ */
+function alignClosedSubpaths(subA: PathCommand[], subB: PathCommand[]): [PathCommand[], PathCommand[]] {
+  const hasZA = subA[subA.length - 1]?.type === 'Z';
+  const hasZB = subB[subB.length - 1]?.type === 'Z';
+  if (!hasZA || !hasZB) return [subA, subB];
+
+  const segsA = subA.slice(1, -1);
+  const segsB = subB.slice(1, -1);
+  const N = segsA.length;
+  if (N <= 1 || segsB.length !== N) return [subA, subB];
+
+  let bestShift = 0;
+  let minCost = Infinity;
+
+  for (let shift = 0; shift < N; shift++) {
+    let cost = 0;
+    for (let i = 0; i < N; i++) {
+      const bIdx = (i + shift) % N;
+      const ax = segsA[i].values[4];
+      const ay = segsA[i].values[5];
+      const bx = segsB[bIdx].values[4];
+      const by = segsB[bIdx].values[5];
+      const dx = bx - ax;
+      const dy = by - ay;
+      cost += dx * dx + dy * dy;
+    }
+    if (cost < minCost) {
+      minCost = cost;
+      bestShift = shift;
+    }
+  }
+
+  if (bestShift === 0) return [subA, subB];
+
+  const rotatedSegsB = [...segsB.slice(bestShift), ...segsB.slice(0, bestShift)];
+  const lastSeg = rotatedSegsB[rotatedSegsB.length - 1];
+  const newStartM: PathCommand = { type: 'M', values: [lastSeg.values[4], lastSeg.values[5]] };
+
+  return [subA, [newStartM, ...rotatedSegsB, { type: 'Z', values: [] }]];
+}
+
+/**
+ * Normalizes two path command lists so they have the exact same command structure,
+ * generating missing points dynamically via de Casteljau subdivision along the shape perimeter.
+ * This guarantees smooth point-to-point linear interpolation without shape distortion,
+ * regardless of the difference in complexity between the two paths.
  */
 export function equalizePathCommands(
   cmdsA: PathCommand[],
@@ -380,141 +616,72 @@ export function equalizePathCommands(
 ): [PathCommand[], PathCommand[]] {
   if (cmdsA.length === 0 && cmdsB.length === 0) return [[], []];
 
-  // Helper to deep clone commands
-  const clone = (cmds: PathCommand[]): PathCommand[] =>
-    cmds.map(c => ({ type: c.type, values: [...c.values] }));
+  // Convert all commands (lines, arcs, quadratics) to canonical cubic Bézier curves
+  const normA = normalizePathCommandsToCubics(cmdsA);
+  const normB = normalizePathCommandsToCubics(cmdsB);
 
-  let a = clone(cmdsA);
-  let b = clone(cmdsB);
+  // Partition both paths into their constituent subpaths
+  const subpathsA = splitCommandsIntoSubpaths(normA);
+  const subpathsB = splitCommandsIntoSubpaths(normB);
 
-  // If one path is empty, initialize it to the starting point of the other
-  if (a.length === 0 && b.length > 0) {
-    const start = b[0].values.slice(0, 2);
-    a = b.map(() => ({ type: 'M', values: [start[0] || 12, start[1] || 12] }));
-  } else if (b.length === 0 && a.length > 0) {
-    const start = a[0].values.slice(0, 2);
-    b = a.map(() => ({ type: 'M', values: [start[0] || 12, start[1] || 12] }));
+  const maxSubpaths = Math.max(subpathsA.length, subpathsB.length, 1);
+
+  // If one path has fewer subpaths, dynamically generate collapsed subpaths at counterpart centroids
+  while (subpathsA.length < maxSubpaths) {
+    const targetSub = subpathsB[subpathsA.length] || subpathsB[0];
+    const { cx, cy } = getSubpathBoundingCenter(targetSub);
+    const hasZ = targetSub[targetSub.length - 1]?.type === 'Z';
+    const newSub: PathCommand[] = [
+      { type: 'M', values: [cx, cy] },
+      { type: 'C', values: [cx, cy, cx, cy, cx, cy] },
+    ];
+    if (hasZ) newSub.push({ type: 'Z', values: [] });
+    subpathsA.push(newSub);
   }
 
-  // Convert all L commands to C (Cubic Béziers) when one of the paths uses curves,
-  // enabling seamless smooth transitions between angular shapes and curved shapes
-  const usesCubic = a.some(c => c.type === 'C') || b.some(c => c.type === 'C');
+  while (subpathsB.length < maxSubpaths) {
+    const targetSub = subpathsA[subpathsB.length] || subpathsA[0];
+    const { cx, cy } = getSubpathBoundingCenter(targetSub);
+    const hasZ = targetSub[targetSub.length - 1]?.type === 'Z';
+    const newSub: PathCommand[] = [
+      { type: 'M', values: [cx, cy] },
+      { type: 'C', values: [cx, cy, cx, cy, cx, cy] },
+    ];
+    if (hasZ) newSub.push({ type: 'Z', values: [] });
+    subpathsB.push(newSub);
+  }
 
-  const promoteToCubic = (cmds: PathCommand[]): PathCommand[] => {
-    let prevX = 0;
-    let prevY = 0;
-    return cmds.map(cmd => {
-      if (cmd.type === 'M') {
-        prevX = cmd.values[0];
-        prevY = cmd.values[1];
-        return cmd;
-      }
-      if (cmd.type === 'L' && usesCubic) {
-        const x = cmd.values[0];
-        const y = cmd.values[1];
-        // Line as cubic: cp1 at prev, cp2 at end
-        const newCmd: PathCommand = {
-          type: 'C',
-          values: [prevX, prevY, x, y, x, y],
-        };
-        prevX = x;
-        prevY = y;
-        return newCmd;
-      }
-      if (cmd.values.length >= 2) {
-        prevX = cmd.values[cmd.values.length - 2];
-        prevY = cmd.values[cmd.values.length - 1];
-      }
-      return cmd;
-    });
-  };
+  const outA: PathCommand[] = [];
+  const outB: PathCommand[] = [];
 
-  a = promoteToCubic(a);
-  b = promoteToCubic(b);
+  // Equalize each pair of corresponding subpaths
+  for (let s = 0; s < maxSubpaths; s++) {
+    const subA = subpathsA[s];
+    const subB = subpathsB[s];
 
-  // Pad the shorter path to match the segment count of the longer path
-  while (a.length < b.length) {
-    // Subdivide the segment before Z or duplicate the last position
-    const insertIdx = Math.max(1, a.length - 1);
-    const prev = a[insertIdx];
-    const targetType = b[insertIdx]?.type || prev.type;
-
-    if (prev.type === 'C') {
-      // Split Bézier segment or duplicate anchor point
-      const [cp1x, cp1y, cp2x, cp2y, x, y] = prev.values;
-      a.splice(insertIdx, 0, {
-        type: 'C',
-        values: [cp1x, cp1y, cp2x, cp2y, x, y],
-      });
-    } else if (prev.values.length >= 2) {
-      const x = prev.values[prev.values.length - 2];
-      const y = prev.values[prev.values.length - 1];
-      if (targetType === 'C') {
-        a.splice(insertIdx, 0, {
-          type: 'C',
-          values: [x, y, x, y, x, y],
-        });
-      } else {
-        a.splice(insertIdx, 0, {
-          type: 'L',
-          values: [x, y],
-        });
-      }
-    } else {
-      a.push({ ...prev });
+    // Harmonize path closure (Z)
+    const hasZ = subA.some(c => c.type === 'Z') || subB.some(c => c.type === 'Z');
+    if (hasZ) {
+      if (!subA.some(c => c.type === 'Z')) subA.push({ type: 'Z', values: [] });
+      if (!subB.some(c => c.type === 'Z')) subB.push({ type: 'Z', values: [] });
     }
+
+    const countA = subA.filter(c => c.type === 'C').length;
+    const countB = subB.filter(c => c.type === 'C').length;
+    const targetSegments = Math.max(countA, countB, 1);
+
+    // Dynamically subdivide to generate missing points along the contours
+    const eqSubA = subdivideSubpathToCount(subA, targetSegments);
+    const eqSubB = subdivideSubpathToCount(subB, targetSegments);
+
+    // Align circular rotation to minimize linear travel distance
+    const [alignedA, alignedB] = alignClosedSubpaths(eqSubA, eqSubB);
+
+    outA.push(...alignedA);
+    outB.push(...alignedB);
   }
 
-  while (b.length < a.length) {
-    const insertIdx = Math.max(1, b.length - 1);
-    const prev = b[insertIdx];
-    const targetType = a[insertIdx]?.type || prev.type;
-
-    if (prev.type === 'C') {
-      const [cp1x, cp1y, cp2x, cp2y, x, y] = prev.values;
-      b.splice(insertIdx, 0, {
-        type: 'C',
-        values: [cp1x, cp1y, cp2x, cp2y, x, y],
-      });
-    } else if (prev.values.length >= 2) {
-      const x = prev.values[prev.values.length - 2];
-      const y = prev.values[prev.values.length - 1];
-      if (targetType === 'C') {
-        b.splice(insertIdx, 0, {
-          type: 'C',
-          values: [x, y, x, y, x, y],
-        });
-      } else {
-        b.splice(insertIdx, 0, {
-          type: 'L',
-          values: [x, y],
-        });
-      }
-    } else {
-      b.push({ ...prev });
-    }
-  }
-
-  // Ensure matching command types on every segment index
-  for (let i = 0; i < a.length; i++) {
-    if (a[i].type !== b[i].type) {
-      if (a[i].type === 'C' && b[i].type === 'L') {
-        const x = b[i].values[0];
-        const y = b[i].values[1];
-        b[i] = { type: 'C', values: [x, y, x, y, x, y] };
-      } else if (b[i].type === 'C' && a[i].type === 'L') {
-        const x = a[i].values[0];
-        const y = a[i].values[1];
-        a[i] = { type: 'C', values: [x, y, x, y, x, y] };
-      } else if (a[i].type === 'Z' || b[i].type === 'Z') {
-        // Harmonize closure
-        a[i] = { type: 'Z', values: [] };
-        b[i] = { type: 'Z', values: [] };
-      }
-    }
-  }
-
-  return [a, b];
+  return [outA, outB];
 }
 
 /**

@@ -196,7 +196,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenShortcuts }) =
               </li>
               <li>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Ankit628792/Vectofi"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-blue-400 transition-colors inline-flex items-center gap-1"
@@ -212,28 +212,42 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenShortcuts }) =
           </div>
         </div>
 
-        {/* Bottom Bar: System Status & Metrics matching Design HTML */}
-        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-white/40">
-          <div className="flex items-center gap-4">
+        {/* Bottom Bar: System Status, Author Attribution & Metrics */}
+        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/40">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 font-mono">
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
               <span>CDN Status: Optimal</span>
             </div>
-            <span className="text-white/20">|</span>
-            <span>Registry: 110+ Production SVGs</span>
+            <span className="text-white/20 hidden sm:inline">|</span>
+            <span>Registry: 120+ Production SVGs</span>
           </div>
 
-          <div className="flex items-center gap-4 text-[11px] text-white/40 uppercase tracking-widest">
-            <button type="button" onClick={() => onNavigate('/docs')} className="hover:text-blue-400 cursor-pointer">
-              Docs
-            </button>
-            <button type="button" onClick={() => onNavigate('/docs')} className="hover:text-blue-400 cursor-pointer">
-              API
-            </button>
-            <button type="button" onClick={() => onNavigate('/license')} className="hover:text-blue-400 cursor-pointer">
-              License
-            </button>
+          {/* Creator Attribution */}
+          <div className="flex items-center gap-1.5 text-xs text-white/60 font-medium">
+            <span>Designed &amp; Developed by</span>
+            <a
+              href="https://www.instagram.com/ankit_628792"
+              target="_blank"
+              rel="noreferrer"
+              className="text-blue-400 hover:text-blue-300 transition-colors font-semibold inline-flex items-center gap-1 group cursor-pointer"
+            >
+              <span>Ankit Kumar</span>
+              <svg
+                className="w-3 h-3 text-blue-400/70 group-hover:text-blue-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </a>
           </div>
+
         </div>
       </div>
     </footer>

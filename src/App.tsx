@@ -9,6 +9,7 @@ import { CategoriesPage } from './pages/CategoriesPage';
 import { CollectionsPage } from './pages/CollectionsPage';
 import { FavoritesPage } from './pages/FavoritesPage';
 import { DocsPage } from './pages/DocsPage';
+import { LicensePage } from './pages/LicensePage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { ErrorPage } from './pages/ErrorPage';
 import { ErrorBoundary } from './components/ui/ErrorBoundary';
@@ -439,8 +440,12 @@ export default function App() {
             />
           )}
 
-          {(currentRoute === '/docs' || currentRoute === '/license') && (
+          {currentRoute === '/docs' && (
             <DocsPage />
+          )}
+
+          {currentRoute === '/license' && (
+            <LicensePage onNavigate={navigateTo} onShowToast={showToast} />
           )}
 
           {currentRoute === '/error' && (

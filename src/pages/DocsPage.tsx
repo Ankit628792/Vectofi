@@ -283,11 +283,53 @@ export class CheckCircleIconComponent {
 
         {/* SECTION 5: LICENSE */}
         <section className="p-6 rounded-2xl border border-white/10 bg-white/5 space-y-3">
-          <h3 className="font-display font-bold text-base text-white">
-            MIT License
-          </h3>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <h3 className="font-display font-bold text-base text-white flex items-center gap-2">
+              <span>MIT License</span>
+              <span className="px-1.5 py-0.5 text-[10px] font-mono rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">
+                Open Source
+              </span>
+            </h3>
+            <div className="flex items-center gap-3 text-xs font-mono">
+              <a
+                href="https://github.com/Ankit628792/Vectofi/blob/main/LICENSE"
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-400 hover:text-blue-300 inline-flex items-center gap-1 hover:underline"
+              >
+                <span>View LICENSE on GitHub</span>
+                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </a>
+              <span className="text-white/20">•</span>
+              <a
+                href="https://opensource.org/licenses/MIT"
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-400 hover:text-blue-300 inline-flex items-center gap-1 hover:underline"
+              >
+                <span>OSI Standard</span>
+                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </a>
+            </div>
+          </div>
           <p className="text-xs sm:text-sm text-white/50 leading-relaxed">
-            All icons in Vectofi are licensed under the MIT License. You are free to use, modify, distribute, and integrate them into personal, commercial, and open-source applications without royalty or mandatory attribution.
+            All icons, animations, and code utilities in Vectofi are licensed under the permissive{' '}
+            <strong className="text-white font-medium">MIT License</strong> by{' '}
+            <a
+              href="https://www.instagram.com/ankit_628792"
+              target="_blank"
+              rel="noreferrer"
+              className="text-blue-400 hover:underline"
+            >
+              Ankit Kumar
+            </a>
+            . You are free to use, modify, distribute, remix, and integrate them into personal, commercial, internal, and open-source applications without royalty or mandatory attribution.
           </p>
         </section>
       </div>
