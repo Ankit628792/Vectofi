@@ -23,7 +23,12 @@ export const AnimatedIconRenderer: React.FC<AnimatedIconRendererProps> = ({
   className = '',
   forceStatic = false,
 }) => {
-  const shouldAnimate = !forceStatic && animated && icon.hasAnimation;
+  const isReducedMotionActive =
+    typeof document !== 'undefined' &&
+    (document.documentElement.classList.contains('reduced-motion') ||
+      document.documentElement.getAttribute('data-reduced-motion') === 'true');
+
+  const shouldAnimate = !forceStatic && !isReducedMotionActive && animated && icon.hasAnimation;
 
   // Parse SVG geometric elements into normalized morphable path descriptors
   const morphablePaths = useMemo(() => {

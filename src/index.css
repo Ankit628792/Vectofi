@@ -185,14 +185,84 @@ body {
   animation: vector-dash 2s linear infinite;
 }
 
-/* Reduced motion preference */
+/* ==========================================================================
+   REDUCED MOTION ENGINE & COMPLETE KEYFRAME ANIMATION SUPPRESSION
+   ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
-    animation-duration: 0.01ms !important;
+    animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Global user setting override via HTML class or data-attribute */
+html.reduced-motion,
+html.reduced-motion *,
+html.reduced-motion *::before,
+html.reduced-motion *::after,
+[data-reduced-motion="true"],
+[data-reduced-motion="true"] *,
+[data-reduced-motion="true"] *::before,
+[data-reduced-motion="true"] *::after,
+.vector-reduced-motion,
+.vector-reduced-motion *,
+.vector-reduced-motion *::before,
+.vector-reduced-motion *::after {
+  animation: none !important;
+  animation-name: none !important;
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  animation-delay: 0s !important;
+  transition-duration: 0.001ms !important;
+  transition-delay: 0s !important;
+  scroll-behavior: auto !important;
+}
+
+/* Explicitly disable all specific keyframe animation classes across the UI */
+html.reduced-motion .animate-wiggle,
+html.reduced-motion .animate-vector-float,
+html.reduced-motion .animate-vector-pulse,
+html.reduced-motion .animate-vector-dash,
+html.reduced-motion .animate-spin,
+html.reduced-motion .animate-ping,
+html.reduced-motion .animate-pulse,
+html.reduced-motion .animate-bounce,
+html.reduced-motion .animate-in,
+[data-reduced-motion="true"] .animate-wiggle,
+[data-reduced-motion="true"] .animate-vector-float,
+[data-reduced-motion="true"] .animate-vector-pulse,
+[data-reduced-motion="true"] .animate-vector-dash,
+[data-reduced-motion="true"] .animate-spin,
+[data-reduced-motion="true"] .animate-ping,
+[data-reduced-motion="true"] .animate-pulse,
+[data-reduced-motion="true"] .animate-bounce,
+[data-reduced-motion="true"] .animate-in,
+.vector-reduced-motion .animate-wiggle,
+.vector-reduced-motion .animate-vector-float,
+.vector-reduced-motion .animate-vector-pulse,
+.vector-reduced-motion .animate-vector-dash,
+.vector-reduced-motion .animate-spin,
+.vector-reduced-motion .animate-ping,
+.vector-reduced-motion .animate-pulse,
+.vector-reduced-motion .animate-bounce,
+.vector-reduced-motion .animate-in {
+  animation: none !important;
+  transform: none !important;
+}
+
+/* Disable SVG SMIL animations (<animate>, <animateTransform>, <animateMotion>) */
+html.reduced-motion svg animate,
+html.reduced-motion svg animateTransform,
+html.reduced-motion svg animateMotion,
+[data-reduced-motion="true"] svg animate,
+[data-reduced-motion="true"] svg animateTransform,
+[data-reduced-motion="true"] svg animateMotion,
+.vector-reduced-motion svg animate,
+.vector-reduced-motion svg animateTransform,
+.vector-reduced-motion svg animateMotion {
+  display: none !important;
 }
 
 /* ==========================================================================

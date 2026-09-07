@@ -1,6 +1,7 @@
 import React from 'react';
 import { IconItem } from '../types';
 import { IconCard } from '../components/icons/IconCard';
+import { VirtualizedIconGrid } from '../components/icons/VirtualizedIconGrid';
 import { EmptyState } from '../components/ui/EmptyState';
 import { downloadSvgFile } from '../utils/svgExport';
 
@@ -14,6 +15,7 @@ interface FavoritesPageProps {
   onClearFavorites: () => void;
   onShowToast: (title: string, message?: string) => void;
   onNavigate: (route: string) => void;
+  reducedMotion?: boolean;
 }
 
 export const FavoritesPage: React.FC<FavoritesPageProps> = ({
@@ -26,6 +28,7 @@ export const FavoritesPage: React.FC<FavoritesPageProps> = ({
   onClearFavorites,
   onShowToast,
   onNavigate,
+  reducedMotion = false,
 }) => {
   const favoriteIcons = favorites
     .map(slug => icons.find(i => i.slug === slug))
@@ -94,19 +97,33 @@ export const FavoritesPage: React.FC<FavoritesPageProps> = ({
       </div>
 
       {favoriteIcons.length > 0 ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {favoriteIcons.map(icon => (
-            <IconCard
-              key={icon.slug}
-              icon={icon}
-              isFavorite={true}
-              onToggleFavorite={onToggleFavorite}
-              onSelectIcon={onSelectIcon}
-              onQuickCopy={onQuickCopy}
-              onQuickDownload={onQuickDownload}
-            />
-          ))}
-        </div>
+        favoriteIcons.length > 24 ? (
+          <VirtualizedIconGrid
+            icons={favoriteIcons}
+            favorites={favorites}
+            onToggleFavorite={onToggleFavorite}
+            onSelectIcon={onSelectIcon}
+            onQuickCopy={onQuickCopy}
+            onQuickDownload={onQuickDownload}
+            globalAnimated={false}
+            reducedMotion={reducedMotion}
+          />
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {favoriteIcons.map(icon => (
+              <IconCard
+                key={icon.slug}
+                icon={icon}
+                isFavorite={true}
+                onToggleFavorite={onToggleFavorite}
+                onSelectIcon={onSelectIcon}
+                onQuickCopy={onQuickCopy}
+                onQuickDownload={onQuickDownload}
+                globalAnimated={!reducedMotion}
+              />
+            ))}
+          </div>
+        )
       ) : (
         <div className="space-y-12">
           {/* Main Empty State Banner */}

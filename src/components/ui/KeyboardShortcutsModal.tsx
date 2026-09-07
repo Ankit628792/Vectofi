@@ -17,6 +17,7 @@ export const KeyboardShortcutsModal: React.FC<KeyboardShortcutsModalProps> = ({
     { key: 'Esc', desc: 'Close open modal, preview, or command palette' },
     { key: 'C', desc: 'Copy current icon SVG code to clipboard' },
     { key: 'D', desc: 'Download current icon SVG file' },
+    { key: 'M', desc: 'Toggle reduced motion (disable/enable animations)' },
     { key: '←  →', desc: 'Navigate to previous / next icon in laboratory' },
     { key: '?', desc: 'Open this keyboard shortcuts cheat sheet' },
   ];

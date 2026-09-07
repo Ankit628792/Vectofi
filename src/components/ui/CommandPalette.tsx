@@ -10,6 +10,8 @@ interface CommandPaletteProps {
   onNavigate: (route: string) => void;
   onToggleDarkMode: () => void;
   darkMode: boolean;
+  reducedMotion?: boolean;
+  onToggleReducedMotion?: () => void;
 }
 
 export const CommandPalette: React.FC<CommandPaletteProps> = ({
@@ -20,6 +22,8 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
   onNavigate,
   onToggleDarkMode,
   darkMode,
+  reducedMotion = false,
+  onToggleReducedMotion,
 }) => {
   const [query, setQuery] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -42,6 +46,19 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
     { id: 'favorites', label: 'View Saved Favorites', action: () => onNavigate('/favorites'), category: 'Navigation', iconSymbol: '♡' },
     { id: 'docs', label: 'Documentation & Guide', action: () => onNavigate('/docs'), category: 'Navigation', iconSymbol: '<>' },
     { id: 'theme', label: darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode', action: onToggleDarkMode, category: 'Preferences', iconSymbol: '☼' },
+    ...(onToggleReducedMotion
+      ? [
+          {
+            id: 'reduced-motion',
+            label: reducedMotion
+              ? 'Restore Animations (Disable Reduced Motion)'
+              : 'Enable Reduced Motion (Disable All Keyframe Animations)',
+            action: onToggleReducedMotion,
+            category: 'Preferences',
+            iconSymbol: reducedMotion ? '▶' : '⏸',
+          },
+        ]
+      : []),
   ];
 
   // Matching icons

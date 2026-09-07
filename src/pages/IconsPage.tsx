@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconItem, FilterState } from '../types';
-import { IconCard } from '../components/icons/IconCard';
 import { FilterBar } from '../components/icons/FilterBar';
 import { EmptyState } from '../components/ui/EmptyState';
 import { VectorGrid } from '../components/vectors/VectorGrid';
+import { VirtualizedIconGrid } from '../components/icons/VirtualizedIconGrid';
 
 interface IconsPageProps {
   icons: IconItem[];
@@ -17,6 +17,8 @@ interface IconsPageProps {
   globalAnimated: boolean;
   onToggleGlobalAnimated: () => void;
   onResetFilters: () => void;
+  reducedMotion?: boolean;
+  onToggleReducedMotion?: () => void;
   title?: string;
   subtitle?: string;
 }
@@ -33,6 +35,8 @@ export const IconsPage: React.FC<IconsPageProps> = ({
   globalAnimated,
   onToggleGlobalAnimated,
   onResetFilters,
+  reducedMotion = false,
+  onToggleReducedMotion,
   title = 'SVG Icon Gallery',
   subtitle = 'Browse, customize, and export 110+ production-ready vector icons with motion and framework bindings.',
 }) => {
@@ -105,9 +109,16 @@ export const IconsPage: React.FC<IconsPageProps> = ({
         </div>
 
         {/* Technical Layout Precision Indicator */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 self-start sm:self-auto text-xs font-mono text-blue-400">
-          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-          <span>Precision Magnet Grid Active</span>
+        <div className="flex flex-wrap items-center gap-2 self-start sm:self-auto">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400">
+            <span className={`w-2 h-2 rounded-full ${reducedMotion ? 'bg-amber-400' : 'bg-cyan-400 animate-pulse'}`} />
+            <span>Virtualized Engine Active</span>
+          </div>
+          {reducedMotion && (
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-xs font-mono text-amber-300">
+              <span>⏸ Reduced Motion</span>
+            </div>
+          )}
         </div>
       </div>
 
@@ -136,7 +147,7 @@ export const IconsPage: React.FC<IconsPageProps> = ({
               crosshairs={true}
               dots={true}
               opacity={0.12}
-              interactive={true}
+              interactive={!reducedMotion}
               magnetPoints={true}
               snapRadius={90}
               showCoordinates={true}
@@ -144,19 +155,17 @@ export const IconsPage: React.FC<IconsPageProps> = ({
             />
           </div>
 
-          <div className="relative z-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
-            {sortedIcons.map(icon => (
-              <IconCard
-                key={icon.slug}
-                icon={icon}
-                isFavorite={favorites.includes(icon.slug)}
-                onToggleFavorite={onToggleFavorite}
-                onSelectIcon={onSelectIcon}
-                onQuickCopy={onQuickCopy}
-                onQuickDownload={onQuickDownload}
-                globalAnimated={globalAnimated}
-              />
-            ))}
+          <div className="relative z-10">
+            <VirtualizedIconGrid
+              icons={sortedIcons}
+              favorites={favorites}
+              onToggleFavorite={onToggleFavorite}
+              onSelectIcon={onSelectIcon}
+              onQuickCopy={onQuickCopy}
+              onQuickDownload={onQuickDownload}
+              globalAnimated={globalAnimated}
+              reducedMotion={reducedMotion}
+            />
           </div>
         </div>
       ) : (

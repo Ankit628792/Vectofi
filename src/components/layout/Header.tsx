@@ -151,27 +151,38 @@ export const Header: React.FC<HeaderProps> = ({
             )}
           </button>
 
-          {/* Reduced Motion Toggle Button (hidden on extra small phones, accessible in mobile drawer) */}
+          {/* Global Reduced Motion Toggle Button */}
           <button
             type="button"
             onClick={onToggleReducedMotion}
-            className={`hidden sm:flex min-w-[38px] min-h-[38px] p-2 rounded-xl border transition-colors items-center justify-center ${
+            className={`hidden sm:flex min-w-[38px] min-h-[38px] px-2.5 py-1.5 rounded-xl border transition-all items-center gap-1.5 cursor-pointer select-none ${
               reducedMotion
-                ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
-                : 'bg-white/5 border-white/10 text-white/70 hover:text-white hover:bg-white/10'
+                ? 'bg-amber-500/20 text-amber-300 border-amber-500/50 shadow-sm shadow-amber-500/10'
+                : 'bg-white/5 border-white/10 text-white/70 hover:text-white hover:bg-white/10 hover:border-white/20'
             }`}
-            title={reducedMotion ? 'Animations Paused (Click to resume)' : 'Pause Animations (Reduced Motion)'}
-            aria-label="Toggle Reduced Motion"
+            title={
+              reducedMotion
+                ? 'Reduced motion is active (All CSS & SVG animations disabled) — Press M to resume'
+                : 'Animations active — Click or press M to disable animations (Reduced Motion)'
+            }
+            aria-label={reducedMotion ? 'Disable reduced motion' : 'Enable reduced motion'}
+            aria-pressed={reducedMotion}
           >
             {reducedMotion ? (
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="6" y="4" width="4" height="16" />
-                <rect x="14" y="4" width="4" height="16" />
-              </svg>
+              <>
+                <svg className="w-3.5 h-3.5 text-amber-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <rect x="6" y="4" width="4" height="16" rx="1" />
+                  <rect x="14" y="4" width="4" height="16" rx="1" />
+                </svg>
+                <span className="hidden lg:inline text-[11px] font-mono font-medium tracking-tight">Motion: Off</span>
+              </>
             ) : (
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <polygon points="5 3 19 12 5 21 5 3" />
-              </svg>
+              <>
+                <svg className="w-3.5 h-3.5 text-blue-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+                <span className="hidden lg:inline text-[11px] font-mono text-white/70 tracking-tight">Motion: On</span>
+              </>
             )}
           </button>
 
@@ -289,11 +300,13 @@ export const Header: React.FC<HeaderProps> = ({
               }}
               className={`px-2 py-2 rounded-xl text-xs font-mono border transition-colors flex items-center justify-center gap-1 min-h-[44px] cursor-pointer ${
                 reducedMotion
-                  ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
-                  : 'bg-white/5 border-white/10 text-white/60 hover:text-white'
+                  ? 'bg-amber-500/20 text-amber-300 border-amber-500/40 font-semibold'
+                  : 'bg-white/5 border-white/10 text-white/70 hover:text-white'
               }`}
+              aria-label="Toggle Reduced Motion"
+              aria-pressed={reducedMotion}
             >
-              <span>{reducedMotion ? 'Play' : 'Pause'}</span>
+              <span>{reducedMotion ? '⏸ Motion: Off' : '▶ Motion: On'}</span>
             </button>
 
             <button

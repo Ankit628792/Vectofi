@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { IconItem, FilterState, CollectionItem, ToastMessage } from './types';
 import { ICONS } from './data/icons';
 import { Header } from './components/layout/Header';
@@ -117,10 +117,16 @@ export default function App() {
     }
   });
 
-  // Reduced Motion
+  // Global Reduced Motion Setting (persists in localStorage)
   const [reducedMotion, setReducedMotion] = useState<boolean>(() => {
     try {
-      return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const saved = localStorage.getItem('vectofi_reduced_motion');
+      if (saved !== null) {
+        return saved === 'true';
+      }
+      return typeof window !== 'undefined'
+        ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        : false;
     } catch {
       return false;
     }
@@ -148,6 +154,23 @@ export default function App() {
     }
     localStorage.setItem('vectofi_theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
+
+  // Apply reduced motion class to root html element and sync to localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem('vectofi_reduced_motion', String(reducedMotion));
+    } catch {
+      // ignore
+    }
+
+    if (reducedMotion) {
+      document.documentElement.classList.add('reduced-motion');
+      document.documentElement.setAttribute('data-reduced-motion', 'true');
+    } else {
+      document.documentElement.classList.remove('reduced-motion');
+      document.documentElement.removeAttribute('data-reduced-motion');
+    }
+  }, [reducedMotion]);
 
   // Persist favorites
   useEffect(() => {
@@ -190,6 +213,36 @@ export default function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
+  const showToast = useCallback(
+    (
+      title: string,
+      message?: string,
+      type: 'success' | 'favorite' | 'download' = 'success'
+    ) => {
+      const id = Math.random().toString(36).substring(2, 9);
+      setToasts(prev => [...prev, { id, title, message, type }]);
+    },
+    []
+  );
+
+  const dismissToast = useCallback((id: string) => {
+    setToasts(prev => prev.filter(t => t.id !== id));
+  }, []);
+
+  const toggleReducedMotion = useCallback(() => {
+    setReducedMotion(prev => {
+      const next = !prev;
+      showToast(
+        next ? 'Reduced Motion Enabled' : 'Standard Motion Active',
+        next
+          ? 'CSS keyframes and SVG animations paused.'
+          : 'CSS animations and keyframes resumed.',
+        'success'
+      );
+      return next;
+    });
+  }, [showToast]);
+
   // Global Keyboard Shortcuts
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -204,25 +257,15 @@ export default function App() {
       } else if (!isInput && e.key === '?') {
         e.preventDefault();
         setShortcutsModalOpen(prev => !prev);
+      } else if (!isInput && (e.key === 'm' || e.key === 'M') && !e.metaKey && !e.ctrlKey) {
+        e.preventDefault();
+        toggleReducedMotion();
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  const showToast = (
-    title: string,
-    message?: string,
-    type: 'success' | 'favorite' | 'download' = 'success'
-  ) => {
-    const id = Math.random().toString(36).substring(2, 9);
-    setToasts(prev => [...prev, { id, title, message, type }]);
-  };
-
-  const dismissToast = (id: string) => {
-    setToasts(prev => prev.filter(t => t.id !== id));
-  };
+  }, [toggleReducedMotion]);
 
   const navigateTo = (route: string) => {
     window.location.hash = route;
@@ -334,13 +377,7 @@ export default function App() {
         darkMode={darkMode}
         onToggleDarkMode={() => setDarkMode(!darkMode)}
         reducedMotion={reducedMotion}
-        onToggleReducedMotion={() => {
-          setReducedMotion(!reducedMotion);
-          showToast(
-            reducedMotion ? 'Animations enabled' : 'Reduced motion enabled',
-            reducedMotion ? 'Motion effects resumed' : 'Vector animations paused'
-          );
-        }}
+        onToggleReducedMotion={toggleReducedMotion}
         onOpenShortcuts={() => setShortcutsModalOpen(true)}
       />
 
@@ -376,6 +413,8 @@ export default function App() {
               globalAnimated={globalAnimated}
               onToggleGlobalAnimated={() => setGlobalAnimated(!globalAnimated)}
               onResetFilters={resetFilters}
+              reducedMotion={reducedMotion}
+              onToggleReducedMotion={toggleReducedMotion}
               title="All SVG Icons"
               subtitle="Explore 110+ precision vector icons across 14 functional categories."
             />
@@ -394,6 +433,8 @@ export default function App() {
               globalAnimated={globalAnimated}
               onToggleGlobalAnimated={() => setGlobalAnimated(!globalAnimated)}
               onResetFilters={resetFilters}
+              reducedMotion={reducedMotion}
+              onToggleReducedMotion={toggleReducedMotion}
               title="Animated SVG Icons"
               subtitle="Self-contained animated vector icons powered by encapsulated CSS keyframes."
             />
@@ -437,6 +478,7 @@ export default function App() {
               onClearFavorites={() => setFavorites([])}
               onShowToast={showToast}
               onNavigate={navigateTo}
+              reducedMotion={reducedMotion}
             />
           )}
 
@@ -486,6 +528,8 @@ export default function App() {
         onNavigate={navigateTo}
         onToggleDarkMode={() => setDarkMode(!darkMode)}
         darkMode={darkMode}
+        reducedMotion={reducedMotion}
+        onToggleReducedMotion={toggleReducedMotion}
       />
 
       {/* Keyboard Shortcuts Cheat Sheet */}
