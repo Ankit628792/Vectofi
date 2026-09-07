@@ -19,6 +19,7 @@ import { CommandPalette } from './components/ui/CommandPalette';
 import { KeyboardShortcutsModal } from './components/ui/KeyboardShortcutsModal';
 import { ToastContainer } from './components/ui/Toast';
 import { generateSvgCode, downloadSvgFile } from './utils/svgExport';
+import { useSEO } from './hooks/useSEO';
 
 // Initial curated collections
 const INITIAL_COLLECTIONS: CollectionItem[] = [
@@ -190,15 +191,31 @@ export default function App() {
     }
   }, [collections]);
 
-  // Handle URL hash routing
+  // Handle URL hash routing and deep-linking to icons
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '') || '/';
       const [path, queryString] = hash.split('?');
-      setCurrentRoute(path || '/');
+
+      // Check if hash points directly to an individual icon (e.g. #/icon/arrow-right)
+      if (path.startsWith('/icon/')) {
+        const slug = path.replace('/icon/', '').trim();
+        const foundIcon = ICONS.find(i => i.slug === slug || i.id === slug);
+        if (foundIcon) {
+          setSelectedIcon(foundIcon);
+          return;
+        }
+      }
 
       if (queryString) {
         const params = new URLSearchParams(queryString);
+        const iconSlug = params.get('icon');
+        if (iconSlug) {
+          const foundIcon = ICONS.find(i => i.slug === iconSlug || i.id === iconSlug);
+          if (foundIcon) {
+            setSelectedIcon(foundIcon);
+          }
+        }
         const q = params.get('q');
         const cat = params.get('category');
         const anim = params.get('anim');
@@ -206,12 +223,22 @@ export default function App() {
         if (cat !== null) setFilters(f => ({ ...f, category: cat as any }));
         if (anim !== null) setFilters(f => ({ ...f, hasAnimation: anim as any }));
       }
+
+      setCurrentRoute(path || '/');
     };
 
     window.addEventListener('hashchange', handleHashChange);
     handleHashChange();
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
+
+  // Dynamically update document title, meta tags, Open Graph, Twitter, and JSON-LD schema (Phase 19 SEO)
+  useSEO({
+    route: currentRoute,
+    selectedIcon,
+    categoryId: filters.category,
+    query: filters.query,
+  });
 
   const showToast = useCallback(
     (
@@ -272,6 +299,18 @@ export default function App() {
     setCurrentRoute(route.split('?')[0]);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const handleOpenIcon = useCallback((icon: IconItem) => {
+    setSelectedIcon(icon);
+    window.location.hash = `/icon/${icon.slug}`;
+  }, []);
+
+  const handleCloseIcon = useCallback(() => {
+    setSelectedIcon(null);
+    if (window.location.hash.startsWith('#/icon/')) {
+      window.location.hash = currentRoute === '/' ? '/' : currentRoute;
+    }
+  }, [currentRoute]);
 
   const handleToggleFavorite = (icon: IconItem) => {
     setFavorites(prev => {
@@ -389,7 +428,7 @@ export default function App() {
               icons={ICONS}
               favorites={favorites}
               onToggleFavorite={handleToggleFavorite}
-              onSelectIcon={setSelectedIcon}
+              onSelectIcon={handleOpenIcon}
               onQuickCopy={handleQuickCopy}
               onQuickDownload={handleQuickDownload}
               onNavigate={navigateTo}
@@ -407,7 +446,7 @@ export default function App() {
               onFilterChange={setFilters}
               favorites={favorites}
               onToggleFavorite={handleToggleFavorite}
-              onSelectIcon={setSelectedIcon}
+              onSelectIcon={handleOpenIcon}
               onQuickCopy={handleQuickCopy}
               onQuickDownload={handleQuickDownload}
               globalAnimated={globalAnimated}
@@ -427,7 +466,7 @@ export default function App() {
               onFilterChange={setFilters}
               favorites={favorites}
               onToggleFavorite={handleToggleFavorite}
-              onSelectIcon={setSelectedIcon}
+              onSelectIcon={handleOpenIcon}
               onQuickCopy={handleQuickCopy}
               onQuickDownload={handleQuickDownload}
               globalAnimated={globalAnimated}
@@ -447,7 +486,7 @@ export default function App() {
                 setFilters(f => ({ ...f, category: catId as any }));
                 navigateTo('/icons');
               }}
-              onSelectIcon={setSelectedIcon}
+              onSelectIcon={handleOpenIcon}
             />
           )}
 
@@ -460,7 +499,7 @@ export default function App() {
               onRemoveFromCollection={handleRemoveFromCollection}
               favorites={favorites}
               onToggleFavorite={handleToggleFavorite}
-              onSelectIcon={setSelectedIcon}
+              onSelectIcon={handleOpenIcon}
               onQuickCopy={handleQuickCopy}
               onQuickDownload={handleQuickDownload}
               onShowToast={showToast}
@@ -472,7 +511,7 @@ export default function App() {
               icons={ICONS}
               favorites={favorites}
               onToggleFavorite={handleToggleFavorite}
-              onSelectIcon={setSelectedIcon}
+              onSelectIcon={handleOpenIcon}
               onQuickCopy={handleQuickCopy}
               onQuickDownload={handleQuickDownload}
               onClearFavorites={() => setFavorites([])}
@@ -509,8 +548,8 @@ export default function App() {
           icon={selectedIcon}
           allIcons={ICONS}
           isOpen={Boolean(selectedIcon)}
-          onClose={() => setSelectedIcon(null)}
-          onSelectIcon={setSelectedIcon}
+          onClose={handleCloseIcon}
+          onSelectIcon={handleOpenIcon}
           isFavorite={favorites.includes(selectedIcon.slug)}
           onToggleFavorite={handleToggleFavorite}
           onShowToast={showToast}
@@ -524,7 +563,7 @@ export default function App() {
         isOpen={commandPaletteOpen}
         onClose={() => setCommandPaletteOpen(false)}
         icons={ICONS}
-        onSelectIcon={setSelectedIcon}
+        onSelectIcon={handleOpenIcon}
         onNavigate={navigateTo}
         onToggleDarkMode={() => setDarkMode(!darkMode)}
         darkMode={darkMode}

@@ -1,0 +1,1468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://vectofi.dev</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icons</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/animated</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/categories</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/collections</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/favorites</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/docs</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/license</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icons?category=arrows</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icons?category=navigation</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icons?category=interface</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icons?category=communication</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icons?category=social</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icons?category=files</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icons?category=media</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icons?category=commerce</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icons?category=security</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icons?category=users</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icons?category=weather</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icons?category=devices</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icons?category=development</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icons?category=business</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/arrow-right</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/arrow-right.svg</image:loc>
+      <image:title>Arrow Right SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Right (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/arrow-left</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/arrow-left.svg</image:loc>
+      <image:title>Arrow Left SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Left (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/arrow-up</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/arrow-up.svg</image:loc>
+      <image:title>Arrow Up SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Up (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/arrow-down</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/arrow-down.svg</image:loc>
+      <image:title>Arrow Down SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Down (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/arrow-up-right</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/arrow-up-right.svg</image:loc>
+      <image:title>Arrow Up Right SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Up Right (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/arrow-down-left</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/arrow-down-left.svg</image:loc>
+      <image:title>Arrow Down Left SVG Icon</image:title>
+      <image:caption>Free static vector icon for Arrow Down Left (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/arrow-trending-up</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/arrow-trending-up.svg</image:loc>
+      <image:title>Arrow Trending Up SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Trending Up (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/arrow-trending-down</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/arrow-trending-down.svg</image:loc>
+      <image:title>Arrow Trending Down SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Trending Down (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/arrow-refresh</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/arrow-refresh.svg</image:loc>
+      <image:title>Arrow Refresh SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Refresh (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/arrow-swap</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/arrow-swap.svg</image:loc>
+      <image:title>Arrow Swap SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Swap (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/arrow-circle-right</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/arrow-circle-right.svg</image:loc>
+      <image:title>Arrow Circle Right SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Circle Right (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/arrow-corner-up-right</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/arrow-corner-up-right.svg</image:loc>
+      <image:title>Arrow Corner Up Right SVG Icon</image:title>
+      <image:caption>Free static vector icon for Arrow Corner Up Right (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/compass</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/compass.svg</image:loc>
+      <image:title>Compass SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Compass (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/map-pin</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/map-pin.svg</image:loc>
+      <image:title>Map Pin SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Map Pin (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/route</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/route.svg</image:loc>
+      <image:title>Route SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Route (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/globe</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/globe.svg</image:loc>
+      <image:title>Globe SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Globe (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/crosshair</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/crosshair.svg</image:loc>
+      <image:title>Crosshair SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Crosshair (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/layers</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/layers.svg</image:loc>
+      <image:title>Layers SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Layers (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/navigation-pointer</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/navigation-pointer.svg</image:loc>
+      <image:title>Navigation Pointer SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Navigation Pointer (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/anchor</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/anchor.svg</image:loc>
+      <image:title>Anchor SVG Icon</image:title>
+      <image:caption>Free static vector icon for Anchor (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/layout-grid</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/layout-grid.svg</image:loc>
+      <image:title>Layout Grid SVG Icon</image:title>
+      <image:caption>Free static vector icon for Layout Grid (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/search</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/search.svg</image:loc>
+      <image:title>Search SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Search (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/settings</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/settings.svg</image:loc>
+      <image:title>Settings SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Settings (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/filter</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/filter.svg</image:loc>
+      <image:title>Filter SVG Icon</image:title>
+      <image:caption>Free static vector icon for Filter (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/check</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/check.svg</image:loc>
+      <image:title>Check SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Check (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/close-x</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/close-x.svg</image:loc>
+      <image:title>Close X SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Close X (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/plus</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/plus.svg</image:loc>
+      <image:title>Plus SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Plus (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/minus</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/minus.svg</image:loc>
+      <image:title>Minus SVG Icon</image:title>
+      <image:caption>Free static vector icon for Minus (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/trash-2</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/trash-2.svg</image:loc>
+      <image:title>Trash SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Trash (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/edit</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/edit.svg</image:loc>
+      <image:title>Edit SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Edit (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/toggle-right</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/toggle-right.svg</image:loc>
+      <image:title>Toggle Switch SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Toggle Switch (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/refresh-cw</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/refresh-cw.svg</image:loc>
+      <image:title>Refresh Counter-Clockwise SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Refresh Counter-Clockwise (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/mail</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/mail.svg</image:loc>
+      <image:title>Mail SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Mail (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/message-square</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/message-square.svg</image:loc>
+      <image:title>Message Square SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Message Square (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/send</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/send.svg</image:loc>
+      <image:title>Send SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Send (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/bell</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/bell.svg</image:loc>
+      <image:title>Bell Notification SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Bell Notification (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/phone</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/phone.svg</image:loc>
+      <image:title>Phone Call SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Phone Call (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/inbox</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/inbox.svg</image:loc>
+      <image:title>Inbox SVG Icon</image:title>
+      <image:caption>Free static vector icon for Inbox (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/message-circle</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/message-circle.svg</image:loc>
+      <image:title>Message Circle SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Message Circle (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/megaphone</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/megaphone.svg</image:loc>
+      <image:title>Megaphone SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Megaphone (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/heart</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/heart.svg</image:loc>
+      <image:title>Heart SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Heart (social category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/star</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/star.svg</image:loc>
+      <image:title>Star SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Star (social category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/thumbs-up</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/thumbs-up.svg</image:loc>
+      <image:title>Thumbs Up SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Thumbs Up (social category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/bookmark</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/bookmark.svg</image:loc>
+      <image:title>Bookmark SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Bookmark (social category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/share-2</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/share-2.svg</image:loc>
+      <image:title>Share SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Share (social category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/award</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/award.svg</image:loc>
+      <image:title>Award Badge SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Award Badge (social category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/sparkle</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/sparkle.svg</image:loc>
+      <image:title>Sparkle AI SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Sparkle AI (social category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/link</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/link.svg</image:loc>
+      <image:title>Hyperlink SVG Icon</image:title>
+      <image:caption>Free static vector icon for Hyperlink (social category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/file-text</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/file-text.svg</image:loc>
+      <image:title>File Document SVG Icon</image:title>
+      <image:caption>Free static vector icon for File Document (files category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/folder</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/folder.svg</image:loc>
+      <image:title>Folder SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Folder (files category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/folder-plus</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/folder-plus.svg</image:loc>
+      <image:title>Folder Plus SVG Icon</image:title>
+      <image:caption>Free static vector icon for Folder Plus (files category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/download</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/download.svg</image:loc>
+      <image:title>Download Cloud SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Download Cloud (files category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/upload</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/upload.svg</image:loc>
+      <image:title>Upload Cloud SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Upload Cloud (files category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/archive</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/archive.svg</image:loc>
+      <image:title>Archive Box SVG Icon</image:title>
+      <image:caption>Free static vector icon for Archive Box (files category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/paperclip</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/paperclip.svg</image:loc>
+      <image:title>Attachment Paperclip SVG Icon</image:title>
+      <image:caption>Free static vector icon for Attachment Paperclip (files category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/file-code</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/file-code.svg</image:loc>
+      <image:title>File Code SVG Icon</image:title>
+      <image:caption>Free animated vector icon for File Code (files category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/play</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/play.svg</image:loc>
+      <image:title>Play Video SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Play Video (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/pause</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/pause.svg</image:loc>
+      <image:title>Pause Video SVG Icon</image:title>
+      <image:caption>Free static vector icon for Pause Video (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/volume-2</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/volume-2.svg</image:loc>
+      <image:title>Volume Sound SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Volume Sound (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/mic</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/mic.svg</image:loc>
+      <image:title>Microphone SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Microphone (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/camera</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/camera.svg</image:loc>
+      <image:title>Camera Photo SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Camera Photo (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/video</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/video.svg</image:loc>
+      <image:title>Video Recorder SVG Icon</image:title>
+      <image:caption>Free static vector icon for Video Recorder (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/music</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/music.svg</image:loc>
+      <image:title>Musical Note SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Musical Note (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/sliders</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/sliders.svg</image:loc>
+      <image:title>Sliders Equalizer SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Sliders Equalizer (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/shopping-cart</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/shopping-cart.svg</image:loc>
+      <image:title>Shopping Cart SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Shopping Cart (commerce category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/shopping-bag</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/shopping-bag.svg</image:loc>
+      <image:title>Shopping Bag SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Shopping Bag (commerce category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/credit-card</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/credit-card.svg</image:loc>
+      <image:title>Credit Card SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Credit Card (commerce category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/tag</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/tag.svg</image:loc>
+      <image:title>Price Tag SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Price Tag (commerce category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/percent</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/percent.svg</image:loc>
+      <image:title>Percent Discount SVG Icon</image:title>
+      <image:caption>Free static vector icon for Percent Discount (commerce category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/dollar-sign</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/dollar-sign.svg</image:loc>
+      <image:title>Dollar Sign SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Dollar Sign (commerce category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/wallet</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/wallet.svg</image:loc>
+      <image:title>Wallet SVG Icon</image:title>
+      <image:caption>Free static vector icon for Wallet (commerce category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/package</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/package.svg</image:loc>
+      <image:title>Package Delivery SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Package Delivery (commerce category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/shield</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/shield.svg</image:loc>
+      <image:title>Shield Protection SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Shield Protection (security category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/shield-check</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/shield-check.svg</image:loc>
+      <image:title>Shield Verified SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Shield Verified (security category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/lock</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/lock.svg</image:loc>
+      <image:title>Lock Closed SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Lock Closed (security category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/unlock</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/unlock.svg</image:loc>
+      <image:title>Unlock Open SVG Icon</image:title>
+      <image:caption>Free static vector icon for Unlock Open (security category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/key</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/key.svg</image:loc>
+      <image:title>Key Token SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Key Token (security category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/eye</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/eye.svg</image:loc>
+      <image:title>Eye Visible SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Eye Visible (security category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/eye-off</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/eye-off.svg</image:loc>
+      <image:title>Eye Concealed SVG Icon</image:title>
+      <image:caption>Free static vector icon for Eye Concealed (security category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/fingerprint</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/fingerprint.svg</image:loc>
+      <image:title>Biometric Fingerprint SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Biometric Fingerprint (security category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/user</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/user.svg</image:loc>
+      <image:title>User Person SVG Icon</image:title>
+      <image:caption>Free animated vector icon for User Person (users category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/users</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/users.svg</image:loc>
+      <image:title>User Group SVG Icon</image:title>
+      <image:caption>Free animated vector icon for User Group (users category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/user-plus</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/user-plus.svg</image:loc>
+      <image:title>User Invite SVG Icon</image:title>
+      <image:caption>Free animated vector icon for User Invite (users category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/user-check</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/user-check.svg</image:loc>
+      <image:title>User Verified SVG Icon</image:title>
+      <image:caption>Free static vector icon for User Verified (users category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/user-x</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/user-x.svg</image:loc>
+      <image:title>User Blocked SVG Icon</image:title>
+      <image:caption>Free static vector icon for User Blocked (users category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/smile</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/smile.svg</image:loc>
+      <image:title>Smile Emoji SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Smile Emoji (users category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/badge-check</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/badge-check.svg</image:loc>
+      <image:title>Badge Check SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Badge Check (users category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/contact</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/contact.svg</image:loc>
+      <image:title>Contact Card SVG Icon</image:title>
+      <image:caption>Free static vector icon for Contact Card (users category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/sun</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/sun.svg</image:loc>
+      <image:title>Sun Bright SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Sun Bright (weather category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/moon</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/moon.svg</image:loc>
+      <image:title>Moon Night SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Moon Night (weather category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/cloud</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/cloud.svg</image:loc>
+      <image:title>Cloud SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Cloud (weather category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/cloud-rain</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/cloud-rain.svg</image:loc>
+      <image:title>Cloud Rain SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Cloud Rain (weather category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/cloud-lightning</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/cloud-lightning.svg</image:loc>
+      <image:title>Cloud Lightning SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Cloud Lightning (weather category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/wind</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/wind.svg</image:loc>
+      <image:title>Wind Breeze SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Wind Breeze (weather category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/droplet</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/droplet.svg</image:loc>
+      <image:title>Water Droplet SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Water Droplet (weather category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/snowflake</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/snowflake.svg</image:loc>
+      <image:title>Snowflake SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Snowflake (weather category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/laptop</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/laptop.svg</image:loc>
+      <image:title>Laptop Computer SVG Icon</image:title>
+      <image:caption>Free static vector icon for Laptop Computer (devices category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/smartphone</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/smartphone.svg</image:loc>
+      <image:title>Smartphone Mobile SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Smartphone Mobile (devices category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/monitor</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/monitor.svg</image:loc>
+      <image:title>Display Monitor SVG Icon</image:title>
+      <image:caption>Free static vector icon for Display Monitor (devices category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/cpu</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/cpu.svg</image:loc>
+      <image:title>CPU Processor SVG Icon</image:title>
+      <image:caption>Free animated vector icon for CPU Processor (devices category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/wifi</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/wifi.svg</image:loc>
+      <image:title>WiFi Signal SVG Icon</image:title>
+      <image:caption>Free animated vector icon for WiFi Signal (devices category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/battery-charging</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/battery-charging.svg</image:loc>
+      <image:title>Battery Charging SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Battery Charging (devices category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/hard-drive</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/hard-drive.svg</image:loc>
+      <image:title>Hard Drive SVG Icon</image:title>
+      <image:caption>Free static vector icon for Hard Drive (devices category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/tablet</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/tablet.svg</image:loc>
+      <image:title>Tablet iPad SVG Icon</image:title>
+      <image:caption>Free static vector icon for Tablet iPad (devices category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/code</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/code.svg</image:loc>
+      <image:title>Code Brackets SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Code Brackets (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/terminal</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/terminal.svg</image:loc>
+      <image:title>Terminal Console SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Terminal Console (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/git-branch</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/git-branch.svg</image:loc>
+      <image:title>Git Branch SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Git Branch (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/git-commit</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/git-commit.svg</image:loc>
+      <image:title>Git Commit SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Git Commit (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/git-pull-request</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/git-pull-request.svg</image:loc>
+      <image:title>Git Pull Request SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Git Pull Request (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/database</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/database.svg</image:loc>
+      <image:title>Database Storage SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Database Storage (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/bug</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/bug.svg</image:loc>
+      <image:title>Software Bug SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Software Bug (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/binary</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/binary.svg</image:loc>
+      <image:title>Binary Data SVG Icon</image:title>
+      <image:caption>Free static vector icon for Binary Data (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/api-endpoint</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/api-endpoint.svg</image:loc>
+      <image:title>API Endpoint SVG Icon</image:title>
+      <image:caption>Free animated vector icon for API Endpoint (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/briefcase</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/briefcase.svg</image:loc>
+      <image:title>Briefcase Portfolio SVG Icon</image:title>
+      <image:caption>Free static vector icon for Briefcase Portfolio (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/bar-chart</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/bar-chart.svg</image:loc>
+      <image:title>Bar Chart Analytics SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Bar Chart Analytics (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/target</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/target.svg</image:loc>
+      <image:title>Target Goal SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Target Goal (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/pie-chart</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/pie-chart.svg</image:loc>
+      <image:title>Pie Chart SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Pie Chart (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/calculator</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/calculator.svg</image:loc>
+      <image:title>Calculator Math SVG Icon</image:title>
+      <image:caption>Free static vector icon for Calculator Math (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/presentation</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/presentation.svg</image:loc>
+      <image:title>Presentation Pitch SVG Icon</image:title>
+      <image:caption>Free static vector icon for Presentation Pitch (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/calendar</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/calendar.svg</image:loc>
+      <image:title>Calendar Schedule SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Calendar Schedule (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vectofi.dev/#/icon/clock</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vectofi.dev/icons/clock.svg</image:loc>
+      <image:title>Clock Time SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Clock Time (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+</urlset>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="vectofi-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="50%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <linearGradient id="vectofi-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121212" />
+      <stop offset="100%" stop-color="#050505" />
+    </linearGradient>
+  </defs>
+  <!-- Background squircle container -->
+  <rect x="1.5" y="1.5" width="29" height="29" rx="8" fill="url(#vectofi-bg)" stroke="#27272a" stroke-width="1.2" />
+  
+  <!-- Precision vector path (stylized "V" with bezier curves) -->
+  <path d="M7 8.5 L16 23.5 L25 8.5" fill="none" stroke="url(#vectofi-grad)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Central anchor point and bezier node points -->
+  <circle cx="16" cy="23.5" r="2.2" fill="#38BDF8" stroke="#09090b" stroke-width="0.8" />
+  <circle cx="7" cy="8.5" r="1.8" fill="#60A5FA" stroke="#09090b" stroke-width="0.8" />
+  <circle cx="25" cy="8.5" r="1.8" fill="#22D3EE" stroke="#09090b" stroke-width="0.8" />
+  
+  <!-- Subtle center crosshair precision point -->
+  <circle cx="16" cy="14" r="1.2" fill="#FFFFFF" opacity="0.9" />
+</svg>
