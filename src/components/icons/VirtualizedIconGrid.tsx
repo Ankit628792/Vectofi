@@ -127,13 +127,13 @@ export const VirtualizedIconGrid: React.FC<VirtualizedIconGridProps> = ({
   // Determine column count and row height based on width
   const { columns, rowHeight } = useMemo(() => {
     if (containerWidth < 540) {
-      return { columns: 2, rowHeight: 180 };
+      return { columns: 2, rowHeight: 185 };
     } else if (containerWidth < 768) {
-      return { columns: 3, rowHeight: 190 };
+      return { columns: 3, rowHeight: 195 };
     } else if (containerWidth < 1024) {
-      return { columns: 4, rowHeight: 200 };
+      return { columns: 4, rowHeight: 205 };
     } else {
-      return { columns: 6, rowHeight: 205 };
+      return { columns: 6, rowHeight: 210 };
     }
   }, [containerWidth]);
 

@@ -52,9 +52,9 @@ export const KeyboardShortcutsModal: React.FC<KeyboardShortcutsModalProps> = ({
 
         <div className="py-4 space-y-3">
           {shortcuts.map(s => (
-            <div key={s.key} className="flex items-center justify-between text-xs sm:text-sm">
-              <span className="text-white/60">{s.desc}</span>
-              <kbd className="px-2 py-1 font-mono text-xs font-semibold rounded-md bg-white/5 border border-white/10 text-white/90 shadow-2xs">
+            <div key={s.key} className="flex items-center justify-between text-xs sm:text-sm gap-3">
+              <span className="text-white/60 min-w-0">{s.desc}</span>
+              <kbd className="px-2 py-1 font-mono text-xs font-semibold rounded-md bg-white/5 border border-white/10 text-white/90 shadow-2xs whitespace-nowrap shrink-0">
                 {s.key}
               </kbd>
             </div>
@@ -65,7 +65,7 @@ export const KeyboardShortcutsModal: React.FC<KeyboardShortcutsModalProps> = ({
           <button
             type="button"
             onClick={onClose}
-            className="w-full py-2.5 rounded-xl text-xs font-mono font-medium bg-white/5 hover:bg-white/10 border border-white/10 text-white transition-colors cursor-pointer"
+            className="w-full py-2.5 rounded-xl text-xs font-mono font-medium bg-white/5 hover:bg-white/10 border border-white/10 text-white transition-colors cursor-pointer whitespace-nowrap"
           >
             Got it, close
           </button>

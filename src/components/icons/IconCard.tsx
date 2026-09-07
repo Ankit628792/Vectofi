@@ -31,7 +31,7 @@ export const IconCard: React.FC<IconCardProps> = ({
       onClick={() => onSelectIcon(icon)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group relative flex flex-col justify-between p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-200 cursor-pointer select-none overflow-hidden"
+      className="group relative flex flex-col justify-between p-3 sm:p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-200 cursor-pointer select-none overflow-hidden h-full"
       role="button"
       tabIndex={0}
       onKeyDown={e => {
@@ -43,9 +43,9 @@ export const IconCard: React.FC<IconCardProps> = ({
       aria-label={`View ${icon.name} icon details`}
     >
       {/* Top action bar */}
-      <div className="flex items-center justify-between w-full mb-3 min-h-6">
+      <div className="flex items-center justify-between w-full mb-1 min-h-[22px] gap-1 shrink-0">
         {/* Style / Category tag */}
-        <span className="text-[10px] font-mono uppercase tracking-wider text-white/40 group-hover:text-white/60 transition-colors">
+        <span className="text-[10px] font-mono uppercase tracking-wider text-white/40 group-hover:text-white/60 transition-colors truncate max-w-[90px] sm:max-w-[120px] whitespace-nowrap leading-none">
           {icon.category}
         </span>
 
@@ -56,7 +56,7 @@ export const IconCard: React.FC<IconCardProps> = ({
             e.stopPropagation();
             onToggleFavorite(icon);
           }}
-          className={`p-1.5 rounded-lg transition-all ${
+          className={`p-1.5 rounded-lg transition-all shrink-0 ${
             isFavorite
               ? 'text-rose-500 bg-rose-500/20 opacity-100'
               : 'text-white/40 hover:text-rose-400 hover:bg-white/10 opacity-70 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100'
@@ -77,14 +77,14 @@ export const IconCard: React.FC<IconCardProps> = ({
       </div>
 
       {/* Main Icon Stage */}
-      <div className="relative py-4 sm:py-6 flex items-center justify-center text-white/80 group-hover:text-blue-400 transition-colors">
+      <div className="relative flex-1 py-1.5 sm:py-2.5 flex items-center justify-center text-white/80 group-hover:text-blue-400 transition-colors min-h-[44px]">
         {/* Subtle grid pattern background on hover */}
         <div className="absolute inset-0 bg-vector-grid-blue opacity-0 group-hover:opacity-60 transition-opacity rounded-xl pointer-events-none" />
 
         <div className="relative transform transition-transform duration-200 group-hover:scale-110">
           <AnimatedIconRenderer
             icon={icon}
-            size={34}
+            size={32}
             strokeWidth={1.8}
             animated={shouldAnimate}
           />
@@ -92,19 +92,19 @@ export const IconCard: React.FC<IconCardProps> = ({
       </div>
 
       {/* Card Footer: Name & Action Buttons */}
-      <div className="mt-2.5 pt-2.5 border-t border-white/5 flex items-center justify-between">
-        <div className="min-w-0 pr-1.5 flex-1">
-          <p className="text-xs font-medium text-white/90 truncate group-hover:text-white transition-colors">
+      <div className="mt-1.5 pt-2 border-t border-white/5 flex items-center justify-between shrink-0">
+        <div className="min-w-0 pr-1 flex-1">
+          <p className="text-xs font-medium text-white/90 truncate group-hover:text-white transition-colors leading-tight">
             {icon.name}
           </p>
-          <div className="flex items-center gap-1.5 mt-0.5">
+          <div className="flex items-center gap-1.5 mt-1">
             {icon.hasAnimation ? (
-              <span className="inline-flex items-center gap-1 text-[10px] font-mono text-blue-400 font-medium">
-                <span className="w-1 h-1 rounded-full bg-blue-500 animate-ping" />
+              <span className="inline-flex items-center gap-1 text-[10px] font-mono text-blue-400 font-medium whitespace-nowrap leading-tight">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-ping shrink-0" />
                 morph
               </span>
             ) : (
-              <span className="text-[10px] font-mono text-white/40">
+              <span className="text-[10px] font-mono text-white/40 whitespace-nowrap leading-tight">
                 static
               </span>
             )}

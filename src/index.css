@@ -61,36 +61,69 @@ html:not(.dark) {
 }
 
 /* ==========================================================================
-   CUSTOM SCROLLBAR SYSTEM
+   SCROLLBAR SYSTEM: Hide all scrollbars EXCEPT the root window/body scrollbar
    ========================================================================== */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+
+/* 1. Hide scrollbars universally on all child elements, containers, modals, code blocks */
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--scrollbar-track);
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb);
-  border-radius: 9999px;
-  border: 2px solid var(--scrollbar-track);
+/* 2. Re-enable and style the scrollbar exclusively for html and body */
+html,
+body {
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track) !important;
+  -ms-overflow-style: auto !important;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: block !important;
+  width: 8px !important;
+  height: 8px !important;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: var(--scrollbar-track) !important;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb) !important;
+  border-radius: 9999px !important;
+  border: 2px solid var(--scrollbar-track) !important;
   transition: background-color 0.2s ease;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover);
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover) !important;
 }
 
-::-webkit-scrollbar-corner {
-  background: var(--scrollbar-track);
+html::-webkit-scrollbar-corner,
+body::-webkit-scrollbar-corner {
+  background: var(--scrollbar-track) !important;
 }
 
-/* Firefox scrollbar */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+/* Explicit scrollbar-none utility */
+.scrollbar-none {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 body {

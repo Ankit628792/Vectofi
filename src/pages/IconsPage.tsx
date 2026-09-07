@@ -110,12 +110,12 @@ export const IconsPage: React.FC<IconsPageProps> = ({
 
         {/* Technical Layout Precision Indicator */}
         <div className="flex flex-wrap items-center gap-2 self-start sm:self-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400">
-            <span className={`w-2 h-2 rounded-full ${reducedMotion ? 'bg-amber-400' : 'bg-cyan-400 animate-pulse'}`} />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 whitespace-nowrap">
+            <span className={`w-2 h-2 rounded-full shrink-0 ${reducedMotion ? 'bg-amber-400' : 'bg-cyan-400 animate-pulse'}`} />
             <span>Virtualized Engine Active</span>
           </div>
           {reducedMotion && (
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-xs font-mono text-amber-300">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-xs font-mono text-amber-300 whitespace-nowrap">
               <span>⏸ Reduced Motion</span>
             </div>
           )}

@@ -342,6 +342,69 @@ export const IconDetailLaboratory: React.FC<IconDetailLaboratoryProps> = ({
                   </div>
                 </div>
               )}
+
+              {/* Range Slider Input in Preview Area (16px to 96px) */}
+              <div
+                id="laboratory-preview-size-panel"
+                className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 px-3.5 py-2.5 rounded-xl bg-[#0c0c10] border border-white/10 shadow-xs"
+              >
+                <div className="flex items-center justify-between sm:justify-start gap-2">
+                  <label
+                    htmlFor="preview-icon-size-slider"
+                    className="text-xs font-mono font-medium text-white/70 flex items-center gap-1.5 cursor-pointer"
+                  >
+                    <svg className="w-3.5 h-3.5 text-blue-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <polyline points="15 3 21 3 21 9" />
+                      <polyline points="9 21 3 21 3 15" />
+                      <line x1="21" y1="3" x2="14" y2="10" />
+                      <line x1="3" y1="21" x2="10" y2="14" />
+                    </svg>
+                    <span>Icon Size:</span>
+                  </label>
+                  <span
+                    id="preview-icon-size-badge"
+                    className="text-xs font-mono font-bold text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20 tabular-nums"
+                  >
+                    {settings.size}px
+                  </span>
+                </div>
+
+                <div className="flex-1 flex items-center gap-2 max-w-sm">
+                  <span className="text-[10px] font-mono text-white/40 select-none shrink-0">16px</span>
+                  <input
+                    id="preview-icon-size-slider"
+                    type="range"
+                    min="16"
+                    max="96"
+                    step="1"
+                    value={settings.size}
+                    onChange={e => setSettings(s => ({ ...s, size: Number(e.target.value) }))}
+                    className="w-full h-1.5 bg-white/10 rounded-lg appearance-none cursor-pointer accent-blue-500 hover:accent-blue-400 transition-all focus:outline-hidden focus:ring-2 focus:ring-blue-500/40"
+                    aria-label="Adjust icon size from 16px to 96px"
+                  />
+                  <span className="text-[10px] font-mono text-white/40 select-none shrink-0">96px</span>
+                </div>
+
+                {/* Quick Presets within 16px - 96px range */}
+                <div className="flex items-center justify-end gap-1 shrink-0">
+                  {[16, 24, 32, 48, 64, 96].map(preset => (
+                    <button
+                      key={preset}
+                      id={`preview-size-preset-${preset}`}
+                      type="button"
+                      onClick={() => setSettings(s => ({ ...s, size: preset }))}
+                      className={`px-2 py-0.5 text-[10px] font-mono rounded-md transition-all cursor-pointer border ${
+                        settings.size === preset
+                          ? 'bg-blue-600 text-white font-bold border-blue-500 shadow-xs'
+                          : 'bg-white/5 border-white/10 text-white/50 hover:bg-white/10 hover:text-white'
+                      }`}
+                      title={`Set size to ${preset}px`}
+                    >
+                      {preset}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Stage Controls: Background, Color, Size, Stroke */}
@@ -395,12 +458,12 @@ export const IconDetailLaboratory: React.FC<IconDetailLaboratoryProps> = ({
                 </div>
               </div>
 
-              {/* Size Slider */}
+              {/* Size Slider (16px to 96px) */}
               <div className="flex flex-col sm:grid sm:grid-cols-12 gap-1.5 sm:gap-3 items-stretch sm:items-center text-xs">
                 <div className="sm:col-span-4 flex items-center justify-between font-mono text-white/50">
                   <span>Size ({settings.size}px):</span>
                   <div className="flex sm:hidden items-center gap-1">
-                    {[24, 48, 64].map(preset => (
+                    {[16, 24, 32, 48, 64, 96].map(preset => (
                       <button
                         key={preset}
                         type="button"
@@ -414,23 +477,28 @@ export const IconDetailLaboratory: React.FC<IconDetailLaboratoryProps> = ({
                 </div>
                 <div className="sm:col-span-5 flex items-center">
                   <input
+                    id="laboratory-stage-size-slider"
                     type="range"
                     min="16"
-                    max="128"
-                    step="4"
+                    max="96"
+                    step="1"
                     value={settings.size}
                     onChange={e => setSettings(s => ({ ...s, size: Number(e.target.value) }))}
-                    className="w-full accent-blue-500 min-h-[24px]"
-                    aria-label="Icon size slider"
+                    className="w-full accent-blue-500 min-h-[24px] cursor-pointer"
+                    aria-label="Icon size slider (16px to 96px)"
                   />
                 </div>
                 <div className="hidden sm:flex col-span-3 items-center justify-end gap-1">
-                  {[24, 48, 64].map(preset => (
+                  {[16, 24, 32, 48, 64, 96].map(preset => (
                     <button
                       key={preset}
                       type="button"
                       onClick={() => setSettings(s => ({ ...s, size: preset }))}
-                      className="px-2 py-0.5 text-[10px] font-mono rounded-lg bg-white/5 border border-white/10 text-white/50 hover:bg-white/10 hover:text-white cursor-pointer"
+                      className={`px-2 py-0.5 text-[10px] font-mono rounded-lg transition-colors cursor-pointer border ${
+                        settings.size === preset
+                          ? 'bg-blue-600 text-white font-bold border-blue-500 shadow-xs'
+                          : 'bg-white/5 border-white/10 text-white/50 hover:bg-white/10 hover:text-white'
+                      }`}
                     >
                       {preset}
                     </button>
@@ -585,9 +653,14 @@ export const IconDetailLaboratory: React.FC<IconDetailLaboratoryProps> = ({
           {/* Right Column: Framework Code Playground (5 cols) matching Design HTML */}
           <div className="lg:col-span-5 p-4 sm:p-6 flex flex-col bg-[#050505]/60">
             <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-3">
-              <span className="text-xs font-mono font-semibold uppercase tracking-wider text-white/60">
-                Framework Output
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-mono font-semibold uppercase tracking-wider text-white/60">
+                  Framework Output
+                </span>
+                <span className="px-1.5 py-0.5 text-[10px] font-mono font-medium rounded bg-blue-500/10 border border-blue-500/20 text-blue-400 tabular-nums">
+                  {settings.size}px
+                </span>
+              </div>
 
               <button
                 type="button"

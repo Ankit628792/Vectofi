@@ -68,18 +68,18 @@ export const FavoritesPage: React.FC<FavoritesPageProps> = ({
         </div>
 
         {favoriteIcons.length > 0 && (
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 shrink-0">
             <button
               type="button"
               onClick={handleBatchDownload}
-              className="px-4 py-2 rounded-xl text-xs font-mono font-medium bg-blue-600 hover:bg-blue-500 text-white transition-colors flex items-center gap-2 shadow-lg shadow-blue-600/20 cursor-pointer"
+              className="px-4 py-2 rounded-xl text-xs font-mono font-medium bg-blue-600 hover:bg-blue-500 text-white transition-colors flex items-center gap-2 shadow-lg shadow-blue-600/20 cursor-pointer whitespace-nowrap shrink-0"
             >
-              <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                 <polyline points="7 10 12 15 17 10" />
                 <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
-              Download All ({favoriteIcons.length})
+              <span>Download All ({favoriteIcons.length})</span>
             </button>
 
             <button
@@ -88,7 +88,7 @@ export const FavoritesPage: React.FC<FavoritesPageProps> = ({
                 onClearFavorites();
                 onShowToast('Favorites cleared', 'All icons removed from favorites.');
               }}
-              className="px-3 py-2 rounded-xl text-xs font-mono text-white/40 hover:text-rose-400 hover:bg-white/5 border border-white/10 transition-colors cursor-pointer"
+              className="px-3 py-2 rounded-xl text-xs font-mono text-white/40 hover:text-rose-400 hover:bg-white/5 border border-white/10 transition-colors cursor-pointer whitespace-nowrap shrink-0"
             >
               Clear All
             </button>

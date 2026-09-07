@@ -41,11 +41,11 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
               className="p-6 rounded-2xl border border-white/10 bg-[#0a0a0a] hover:border-blue-500/40 transition-all flex flex-col justify-between group"
             >
               <div>
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-display font-bold text-lg text-white">
+                <div className="flex items-center justify-between mb-3 gap-2">
+                  <h3 className="font-display font-bold text-lg text-white truncate">
                     {cat.name}
                   </h3>
-                  <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/50">
+                  <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/50 whitespace-nowrap shrink-0">
                     {categoryIcons.length} icons
                   </span>
                 </div>
@@ -73,10 +73,10 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({
               <button
                 type="button"
                 onClick={() => onSelectCategory(cat.id)}
-                className="w-full py-2.5 rounded-xl border border-white/10 text-xs font-mono font-medium text-white/70 hover:text-white hover:bg-white/5 hover:border-white/20 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                className="w-full py-2.5 rounded-xl border border-white/10 text-xs font-mono font-medium text-white/70 hover:text-white hover:bg-white/5 hover:border-white/20 transition-colors flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap"
               >
-                <span>View {cat.name} Collection</span>
-                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <span className="truncate">View {cat.name} Collection</span>
+                <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 18 15 12 9 6" />
                 </svg>
               </button>

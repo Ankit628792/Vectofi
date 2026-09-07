@@ -72,7 +72,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* Desktop Navigation with refined underline indicator */}
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-5 lg:gap-6 text-sm font-medium">
           {navLinks.map(link => {
             const isActive = currentRoute === link.route;
             return (
@@ -80,15 +80,15 @@ export const Header: React.FC<HeaderProps> = ({
                 key={link.route}
                 type="button"
                 onClick={() => onNavigate(link.route)}
-                className={`relative py-1 transition-colors flex items-center gap-1.5 ${
+                className={`relative py-1 transition-colors flex items-center gap-1.5 whitespace-nowrap ${
                   isActive
                     ? 'text-white font-semibold border-b-2 border-blue-500'
                     : 'text-white/60 hover:text-blue-400'
                 }`}
               >
-                {link.label}
+                <span>{link.label}</span>
                 {link.badge && (
-                  <span className="px-1.5 py-0.2 text-[9px] font-mono uppercase font-bold rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30">
+                  <span className="px-1.5 py-0.2 text-[9px] font-mono uppercase font-bold rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 whitespace-nowrap shrink-0">
                     {link.badge}
                   </span>
                 )}
@@ -98,7 +98,7 @@ export const Header: React.FC<HeaderProps> = ({
         </nav>
 
         {/* Right Action Bar */}
-        <div className="flex items-center gap-1.5 sm:gap-2.5">
+        <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
           {/* Search Trigger matching Design HTML (expanded on desktop, compact on tablet) */}
           <div
             onClick={onOpenCommandPalette}
@@ -109,9 +109,9 @@ export const Header: React.FC<HeaderProps> = ({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-full py-1.5 pl-9 pr-10 text-xs w-44 md:w-56 lg:w-64 text-white/60 group-hover:border-blue-500/50 group-hover:bg-white/[0.08] transition-all flex items-center justify-between">
+            <div className="bg-white/5 border border-white/10 rounded-full py-1.5 pl-9 pr-10 text-xs w-44 md:w-52 lg:w-64 text-white/60 group-hover:border-blue-500/50 group-hover:bg-white/[0.08] transition-all flex items-center justify-between">
               <span className="truncate">Search 110+ icons...</span>
-              <kbd className="absolute right-2.5 top-1.5 text-[10px] bg-white/10 px-1.5 py-0.5 rounded text-white/40 border border-white/10 font-mono">
+              <kbd className="absolute right-2.5 top-1.5 text-[10px] bg-white/10 px-1.5 py-0.5 rounded text-white/40 border border-white/10 font-mono whitespace-nowrap shrink-0">
                 ⌘K
               </kbd>
             </div>
@@ -231,7 +231,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={() => onNavigate('/icons')}
-            className="hidden lg:inline-flex bg-white text-black font-semibold text-xs px-4 py-2 rounded-full hover:bg-blue-400 hover:text-black transition-colors shrink-0 shadow-sm cursor-pointer"
+            className="hidden lg:inline-flex bg-white text-black font-semibold text-xs px-4 py-2 rounded-full hover:bg-blue-400 hover:text-black transition-colors shrink-0 shadow-sm cursor-pointer whitespace-nowrap"
           >
             Browse Library
           </button>
@@ -240,7 +240,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden min-w-[42px] min-h-[42px] p-2 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:text-white flex items-center justify-center transition-colors"
+            className="md:hidden min-w-[42px] min-h-[42px] p-2 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:text-white flex items-center justify-center transition-colors shrink-0"
             aria-label="Toggle navigation menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -273,9 +273,9 @@ export const Header: React.FC<HeaderProps> = ({
                     : 'text-white/80 hover:bg-white/5 hover:text-white'
                 }`}
               >
-                <span>{link.label}</span>
+                <span className="truncate">{link.label}</span>
                 {link.badge && (
-                  <span className="px-2 py-0.5 text-[10px] font-mono rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30">
+                  <span className="px-2 py-0.5 text-[10px] font-mono rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 whitespace-nowrap shrink-0">
                     {link.badge}
                   </span>
                 )}
@@ -288,7 +288,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               type="button"
               onClick={() => onToggleDarkMode()}
-              className="px-2 py-2 rounded-xl text-xs font-mono border border-white/10 bg-white/5 text-white/70 hover:text-white hover:bg-white/10 flex items-center justify-center gap-1 min-h-[44px] cursor-pointer"
+              className="px-2 py-2 rounded-xl text-xs font-mono border border-white/10 bg-white/5 text-white/70 hover:text-white hover:bg-white/10 flex items-center justify-center gap-1 min-h-[44px] cursor-pointer whitespace-nowrap"
             >
               <span>{darkMode ? '☀️ Light' : '🌙 Dark'}</span>
             </button>
@@ -298,7 +298,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => {
                 onToggleReducedMotion();
               }}
-              className={`px-2 py-2 rounded-xl text-xs font-mono border transition-colors flex items-center justify-center gap-1 min-h-[44px] cursor-pointer ${
+              className={`px-2 py-2 rounded-xl text-xs font-mono border transition-colors flex items-center justify-center gap-1 min-h-[44px] cursor-pointer whitespace-nowrap ${
                 reducedMotion
                   ? 'bg-amber-500/20 text-amber-300 border-amber-500/40 font-semibold'
                   : 'bg-white/5 border-white/10 text-white/70 hover:text-white'
@@ -315,7 +315,7 @@ export const Header: React.FC<HeaderProps> = ({
                 onOpenShortcuts();
                 setMobileMenuOpen(false);
               }}
-              className="px-2 py-2 rounded-xl text-xs font-mono border border-white/10 bg-white/5 text-white/60 hover:text-white hover:bg-white/10 flex items-center justify-center gap-1 min-h-[44px] cursor-pointer"
+              className="px-2 py-2 rounded-xl text-xs font-mono border border-white/10 bg-white/5 text-white/60 hover:text-white hover:bg-white/10 flex items-center justify-center gap-1 min-h-[44px] cursor-pointer whitespace-nowrap"
             >
               <span>Keys (?)</span>
             </button>
@@ -326,13 +326,13 @@ export const Header: React.FC<HeaderProps> = ({
               href="https://github.com/Ankit628792/Vectofi"
               target="_blank"
               rel="noreferrer"
-              className="w-full py-2.5 rounded-xl text-xs font-mono font-medium bg-white/5 hover:bg-white/10 text-white/80 hover:text-white border border-white/10 flex items-center justify-center gap-2 transition-colors min-h-[44px]"
+              className="w-full py-2.5 rounded-xl text-xs font-mono font-medium bg-white/5 hover:bg-white/10 text-white/80 hover:text-white border border-white/10 flex items-center justify-center gap-2 transition-colors min-h-[44px] whitespace-nowrap"
             >
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
               </svg>
               <span>GitHub Repository</span>
-              <svg className="w-3.5 h-3.5 text-white/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg className="w-3.5 h-3.5 text-white/40 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <line x1="7" y1="17" x2="17" y2="7" />
                 <polyline points="7 7 17 7 17 17" />
               </svg>
@@ -344,10 +344,10 @@ export const Header: React.FC<HeaderProps> = ({
                 onNavigate('/icons');
                 setMobileMenuOpen(false);
               }}
-              className="w-full py-2.5 rounded-xl text-xs font-bold font-mono bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center gap-2 shadow-md shadow-blue-600/20 min-h-[44px]"
+              className="w-full py-2.5 rounded-xl text-xs font-bold font-mono bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center gap-2 shadow-md shadow-blue-600/20 min-h-[44px] whitespace-nowrap"
             >
               <span>Browse 110+ SVG Library</span>
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
               </svg>

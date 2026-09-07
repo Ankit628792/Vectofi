@@ -82,7 +82,7 @@ export const DocsPage: React.FC = () => {
                 key={fw}
                 type="button"
                 onClick={() => setActiveFw(fw)}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-mono font-bold uppercase transition-all border cursor-pointer ${
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-mono font-bold uppercase transition-all border cursor-pointer whitespace-nowrap shrink-0 ${
                   activeFw === fw
                     ? 'bg-blue-600 border-blue-500 text-white shadow-md shadow-blue-600/20'
                     : 'bg-white/5 border-white/10 text-white/50 hover:bg-white/10 hover:text-white'
@@ -261,21 +261,21 @@ export class CheckCircleIconComponent {
             <p>
               1. <strong className="text-white">Decorative Icons:</strong> If an icon is placed next to text (e.g. a button with label "Delete"), add <code className="text-blue-300">aria-hidden="true"</code> so screen readers do not announce duplicate information:
             </p>
-            <div className="p-3 rounded-lg bg-black border border-white/10 font-mono text-xs text-blue-300">
+            <div className="p-3 rounded-lg bg-black border border-white/10 font-mono text-xs text-blue-300 overflow-x-auto">
               <code>&lt;button&gt;&lt;TrashIcon aria-hidden="true" /&gt; Delete&lt;/button&gt;</code>
             </div>
 
             <p className="pt-2">
               2. <strong className="text-white">Standalone Icon Buttons:</strong> If an icon represents an action by itself without text (e.g. an icon-only close button), ensure the parent button has an <code className="text-blue-300">aria-label</code>:
             </p>
-            <div className="p-3 rounded-lg bg-black border border-white/10 font-mono text-xs text-blue-300">
+            <div className="p-3 rounded-lg bg-black border border-white/10 font-mono text-xs text-blue-300 overflow-x-auto">
               <code>&lt;button aria-label="Close dialog"&gt;&lt;CloseIcon /&gt;&lt;/button&gt;</code>
             </div>
 
             <p className="pt-2">
               3. <strong className="text-white">Reduced Motion:</strong> Respect users who have enabled <code className="text-blue-300">prefers-reduced-motion</code> in their OS settings by honoring our built-in CSS media queries:
             </p>
-            <div className="p-3 rounded-lg bg-black border border-white/10 font-mono text-xs text-blue-300">
+            <div className="p-3 rounded-lg bg-black border border-white/10 font-mono text-xs text-blue-300 overflow-x-auto">
               <code>@media (prefers-reduced-motion: reduce) &#123; * &#123; animation: none !important; &#125; &#125;</code>
             </div>
           </div>
@@ -286,19 +286,19 @@ export class CheckCircleIconComponent {
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <h3 className="font-display font-bold text-base text-white flex items-center gap-2">
               <span>MIT License</span>
-              <span className="px-1.5 py-0.5 text-[10px] font-mono rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">
+              <span className="px-1.5 py-0.5 text-[10px] font-mono rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold whitespace-nowrap shrink-0">
                 Open Source
               </span>
             </h3>
-            <div className="flex items-center gap-3 text-xs font-mono">
+            <div className="flex flex-wrap items-center gap-3 text-xs font-mono">
               <a
                 href="https://github.com/Ankit628792/Vectofi/blob/main/LICENSE"
                 target="_blank"
                 rel="noreferrer"
-                className="text-blue-400 hover:text-blue-300 inline-flex items-center gap-1 hover:underline"
+                className="text-blue-400 hover:text-blue-300 inline-flex items-center gap-1 hover:underline whitespace-nowrap"
               >
                 <span>View LICENSE on GitHub</span>
-                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg className="w-3 h-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <line x1="7" y1="17" x2="17" y2="7" />
                   <polyline points="7 7 17 7 17 17" />
                 </svg>
@@ -308,10 +308,10 @@ export class CheckCircleIconComponent {
                 href="https://opensource.org/licenses/MIT"
                 target="_blank"
                 rel="noreferrer"
-                className="text-blue-400 hover:text-blue-300 inline-flex items-center gap-1 hover:underline"
+                className="text-blue-400 hover:text-blue-300 inline-flex items-center gap-1 hover:underline whitespace-nowrap"
               >
                 <span>OSI Standard</span>
-                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg className="w-3 h-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <line x1="7" y1="17" x2="17" y2="7" />
                   <polyline points="7 7 17 7 17 17" />
                 </svg>

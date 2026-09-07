@@ -169,17 +169,17 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
                         : 'text-white/80 hover:bg-white/5'
                     }`}
                   >
-                    <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 flex items-center justify-center text-white/60">
+                    <div className="flex items-center gap-3 min-w-0 pr-2">
+                      <div className="w-6 h-6 flex items-center justify-center text-white/60 shrink-0">
                         <AnimatedIconRenderer icon={iconItem} size={18} strokeWidth={1.8} animated={false} />
                       </div>
-                      <span className="text-white">{iconItem.name}</span>
-                      <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-white/40">
+                      <span className="text-white truncate">{iconItem.name}</span>
+                      <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-white/40 whitespace-nowrap shrink-0">
                         {iconItem.category}
                       </span>
                     </div>
                     {iconItem.hasAnimation && (
-                      <span className="text-[10px] font-mono text-blue-400">animated</span>
+                      <span className="text-[10px] font-mono text-blue-400 whitespace-nowrap shrink-0">animated</span>
                     )}
                   </button>
                 );
@@ -210,11 +210,11 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
                         : 'text-white/80 hover:bg-white/5'
                     }`}
                   >
-                    <div className="flex items-center gap-3">
-                      <span className="w-5 text-center font-mono text-white/40">{cmd.iconSymbol}</span>
-                      <span className="text-white">{cmd.label}</span>
+                    <div className="flex items-center gap-3 min-w-0 pr-2">
+                      <span className="w-5 text-center font-mono text-white/40 shrink-0">{cmd.iconSymbol}</span>
+                      <span className="text-white truncate">{cmd.label}</span>
                     </div>
-                    <span className="text-[10px] font-mono text-white/40">
+                    <span className="text-[10px] font-mono text-white/40 whitespace-nowrap shrink-0">
                       {cmd.category}
                     </span>
                   </button>
@@ -231,12 +231,12 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
         </div>
 
         {/* Footer info */}
-        <div className="px-4 py-2.5 bg-[#050505] border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-white/40">
-          <div className="flex items-center gap-3">
+        <div className="px-4 py-2.5 bg-[#050505] border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-white/40 gap-2">
+          <div className="flex items-center gap-3 whitespace-nowrap">
             <span>↑↓ to navigate</span>
             <span>↵ to select</span>
           </div>
-          <span>110+ icons registered</span>
+          <span className="whitespace-nowrap shrink-0">110+ icons registered</span>
         </div>
       </div>
     </div>
