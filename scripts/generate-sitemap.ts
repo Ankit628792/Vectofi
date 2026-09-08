@@ -7,7 +7,7 @@ import { ICON_CATEGORIES } from '../src/data/categories.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL = 'https://vectofi.dev';
+const BASE_URL = process.env.APP_URL || 'https://vectofi.dev';
 const TODAY = new Date().toISOString().split('T')[0];
 
 interface SitemapUrl {

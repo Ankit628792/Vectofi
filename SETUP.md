@@ -44,8 +44,8 @@ cp .env.example .env
 
 Variables in `.env.example`:
 ```env
-# Optional: The base host URL for deployment
-APP_URL=
+# Base host URL for deployment (used in sitemap and robots.txt generation)
+APP_URL=https://vectofi.dev
 ```
 
 ---
