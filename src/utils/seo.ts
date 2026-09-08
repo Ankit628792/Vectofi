@@ -10,7 +10,7 @@ export interface SEOConfig {
   jsonLd?: Record<string, any>;
 }
 
-const BASE_URL = 'https://vectofi.dev';
+const BASE_URL = process.env.APP_URL || 'https://vectofi.vercel.app';
 const DEFAULT_TITLE = 'Vectofi — Free Static & Animated Vector Icons';
 const DEFAULT_DESCRIPTION =
   'Developer-first SVG icon library with 110+ static and animated icons, interactive SVG laboratory, framework code generators, and vector art design system.';
