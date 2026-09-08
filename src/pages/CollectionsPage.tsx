@@ -16,6 +16,7 @@ interface CollectionsPageProps {
   onQuickCopy: (icon: IconItem, e: React.MouseEvent) => void;
   onQuickDownload: (icon: IconItem, e: React.MouseEvent) => void;
   onShowToast: (title: string, message?: string) => void;
+  onNavigate?: (route: string) => void;
 }
 
 export const CollectionsPage: React.FC<CollectionsPageProps> = ({
@@ -30,6 +31,7 @@ export const CollectionsPage: React.FC<CollectionsPageProps> = ({
   onQuickCopy,
   onQuickDownload,
   onShowToast,
+  onNavigate,
 }) => {
   const [activeCollectionId, setActiveCollectionId] = useState<string>(
     collections[0]?.id || ''
@@ -216,7 +218,12 @@ export const CollectionsPage: React.FC<CollectionsPageProps> = ({
                   description="Open any icon laboratory and click 'Collect' to add icons into this collection."
                   actionLabel="Browse icons"
                   onAction={() => {
-                    window.location.hash = '/icons';
+                    if (onNavigate) {
+                      onNavigate('/icons');
+                    } else {
+                      window.history.pushState(null, '', '/icons');
+                      window.dispatchEvent(new PopStateEvent('popstate'));
+                    }
                   }}
                   iconType="collection"
                 />

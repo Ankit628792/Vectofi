@@ -37,13 +37,13 @@ export function generateSitemapXml(): { xml: string; totalUrls: number } {
   // 1. Static Core Pages
   const staticPages: { path: string; priority: string; changefreq: SitemapUrl['changefreq'] }[] = [
     { path: '/', priority: '1.0', changefreq: 'daily' },
-    { path: '/#/icons', priority: '0.9', changefreq: 'daily' },
-    { path: '/#/animated', priority: '0.9', changefreq: 'weekly' },
-    { path: '/#/categories', priority: '0.8', changefreq: 'weekly' },
-    { path: '/#/collections', priority: '0.8', changefreq: 'weekly' },
-    { path: '/#/favorites', priority: '0.6', changefreq: 'weekly' },
-    { path: '/#/docs', priority: '0.8', changefreq: 'monthly' },
-    { path: '/#/license', priority: '0.7', changefreq: 'monthly' },
+    { path: '/icons', priority: '0.9', changefreq: 'daily' },
+    { path: '/animated', priority: '0.9', changefreq: 'weekly' },
+    { path: '/categories', priority: '0.8', changefreq: 'weekly' },
+    { path: '/collections', priority: '0.8', changefreq: 'weekly' },
+    { path: '/favorites', priority: '0.6', changefreq: 'weekly' },
+    { path: '/docs', priority: '0.8', changefreq: 'monthly' },
+    { path: '/license', priority: '0.7', changefreq: 'monthly' },
   ];
 
   for (const page of staticPages) {
@@ -58,7 +58,7 @@ export function generateSitemapXml(): { xml: string; totalUrls: number } {
   // 2. Category Pages (14 categories)
   for (const cat of ICON_CATEGORIES) {
     urls.push({
-      loc: `${BASE_URL}/#/icons?category=${encodeURIComponent(cat.id)}`,
+      loc: `${BASE_URL}/icons?category=${encodeURIComponent(cat.id)}`,
       lastmod: TODAY,
       changefreq: 'weekly',
       priority: '0.7',
@@ -69,7 +69,7 @@ export function generateSitemapXml(): { xml: string; totalUrls: number } {
   for (const icon of ICONS_DEFINITIONS) {
     const isAnim = icon.hasAnimation ? 'animated' : 'static';
     urls.push({
-      loc: `${BASE_URL}/#/icon/${icon.slug}`,
+      loc: `${BASE_URL}/icon/${icon.slug}`,
       lastmod: TODAY,
       changefreq: 'weekly',
       priority: icon.featured ? '0.85' : '0.80',

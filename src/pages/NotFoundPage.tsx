@@ -6,7 +6,7 @@ interface NotFoundPageProps {
 }
 
 export const NotFoundPage: React.FC<NotFoundPageProps> = ({
-  currentPath = window.location.hash || '/404',
+  currentPath = window.location.pathname || '/404',
   onNavigate,
 }) => {
   const [searchQuery, setSearchQuery] = useState('');

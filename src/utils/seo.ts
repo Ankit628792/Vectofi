@@ -145,7 +145,7 @@ export function getSEOForRoute(
         description: DEFAULT_DESCRIPTION,
         potentialAction: {
           '@type': 'SearchAction',
-          target: `${BASE_URL}/#/icons?q={search_term_string}`,
+          target: `${BASE_URL}/icons?q={search_term_string}`,
           'query-input': 'required name=search_term_string',
         },
       },
@@ -158,7 +158,7 @@ export function getSEOForRoute(
         title: `Search "${query}" Icons — Vectofi`,
         description: `Explore search results for "${query}" across 110+ precision static and animated vector icons.`,
         keywords: [query, 'svg search', 'icon search', 'vector search', ...DEFAULT_KEYWORDS],
-        canonicalUrl: `${BASE_URL}/#/icons?q=${encodeURIComponent(query)}`,
+        canonicalUrl: `${BASE_URL}/icons?q=${encodeURIComponent(query)}`,
       };
     }
 
@@ -169,7 +169,7 @@ export function getSEOForRoute(
         title: `${catName} SVG Icons — Vectofi`,
         description: cat?.description || `Explore ${catName} vector icons in SVG, React, Vue, and Svelte format.`,
         keywords: [catName.toLowerCase(), `${catName.toLowerCase()} icons`, 'svg icons', ...DEFAULT_KEYWORDS],
-        canonicalUrl: `${BASE_URL}/#/icons?category=${encodeURIComponent(categoryId)}`,
+        canonicalUrl: `${BASE_URL}/icons?category=${encodeURIComponent(categoryId)}`,
       };
     }
 
@@ -177,7 +177,7 @@ export function getSEOForRoute(
       title: 'Browse 110+ Precision SVG Icons — Vectofi',
       description: 'Explore 110+ developer-first static and morphing SVG vector icons with real-time framework code generation and interactive customization.',
       keywords: ['icon catalog', 'all icons', 'svg collection', ...DEFAULT_KEYWORDS],
-      canonicalUrl: `${BASE_URL}/#/icons`,
+      canonicalUrl: `${BASE_URL}/icons`,
     };
   }
 
@@ -186,7 +186,7 @@ export function getSEOForRoute(
       title: 'Animated SVG Icons (Pure CSS Keyframes) — Vectofi',
       description: 'Self-contained animated vector icons powered by encapsulated CSS keyframes, zero external dependencies, and accessible reduced-motion support.',
       keywords: ['animated icons', 'css keyframe icons', 'morphing icons', 'svg motion', ...DEFAULT_KEYWORDS],
-      canonicalUrl: `${BASE_URL}/#/animated`,
+      canonicalUrl: `${BASE_URL}/animated`,
     };
   }
 
@@ -195,7 +195,7 @@ export function getSEOForRoute(
       title: 'Icon Categories (14 Functional Sets) — Vectofi',
       description: 'Explore vector icons organized into 14 functional categories: arrows, navigation, interface, media, developer tooling, security, and more.',
       keywords: ['icon categories', 'functional icon sets', 'ui icons', ...DEFAULT_KEYWORDS],
-      canonicalUrl: `${BASE_URL}/#/categories`,
+      canonicalUrl: `${BASE_URL}/categories`,
     };
   }
 
@@ -204,7 +204,7 @@ export function getSEOForRoute(
       title: 'Curated Icon Sets & Custom Collections — Vectofi',
       description: 'Build, customize, and batch download tailored SVG icon packs for web applications, dashboards, e-commerce, and developer tooling.',
       keywords: ['icon collections', 'curated icon packs', 'batch download svg', ...DEFAULT_KEYWORDS],
-      canonicalUrl: `${BASE_URL}/#/collections`,
+      canonicalUrl: `${BASE_URL}/collections`,
     };
   }
 
@@ -213,7 +213,7 @@ export function getSEOForRoute(
       title: 'Saved Favorite Icons — Vectofi',
       description: 'Your saved vector icons ready for batch download, React component export, and SVG code copying.',
       keywords: ['saved icons', 'favorite icons', 'custom icon set', ...DEFAULT_KEYWORDS],
-      canonicalUrl: `${BASE_URL}/#/favorites`,
+      canonicalUrl: `${BASE_URL}/favorites`,
     };
   }
 
@@ -222,7 +222,7 @@ export function getSEOForRoute(
       title: 'Integration Documentation & Framework Guide — Vectofi',
       description: 'Complete documentation for integrating Vectofi SVG icons into React, Vue, Svelte, Angular, Web Components, and Vanilla HTML/CSS.',
       keywords: ['icon documentation', 'react icons guide', 'vue icons guide', 'svelte icons', ...DEFAULT_KEYWORDS],
-      canonicalUrl: `${BASE_URL}/#/docs`,
+      canonicalUrl: `${BASE_URL}/docs`,
       ogType: 'article',
     };
   }
@@ -232,14 +232,14 @@ export function getSEOForRoute(
       title: 'MIT Open Source License — Vectofi',
       description: 'Vectofi is 100% free and open-source under the MIT license for personal, educational, and commercial projects.',
       keywords: ['mit license', 'open source icons', 'commercial use icons', 'free svg license'],
-      canonicalUrl: `${BASE_URL}/#/license`,
+      canonicalUrl: `${BASE_URL}/license`,
     };
   }
 
   return {
     title: 'Page Not Found — Vectofi',
     description: 'The requested Vectofi page could not be found.',
-    canonicalUrl: `${BASE_URL}/#${route}`,
+    canonicalUrl: `${BASE_URL}${route.startsWith('/') ? route : '/' + route}`,
   };
 }
 
@@ -261,7 +261,7 @@ export function getSEOForIcon(icon: IconItem): SEOConfig {
     'free vector icon',
     'mit license',
   ];
-  const canonicalUrl = `${BASE_URL}/#/icon/${icon.slug}`;
+  const canonicalUrl = `${BASE_URL}/icon/${icon.slug}`;
 
   return {
     title,

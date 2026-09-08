@@ -165,7 +165,7 @@ export const FavoritesPage: React.FC<FavoritesPageProps> = ({
                 No favorites <span className="font-bold text-rose-400">saved yet</span>
               </h2>
               <p className="text-sm sm:text-base text-white/60 mt-3 leading-relaxed">
-                Your favorites drawer is currently empty. Star icons while browsing the catalog to bookmark your key project assets, customize strokes, and run batch exports in one click.
+                Your favorites drawer is currently empty.
               </p>
 
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -194,60 +194,6 @@ export const FavoritesPage: React.FC<FavoritesPageProps> = ({
                   Explore Animated SVGs
                 </button>
               </div>
-            </div>
-          </div>
-
-          {/* Initial Empty Placeholder Blueprint Slots */}
-          <div>
-            <div className="flex items-center justify-between mb-4">
-              <div>
-                <h3 className="text-base font-bold text-white flex items-center gap-2">
-                  <span>Initial Placeholder Slots</span>
-                  <span className="text-xs font-mono font-normal px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-white/50">
-                    0 / 6 Populated
-                  </span>
-                </h3>
-                <p className="text-xs text-white/40 mt-0.5">
-                  Visual slots reserved for your favorite vector assets. Click any slot to browse the library.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              {[
-                { slot: '1', label: 'Primary Brand', icon: 'heart' },
-                { slot: '2', label: 'Dev Tooling', icon: 'code' },
-                { slot: '3', label: 'Navigation', icon: 'compass' },
-                { slot: '4', label: 'Media Control', icon: 'play' },
-                { slot: '5', label: 'Interface Action', icon: 'sparkle' },
-                { slot: '6', label: 'Layer Asset', icon: 'layers' },
-              ].map(item => (
-                <button
-                  key={item.slot}
-                  type="button"
-                  onClick={() => onNavigate('/icons')}
-                  className="group relative flex flex-col items-center justify-center p-6 rounded-2xl border-2 border-dashed border-white/10 hover:border-blue-500/40 bg-white/[0.01] hover:bg-blue-500/[0.03] transition-all min-h-[170px] text-center cursor-pointer select-none"
-                >
-                  {/* Slot Number Tag */}
-                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono text-white/30 group-hover:text-blue-400 transition-colors">
-                    #{item.slot}
-                  </span>
-
-                  {/* Empty Slot Icon Silhouette */}
-                  <div className="w-12 h-12 rounded-xl bg-white/5 group-hover:bg-blue-500/10 border border-white/10 group-hover:border-blue-500/30 flex items-center justify-center text-white/20 group-hover:text-blue-400 transition-all mb-3 group-hover:scale-105">
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path d="M12 5v14M5 12h14" strokeLinecap="round" />
-                    </svg>
-                  </div>
-
-                  <span className="text-xs font-medium text-white/60 group-hover:text-white transition-colors">
-                    Empty Slot
-                  </span>
-                  <span className="text-[10px] text-white/30 group-hover:text-blue-400/80 transition-colors mt-0.5">
-                    Click to pin
-                  </span>
-                </button>
-              ))}
             </div>
           </div>
 

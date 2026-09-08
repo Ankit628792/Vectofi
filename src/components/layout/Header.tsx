@@ -83,7 +83,7 @@ export const Header: React.FC<HeaderProps> = ({
                 className={`relative py-1 transition-colors flex items-center gap-1.5 whitespace-nowrap ${
                   isActive
                     ? 'text-white font-semibold border-b-2 border-blue-500'
-                    : 'text-white/60 hover:text-blue-400'
+                    : 'text-white/60 hover:text-blue-400 cursor-pointer select-none'
                 }`}
               >
                 <span>{link.label}</span>
@@ -133,7 +133,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={() => onNavigate('/favorites')}
-            className={`relative min-w-[38px] min-h-[38px] p-2 rounded-xl border transition-colors flex items-center justify-center ${
+            className={`relative min-w-[38px] min-h-[38px] p-2 rounded-xl border transition-colors flex items-center justify-center cursor-pointer select-none ${
               currentRoute === '/favorites'
                 ? 'bg-rose-500/20 text-rose-400 border-rose-500/40'
                 : 'bg-white/5 border-white/10 text-white/70 hover:text-rose-400 hover:bg-white/10'

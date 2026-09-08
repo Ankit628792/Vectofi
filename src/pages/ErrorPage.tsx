@@ -10,8 +10,7 @@ export const ErrorPage: React.FC<ErrorPageProps> = ({
   error,
   resetErrorBoundary,
   onNavigate = route => {
-    window.location.hash = route;
-    window.location.reload();
+    window.location.href = route;
   },
 }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -21,8 +20,7 @@ export const ErrorPage: React.FC<ErrorPageProps> = ({
       localStorage.removeItem('vectofi_favorites');
       localStorage.removeItem('vectofi_collections');
       localStorage.removeItem('vectofi_theme');
-      window.location.hash = '/';
-      window.location.reload();
+      window.location.href = '/';
     } catch {
       window.location.reload();
     }

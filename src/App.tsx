@@ -191,24 +191,35 @@ export default function App() {
     }
   }, [collections]);
 
-  // Handle URL hash routing and deep-linking to icons
+  // Handle HTML5 pushState routing and deep-linking to icons
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '') || '/';
-      const [path, queryString] = hash.split('?');
+    const handleLocationChange = () => {
+      // If URL contains a legacy hash (e.g., #/icons or #/icon/arrow-right), migrate cleanly to pathname
+      if (window.location.hash && window.location.hash.startsWith('#')) {
+        const hashContent = window.location.hash.replace(/^#\/?/, '/');
+        window.history.replaceState(null, '', hashContent);
+      }
 
-      // Check if hash points directly to an individual icon (e.g. #/icon/arrow-right)
-      if (path.startsWith('/icon/')) {
-        const slug = path.replace('/icon/', '').trim();
+      const pathname = window.location.pathname || '/';
+      const search = window.location.search;
+
+      if (pathname.startsWith('/icon/')) {
+        const slug = pathname.replace('/icon/', '').split('/')[0].trim();
         const foundIcon = ICONS.find(i => i.slug === slug || i.id === slug);
         if (foundIcon) {
           setSelectedIcon(foundIcon);
-          return;
+          // Keep current background route if already valid; default to /icons
+          setCurrentRoute(prev => (prev === '/' ? '/icons' : prev));
+        } else {
+          setSelectedIcon(null);
         }
+      } else {
+        setSelectedIcon(null);
+        setCurrentRoute(pathname);
       }
 
-      if (queryString) {
-        const params = new URLSearchParams(queryString);
+      if (search) {
+        const params = new URLSearchParams(search);
         const iconSlug = params.get('icon');
         if (iconSlug) {
           const foundIcon = ICONS.find(i => i.slug === iconSlug || i.id === iconSlug);
@@ -223,13 +234,11 @@ export default function App() {
         if (cat !== null) setFilters(f => ({ ...f, category: cat as any }));
         if (anim !== null) setFilters(f => ({ ...f, hasAnimation: anim as any }));
       }
-
-      setCurrentRoute(path || '/');
     };
 
-    window.addEventListener('hashchange', handleHashChange);
-    handleHashChange();
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handleLocationChange);
+    handleLocationChange();
+    return () => window.removeEventListener('popstate', handleLocationChange);
   }, []);
 
   // Dynamically update document title, meta tags, Open Graph, Twitter, and JSON-LD schema (Phase 19 SEO)
@@ -294,21 +303,41 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [toggleReducedMotion]);
 
-  const navigateTo = (route: string) => {
-    window.location.hash = route;
-    setCurrentRoute(route.split('?')[0]);
+  const navigateTo = useCallback((route: string) => {
+    // Ensure clean route without leading #
+    const cleanRoute = route.startsWith('#') ? route.replace(/^#\/?/, '/') : route;
+    const [path, queryString] = cleanRoute.split('?');
+
+    // Close any open icon detail laboratory
+    setSelectedIcon(null);
+
+    // Update browser URL without hash
+    window.history.pushState(null, '', cleanRoute);
+    setCurrentRoute(path || '/');
+
+    if (queryString) {
+      const params = new URLSearchParams(queryString);
+      const q = params.get('q');
+      const cat = params.get('category');
+      const anim = params.get('anim');
+      if (q !== null) setFilters(f => ({ ...f, query: q }));
+      if (cat !== null) setFilters(f => ({ ...f, category: cat as any }));
+      if (anim !== null) setFilters(f => ({ ...f, hasAnimation: anim as any }));
+    }
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  }, []);
 
   const handleOpenIcon = useCallback((icon: IconItem) => {
     setSelectedIcon(icon);
-    window.location.hash = `/icon/${icon.slug}`;
+    window.history.pushState(null, '', `/icon/${icon.slug}`);
   }, []);
 
   const handleCloseIcon = useCallback(() => {
     setSelectedIcon(null);
-    if (window.location.hash.startsWith('#/icon/')) {
-      window.location.hash = currentRoute === '/' ? '/' : currentRoute;
+    if (window.location.pathname.startsWith('/icon/')) {
+      const returnRoute = currentRoute === '/' ? '/' : currentRoute;
+      window.history.pushState(null, '', returnRoute);
     }
   }, [currentRoute]);
 
@@ -503,6 +532,7 @@ export default function App() {
               onQuickCopy={handleQuickCopy}
               onQuickDownload={handleQuickDownload}
               onShowToast={showToast}
+              onNavigate={navigateTo}
             />
           )}
 

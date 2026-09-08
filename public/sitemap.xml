@@ -4,139 +4,139 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://vectofi.dev</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icons</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icons</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/animated</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/animated</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/categories</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/categories</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/collections</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/collections</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/favorites</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/favorites</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/docs</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/docs</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/license</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/license</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icons?category=arrows</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icons?category=arrows</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icons?category=navigation</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icons?category=navigation</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icons?category=interface</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icons?category=interface</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icons?category=communication</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icons?category=communication</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icons?category=social</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icons?category=social</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icons?category=files</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icons?category=files</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icons?category=media</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icons?category=media</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icons?category=commerce</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icons?category=commerce</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icons?category=security</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icons?category=security</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icons?category=users</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icons?category=users</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icons?category=weather</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icons?category=weather</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icons?category=devices</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icons?category=devices</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icons?category=development</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icons?category=development</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icons?category=business</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icons?category=business</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/arrow-right</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/arrow-right</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -146,8 +146,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/arrow-left</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/arrow-left</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -157,8 +157,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/arrow-up</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/arrow-up</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -168,8 +168,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/arrow-down</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/arrow-down</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -179,8 +179,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/arrow-up-right</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/arrow-up-right</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -190,8 +190,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/arrow-down-left</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/arrow-down-left</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -201,8 +201,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/arrow-trending-up</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/arrow-trending-up</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -212,8 +212,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/arrow-trending-down</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/arrow-trending-down</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -223,8 +223,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/arrow-refresh</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/arrow-refresh</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -234,8 +234,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/arrow-swap</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/arrow-swap</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -245,8 +245,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/arrow-circle-right</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/arrow-circle-right</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -256,8 +256,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/arrow-corner-up-right</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/arrow-corner-up-right</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -267,8 +267,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/compass</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/compass</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -278,8 +278,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/map-pin</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/map-pin</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -289,8 +289,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/route</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/route</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -300,8 +300,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/globe</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/globe</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -311,8 +311,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/crosshair</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/crosshair</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -322,8 +322,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/layers</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/layers</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -333,8 +333,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/navigation-pointer</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/navigation-pointer</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -344,8 +344,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/anchor</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/anchor</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -355,8 +355,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/layout-grid</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/layout-grid</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -366,8 +366,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/search</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/search</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -377,8 +377,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/settings</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/settings</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -388,8 +388,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/filter</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/filter</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -399,8 +399,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/check</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/check</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -410,8 +410,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/close-x</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/close-x</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -421,8 +421,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/plus</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/plus</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -432,8 +432,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/minus</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/minus</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -443,8 +443,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/trash-2</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/trash-2</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -454,8 +454,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/edit</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/edit</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -465,8 +465,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/toggle-right</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/toggle-right</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -476,8 +476,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/refresh-cw</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/refresh-cw</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -487,8 +487,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/mail</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/mail</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -498,8 +498,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/message-square</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/message-square</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -509,8 +509,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/send</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/send</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -520,8 +520,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/bell</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/bell</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -531,8 +531,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/phone</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/phone</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -542,8 +542,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/inbox</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/inbox</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -553,8 +553,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/message-circle</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/message-circle</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -564,8 +564,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/megaphone</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/megaphone</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -575,8 +575,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/heart</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/heart</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -586,8 +586,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/star</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/star</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -597,8 +597,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/thumbs-up</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/thumbs-up</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -608,8 +608,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/bookmark</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/bookmark</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -619,8 +619,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/share-2</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/share-2</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -630,8 +630,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/award</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/award</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -641,8 +641,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/sparkle</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/sparkle</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -652,8 +652,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/link</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/link</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -663,8 +663,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/file-text</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/file-text</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -674,8 +674,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/folder</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/folder</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -685,8 +685,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/folder-plus</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/folder-plus</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -696,8 +696,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/download</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/download</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -707,8 +707,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/upload</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/upload</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -718,8 +718,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/archive</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/archive</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -729,8 +729,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/paperclip</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/paperclip</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -740,8 +740,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/file-code</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/file-code</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -751,8 +751,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/play</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/play</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -762,8 +762,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/pause</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/pause</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -773,8 +773,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/volume-2</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/volume-2</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -784,8 +784,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/mic</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/mic</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -795,8 +795,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/camera</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/camera</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -806,8 +806,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/video</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/video</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -817,8 +817,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/music</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/music</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -828,8 +828,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/sliders</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/sliders</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -839,8 +839,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/shopping-cart</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/shopping-cart</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -850,8 +850,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/shopping-bag</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/shopping-bag</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -861,8 +861,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/credit-card</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/credit-card</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -872,8 +872,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/tag</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/tag</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -883,8 +883,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/percent</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/percent</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -894,8 +894,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/dollar-sign</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/dollar-sign</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -905,8 +905,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/wallet</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/wallet</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -916,8 +916,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/package</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/package</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -927,8 +927,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/shield</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/shield</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -938,8 +938,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/shield-check</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/shield-check</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -949,8 +949,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/lock</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/lock</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -960,8 +960,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/unlock</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/unlock</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -971,8 +971,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/key</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/key</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -982,8 +982,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/eye</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/eye</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -993,8 +993,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/eye-off</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/eye-off</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1004,8 +1004,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/fingerprint</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/fingerprint</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1015,8 +1015,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/user</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/user</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -1026,8 +1026,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/users</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/users</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -1037,8 +1037,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/user-plus</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/user-plus</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1048,8 +1048,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/user-check</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/user-check</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1059,8 +1059,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/user-x</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/user-x</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1070,8 +1070,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/smile</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/smile</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1081,8 +1081,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/badge-check</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/badge-check</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1092,8 +1092,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/contact</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/contact</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1103,8 +1103,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/sun</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/sun</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -1114,8 +1114,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/moon</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/moon</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -1125,8 +1125,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/cloud</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/cloud</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1136,8 +1136,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/cloud-rain</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/cloud-rain</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1147,8 +1147,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/cloud-lightning</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/cloud-lightning</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1158,8 +1158,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/wind</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/wind</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1169,8 +1169,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/droplet</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/droplet</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1180,8 +1180,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/snowflake</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/snowflake</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1191,8 +1191,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/laptop</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/laptop</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -1202,8 +1202,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/smartphone</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/smartphone</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -1213,8 +1213,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/monitor</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/monitor</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1224,8 +1224,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/cpu</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/cpu</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -1235,8 +1235,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/wifi</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/wifi</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1246,8 +1246,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/battery-charging</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/battery-charging</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1257,8 +1257,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/hard-drive</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/hard-drive</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1268,8 +1268,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/tablet</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/tablet</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1279,8 +1279,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/code</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/code</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -1290,8 +1290,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/terminal</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/terminal</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -1301,8 +1301,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/git-branch</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/git-branch</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -1312,8 +1312,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/git-commit</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/git-commit</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1323,8 +1323,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/git-pull-request</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/git-pull-request</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1334,8 +1334,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/database</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/database</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1345,8 +1345,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/bug</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/bug</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1356,8 +1356,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/binary</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/binary</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1367,8 +1367,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/api-endpoint</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/api-endpoint</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1378,8 +1378,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/briefcase</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/briefcase</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1389,8 +1389,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/bar-chart</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/bar-chart</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -1400,8 +1400,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/target</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/target</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -1411,8 +1411,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/pie-chart</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/pie-chart</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1422,8 +1422,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/calculator</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/calculator</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1433,8 +1433,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/presentation</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/presentation</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1444,8 +1444,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/calendar</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/calendar</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -1455,8 +1455,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.dev/#/icon/clock</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://vectofi.dev/icon/clock</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
