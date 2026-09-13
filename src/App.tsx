@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { IconItem, FilterState, CollectionItem, ToastMessage } from './types';
 import { ICONS } from './data/icons';
 import { Header } from './components/layout/Header';
@@ -59,8 +60,9 @@ const INITIAL_COLLECTIONS: CollectionItem[] = [
 ];
 
 export default function App() {
-  // Navigation Route
-  const [currentRoute, setCurrentRoute] = useState<string>('/');
+  const navigate = useNavigate();
+  const location = useLocation();
+  const currentRoute = location.pathname;
 
   // Filter State
   const [filters, setFilters] = useState<FilterState>({
@@ -192,55 +194,43 @@ export default function App() {
     }
   }, [collections]);
 
-  // Handle HTML5 pushState routing and deep-linking to icons
+  // Handle direct navigation to icon (/icon/:slug) and query parameters via React Router
   useEffect(() => {
-    const handleLocationChange = () => {
-      // If URL contains a legacy hash (e.g., #/icons or #/icon/arrow-right), migrate cleanly to pathname
-      if (window.location.hash && window.location.hash.startsWith('#')) {
-        const hashContent = window.location.hash.replace(/^#\/?/, '/');
-        window.history.replaceState(null, '', hashContent);
-      }
+    // If URL contains a legacy hash (e.g., #/icons or #/icon/arrow-right), migrate cleanly to pathname
+    if (window.location.hash && window.location.hash.startsWith('#')) {
+      const hashContent = window.location.hash.replace(/^#\/?/, '/');
+      navigate(hashContent, { replace: true });
+    }
 
-      const pathname = window.location.pathname || '/';
-      const search = window.location.search;
-
-      if (pathname.startsWith('/icon/')) {
-        const slug = pathname.replace('/icon/', '').split('/')[0].trim();
-        const foundIcon = ICONS.find(i => i.slug === slug || i.id === slug);
-        if (foundIcon) {
-          setSelectedIcon(foundIcon);
-          // Keep current background route if already valid; default to /icons
-          setCurrentRoute(prev => (prev === '/' ? '/icons' : prev));
-        } else {
-          setSelectedIcon(null);
-        }
+    if (location.pathname.startsWith('/icon/')) {
+      const slug = location.pathname.replace('/icon/', '').split('/')[0].trim();
+      const foundIcon = ICONS.find(i => i.slug === slug || i.id === slug);
+      if (foundIcon) {
+        setSelectedIcon(foundIcon);
       } else {
         setSelectedIcon(null);
-        setCurrentRoute(pathname);
       }
+    } else {
+      setSelectedIcon(null);
+    }
 
-      if (search) {
-        const params = new URLSearchParams(search);
-        const iconSlug = params.get('icon');
-        if (iconSlug) {
-          const foundIcon = ICONS.find(i => i.slug === iconSlug || i.id === iconSlug);
-          if (foundIcon) {
-            setSelectedIcon(foundIcon);
-          }
+    if (location.search) {
+      const params = new URLSearchParams(location.search);
+      const iconSlug = params.get('icon');
+      if (iconSlug) {
+        const foundIcon = ICONS.find(i => i.slug === iconSlug || i.id === iconSlug);
+        if (foundIcon) {
+          setSelectedIcon(foundIcon);
         }
-        const q = params.get('q');
-        const cat = params.get('category');
-        const anim = params.get('anim');
-        if (q !== null) setFilters(f => ({ ...f, query: q }));
-        if (cat !== null) setFilters(f => ({ ...f, category: cat as any }));
-        if (anim !== null) setFilters(f => ({ ...f, hasAnimation: anim as any }));
       }
-    };
-
-    window.addEventListener('popstate', handleLocationChange);
-    handleLocationChange();
-    return () => window.removeEventListener('popstate', handleLocationChange);
-  }, []);
+      const q = params.get('q');
+      const cat = params.get('category');
+      const anim = params.get('anim');
+      if (q !== null) setFilters(f => ({ ...f, query: q }));
+      if (cat !== null) setFilters(f => ({ ...f, category: cat as any }));
+      if (anim !== null) setFilters(f => ({ ...f, hasAnimation: anim as any }));
+    }
+  }, [location.pathname, location.search, navigate]);
 
   // Dynamically update document title, meta tags, Open Graph, Twitter, and JSON-LD schema (Phase 19 SEO)
   useSEO({
@@ -304,43 +294,35 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [toggleReducedMotion]);
 
-  const navigateTo = useCallback((route: string) => {
-    // Ensure clean route without leading #
-    const cleanRoute = route.startsWith('#') ? route.replace(/^#\/?/, '/') : route;
-    const [path, queryString] = cleanRoute.split('?');
+  const navigateTo = useCallback(
+    (route: string) => {
+      // Ensure clean route without leading #
+      const cleanRoute = route.startsWith('#') ? route.replace(/^#\/?/, '/') : route;
+      setSelectedIcon(null);
+      navigate(cleanRoute);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    },
+    [navigate]
+  );
 
-    // Close any open icon detail laboratory
-    setSelectedIcon(null);
-
-    // Update browser URL without hash
-    window.history.pushState(null, '', cleanRoute);
-    setCurrentRoute(path || '/');
-
-    if (queryString) {
-      const params = new URLSearchParams(queryString);
-      const q = params.get('q');
-      const cat = params.get('category');
-      const anim = params.get('anim');
-      if (q !== null) setFilters(f => ({ ...f, query: q }));
-      if (cat !== null) setFilters(f => ({ ...f, category: cat as any }));
-      if (anim !== null) setFilters(f => ({ ...f, hasAnimation: anim as any }));
-    }
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
-
-  const handleOpenIcon = useCallback((icon: IconItem) => {
-    setSelectedIcon(icon);
-    window.history.pushState(null, '', `/icon/${icon.slug}`);
-  }, []);
+  const handleOpenIcon = useCallback(
+    (icon: IconItem) => {
+      setSelectedIcon(icon);
+      navigate(`/icon/${icon.slug}`);
+    },
+    [navigate]
+  );
 
   const handleCloseIcon = useCallback(() => {
     setSelectedIcon(null);
-    if (window.location.pathname.startsWith('/icon/')) {
-      const returnRoute = currentRoute === '/' ? '/' : currentRoute;
-      window.history.pushState(null, '', returnRoute);
+    if (location.pathname.startsWith('/icon/')) {
+      if (window.history.length > 1) {
+        navigate(-1);
+      } else {
+        navigate('/icons');
+      }
     }
-  }, [currentRoute]);
+  }, [location.pathname, navigate]);
 
   const handleToggleFavorite = (icon: IconItem) => {
     setFavorites(prev => {
@@ -417,19 +399,6 @@ export default function App() {
     });
   };
 
-  const knownRoutes = [
-    '/',
-    '/icons',
-    '/animated',
-    '/categories',
-    '/collections',
-    '/favorites',
-    '/docs',
-    '/license',
-    '/error',
-  ];
-  const isKnownRoute = knownRoutes.includes(currentRoute);
-
   return (
     <div className={`min-h-screen flex flex-col bg-[#050505] text-[#e5e5e5] selection:bg-blue-600/30 selection:text-white transition-colors duration-200 ${reducedMotion ? 'vector-reduced-motion' : ''}`}>
       {/* Initial Entry Loader */}
@@ -453,120 +422,161 @@ export default function App() {
       {/* Main Routed Page Content wrapped in Error Boundary */}
       <main className="flex-1">
         <ErrorBoundary>
-          {currentRoute === '/' && (
-            <HomePage
-              icons={ICONS}
-              favorites={favorites}
-              onToggleFavorite={handleToggleFavorite}
-              onSelectIcon={handleOpenIcon}
-              onQuickCopy={handleQuickCopy}
-              onQuickDownload={handleQuickDownload}
-              onNavigate={navigateTo}
-              onFilterCategory={catId => {
-                setFilters(f => ({ ...f, category: catId as any }));
-              }}
-              onOpenSearch={() => setCommandPaletteOpen(true)}
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <HomePage
+                  icons={ICONS}
+                  favorites={favorites}
+                  onToggleFavorite={handleToggleFavorite}
+                  onSelectIcon={handleOpenIcon}
+                  onQuickCopy={handleQuickCopy}
+                  onQuickDownload={handleQuickDownload}
+                  onNavigate={navigateTo}
+                  onFilterCategory={catId => {
+                    setFilters(f => ({ ...f, category: catId as any }));
+                  }}
+                  onOpenSearch={() => setCommandPaletteOpen(true)}
+                />
+              }
             />
-          )}
 
-          {currentRoute === '/icons' && (
-            <IconsPage
-              icons={ICONS}
-              filters={filters}
-              onFilterChange={setFilters}
-              favorites={favorites}
-              onToggleFavorite={handleToggleFavorite}
-              onSelectIcon={handleOpenIcon}
-              onQuickCopy={handleQuickCopy}
-              onQuickDownload={handleQuickDownload}
-              globalAnimated={globalAnimated}
-              onToggleGlobalAnimated={() => setGlobalAnimated(!globalAnimated)}
-              onResetFilters={resetFilters}
-              reducedMotion={reducedMotion}
-              onToggleReducedMotion={toggleReducedMotion}
-              title="All SVG Icons"
-              subtitle={UI_TEXT.allIconsSubtitle}
+            <Route
+              path="/icons"
+              element={
+                <IconsPage
+                  icons={ICONS}
+                  filters={filters}
+                  onFilterChange={setFilters}
+                  favorites={favorites}
+                  onToggleFavorite={handleToggleFavorite}
+                  onSelectIcon={handleOpenIcon}
+                  onQuickCopy={handleQuickCopy}
+                  onQuickDownload={handleQuickDownload}
+                  globalAnimated={globalAnimated}
+                  onToggleGlobalAnimated={() => setGlobalAnimated(!globalAnimated)}
+                  onResetFilters={resetFilters}
+                  reducedMotion={reducedMotion}
+                  onToggleReducedMotion={toggleReducedMotion}
+                  title="All SVG Icons"
+                  subtitle={UI_TEXT.allIconsSubtitle}
+                />
+              }
             />
-          )}
 
-          {currentRoute === '/animated' && (
-            <IconsPage
-              icons={ICONS}
-              filters={{ ...filters, hasAnimation: 'animated' }}
-              onFilterChange={setFilters}
-              favorites={favorites}
-              onToggleFavorite={handleToggleFavorite}
-              onSelectIcon={handleOpenIcon}
-              onQuickCopy={handleQuickCopy}
-              onQuickDownload={handleQuickDownload}
-              globalAnimated={globalAnimated}
-              onToggleGlobalAnimated={() => setGlobalAnimated(!globalAnimated)}
-              onResetFilters={resetFilters}
-              reducedMotion={reducedMotion}
-              onToggleReducedMotion={toggleReducedMotion}
-              title="Animated SVG Icons"
-              subtitle="Self-contained animated vector icons powered by encapsulated CSS keyframes."
+            <Route
+              path="/icon/:slug"
+              element={
+                <IconsPage
+                  icons={ICONS}
+                  filters={filters}
+                  onFilterChange={setFilters}
+                  favorites={favorites}
+                  onToggleFavorite={handleToggleFavorite}
+                  onSelectIcon={handleOpenIcon}
+                  onQuickCopy={handleQuickCopy}
+                  onQuickDownload={handleQuickDownload}
+                  globalAnimated={globalAnimated}
+                  onToggleGlobalAnimated={() => setGlobalAnimated(!globalAnimated)}
+                  onResetFilters={resetFilters}
+                  reducedMotion={reducedMotion}
+                  onToggleReducedMotion={toggleReducedMotion}
+                  title="All SVG Icons"
+                  subtitle={UI_TEXT.allIconsSubtitle}
+                />
+              }
             />
-          )}
 
-          {currentRoute === '/categories' && (
-            <CategoriesPage
-              icons={ICONS}
-              onSelectCategory={catId => {
-                setFilters(f => ({ ...f, category: catId as any }));
-                navigateTo('/icons');
-              }}
-              onSelectIcon={handleOpenIcon}
+            <Route
+              path="/animated"
+              element={
+                <IconsPage
+                  icons={ICONS}
+                  filters={{ ...filters, hasAnimation: 'animated' }}
+                  onFilterChange={setFilters}
+                  favorites={favorites}
+                  onToggleFavorite={handleToggleFavorite}
+                  onSelectIcon={handleOpenIcon}
+                  onQuickCopy={handleQuickCopy}
+                  onQuickDownload={handleQuickDownload}
+                  globalAnimated={globalAnimated}
+                  onToggleGlobalAnimated={() => setGlobalAnimated(!globalAnimated)}
+                  onResetFilters={resetFilters}
+                  reducedMotion={reducedMotion}
+                  onToggleReducedMotion={toggleReducedMotion}
+                  title="Animated SVG Icons"
+                  subtitle="Self-contained animated vector icons powered by encapsulated CSS keyframes."
+                />
+              }
             />
-          )}
 
-          {currentRoute === '/collections' && (
-            <CollectionsPage
-              icons={ICONS}
-              collections={collections}
-              onCreateCollection={handleCreateCollection}
-              onDeleteCollection={handleDeleteCollection}
-              onRemoveFromCollection={handleRemoveFromCollection}
-              favorites={favorites}
-              onToggleFavorite={handleToggleFavorite}
-              onSelectIcon={handleOpenIcon}
-              onQuickCopy={handleQuickCopy}
-              onQuickDownload={handleQuickDownload}
-              onShowToast={showToast}
-              onNavigate={navigateTo}
+            <Route
+              path="/categories"
+              element={
+                <CategoriesPage
+                  icons={ICONS}
+                  onSelectCategory={catId => {
+                    setFilters(f => ({ ...f, category: catId as any }));
+                    navigateTo('/icons');
+                  }}
+                  onSelectIcon={handleOpenIcon}
+                />
+              }
             />
-          )}
 
-          {currentRoute === '/favorites' && (
-            <FavoritesPage
-              icons={ICONS}
-              favorites={favorites}
-              onToggleFavorite={handleToggleFavorite}
-              onSelectIcon={handleOpenIcon}
-              onQuickCopy={handleQuickCopy}
-              onQuickDownload={handleQuickDownload}
-              onClearFavorites={() => setFavorites([])}
-              onShowToast={showToast}
-              onNavigate={navigateTo}
-              reducedMotion={reducedMotion}
+            <Route
+              path="/collections"
+              element={
+                <CollectionsPage
+                  icons={ICONS}
+                  collections={collections}
+                  onCreateCollection={handleCreateCollection}
+                  onDeleteCollection={handleDeleteCollection}
+                  onRemoveFromCollection={handleRemoveFromCollection}
+                  favorites={favorites}
+                  onToggleFavorite={handleToggleFavorite}
+                  onSelectIcon={handleOpenIcon}
+                  onQuickCopy={handleQuickCopy}
+                  onQuickDownload={handleQuickDownload}
+                  onShowToast={showToast}
+                  onNavigate={navigateTo}
+                />
+              }
             />
-          )}
 
-          {currentRoute === '/docs' && (
-            <DocsPage />
-          )}
+            <Route
+              path="/favorites"
+              element={
+                <FavoritesPage
+                  icons={ICONS}
+                  favorites={favorites}
+                  onToggleFavorite={handleToggleFavorite}
+                  onSelectIcon={handleOpenIcon}
+                  onQuickCopy={handleQuickCopy}
+                  onQuickDownload={handleQuickDownload}
+                  onClearFavorites={() => setFavorites([])}
+                  onShowToast={showToast}
+                  onNavigate={navigateTo}
+                  reducedMotion={reducedMotion}
+                />
+              }
+            />
 
-          {currentRoute === '/license' && (
-            <LicensePage onNavigate={navigateTo} onShowToast={showToast} />
-          )}
+            <Route path="/docs" element={<DocsPage />} />
 
-          {currentRoute === '/error' && (
-            <ErrorPage onNavigate={navigateTo} />
-          )}
+            <Route
+              path="/license"
+              element={<LicensePage onNavigate={navigateTo} onShowToast={showToast} />}
+            />
 
-          {!isKnownRoute && (
-            <NotFoundPage currentPath={currentRoute} onNavigate={navigateTo} />
-          )}
+            <Route path="/error" element={<ErrorPage onNavigate={navigateTo} />} />
+
+            <Route
+              path="*"
+              element={<NotFoundPage currentPath={location.pathname} onNavigate={navigateTo} />}
+            />
+          </Routes>
         </ErrorBoundary>
       </main>
 

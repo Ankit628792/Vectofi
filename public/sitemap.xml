@@ -3,1466 +3,2588 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://vectofi.vercel.app</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icons</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/animated</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/animated</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/categories</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/categories</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/collections</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/collections</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/favorites</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/favorites</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/docs</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/docs</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/license</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/license</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icons?category=arrows</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons?category=arrows</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icons?category=navigation</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons?category=navigation</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icons?category=interface</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons?category=interface</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icons?category=communication</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons?category=communication</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icons?category=social</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons?category=social</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icons?category=files</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons?category=files</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icons?category=media</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons?category=media</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icons?category=commerce</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons?category=commerce</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icons?category=security</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons?category=security</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icons?category=users</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons?category=users</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icons?category=weather</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons?category=weather</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icons?category=devices</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons?category=devices</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icons?category=development</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons?category=development</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icons?category=business</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons?category=business</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/arrow-right</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-right</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/arrow-right.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-right.svg</image:loc>
       <image:title>Arrow Right SVG Icon</image:title>
       <image:caption>Free animated vector icon for Arrow Right (arrows category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/arrow-left</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-left</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/arrow-left.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-left.svg</image:loc>
       <image:title>Arrow Left SVG Icon</image:title>
       <image:caption>Free animated vector icon for Arrow Left (arrows category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/arrow-up</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-up</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/arrow-up.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-up.svg</image:loc>
       <image:title>Arrow Up SVG Icon</image:title>
       <image:caption>Free animated vector icon for Arrow Up (arrows category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/arrow-down</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-down</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/arrow-down.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-down.svg</image:loc>
       <image:title>Arrow Down SVG Icon</image:title>
       <image:caption>Free animated vector icon for Arrow Down (arrows category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/arrow-up-right</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-up-right</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/arrow-up-right.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-up-right.svg</image:loc>
       <image:title>Arrow Up Right SVG Icon</image:title>
       <image:caption>Free animated vector icon for Arrow Up Right (arrows category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/arrow-down-left</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-down-left</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/arrow-down-left.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-down-left.svg</image:loc>
       <image:title>Arrow Down Left SVG Icon</image:title>
       <image:caption>Free static vector icon for Arrow Down Left (arrows category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/arrow-trending-up</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-trending-up</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/arrow-trending-up.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-trending-up.svg</image:loc>
       <image:title>Arrow Trending Up SVG Icon</image:title>
       <image:caption>Free animated vector icon for Arrow Trending Up (arrows category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/arrow-trending-down</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-trending-down</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/arrow-trending-down.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-trending-down.svg</image:loc>
       <image:title>Arrow Trending Down SVG Icon</image:title>
       <image:caption>Free animated vector icon for Arrow Trending Down (arrows category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/arrow-refresh</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-refresh</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/arrow-refresh.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-refresh.svg</image:loc>
       <image:title>Arrow Refresh SVG Icon</image:title>
       <image:caption>Free animated vector icon for Arrow Refresh (arrows category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/arrow-swap</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-swap</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/arrow-swap.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-swap.svg</image:loc>
       <image:title>Arrow Swap SVG Icon</image:title>
       <image:caption>Free animated vector icon for Arrow Swap (arrows category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/arrow-circle-right</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-circle-right</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/arrow-circle-right.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-circle-right.svg</image:loc>
       <image:title>Arrow Circle Right SVG Icon</image:title>
       <image:caption>Free animated vector icon for Arrow Circle Right (arrows category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/arrow-corner-up-right</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-corner-up-right</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/arrow-corner-up-right.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-corner-up-right.svg</image:loc>
       <image:title>Arrow Corner Up Right SVG Icon</image:title>
       <image:caption>Free static vector icon for Arrow Corner Up Right (arrows category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/compass</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-up-left</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-up-left.svg</image:loc>
+      <image:title>Arrow Up Left SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Up Left (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-down-right</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-down-right.svg</image:loc>
+      <image:title>Arrow Down Right SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Down Right (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-circle-left</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-circle-left.svg</image:loc>
+      <image:title>Arrow Circle Left SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Circle Left (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-circle-up</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-circle-up.svg</image:loc>
+      <image:title>Arrow Circle Up SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Circle Up (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-circle-down</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-circle-down.svg</image:loc>
+      <image:title>Arrow Circle Down SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Circle Down (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/arrow-expand</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/compass.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/arrow-expand.svg</image:loc>
+      <image:title>Arrow Expand SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Arrow Expand (arrows category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/compass</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/compass.svg</image:loc>
       <image:title>Compass SVG Icon</image:title>
       <image:caption>Free animated vector icon for Compass (navigation category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/map-pin</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/map-pin</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/map-pin.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/map-pin.svg</image:loc>
       <image:title>Map Pin SVG Icon</image:title>
       <image:caption>Free animated vector icon for Map Pin (navigation category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/route</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/route</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/route.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/route.svg</image:loc>
       <image:title>Route SVG Icon</image:title>
       <image:caption>Free animated vector icon for Route (navigation category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/globe</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/globe</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/globe.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/globe.svg</image:loc>
       <image:title>Globe SVG Icon</image:title>
       <image:caption>Free animated vector icon for Globe (navigation category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/crosshair</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/crosshair</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/crosshair.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/crosshair.svg</image:loc>
       <image:title>Crosshair SVG Icon</image:title>
       <image:caption>Free animated vector icon for Crosshair (navigation category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/layers</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/layers</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/layers.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/layers.svg</image:loc>
       <image:title>Layers SVG Icon</image:title>
       <image:caption>Free animated vector icon for Layers (navigation category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/navigation-pointer</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/navigation-pointer</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/navigation-pointer.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/navigation-pointer.svg</image:loc>
       <image:title>Navigation Pointer SVG Icon</image:title>
       <image:caption>Free animated vector icon for Navigation Pointer (navigation category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/anchor</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/anchor</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/anchor.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/anchor.svg</image:loc>
       <image:title>Anchor SVG Icon</image:title>
       <image:caption>Free static vector icon for Anchor (navigation category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/layout-grid</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/layout-grid</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/layout-grid.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/layout-grid.svg</image:loc>
       <image:title>Layout Grid SVG Icon</image:title>
       <image:caption>Free static vector icon for Layout Grid (navigation category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/search</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/map</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/search.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/map.svg</image:loc>
+      <image:title>Map SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Map (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/flag</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/flag.svg</image:loc>
+      <image:title>Flag Marker SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Flag Marker (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/signpost</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/signpost.svg</image:loc>
+      <image:title>Signpost SVG Icon</image:title>
+      <image:caption>Free static vector icon for Signpost (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/locate</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/locate.svg</image:loc>
+      <image:title>Locate GPS SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Locate GPS (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/compass-needle</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/compass-needle.svg</image:loc>
+      <image:title>Compass Needle SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Compass Needle (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/milestone</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/milestone.svg</image:loc>
+      <image:title>Milestone SVG Icon</image:title>
+      <image:caption>Free static vector icon for Milestone (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/radar</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/radar.svg</image:loc>
+      <image:title>Radar Scanner SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Radar Scanner (navigation category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/search</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/search.svg</image:loc>
       <image:title>Search SVG Icon</image:title>
       <image:caption>Free animated vector icon for Search (interface category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/settings</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/settings</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/settings.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/settings.svg</image:loc>
       <image:title>Settings SVG Icon</image:title>
       <image:caption>Free animated vector icon for Settings (interface category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/filter</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/filter</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/filter.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/filter.svg</image:loc>
       <image:title>Filter SVG Icon</image:title>
       <image:caption>Free static vector icon for Filter (interface category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/check</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/check</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/check.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/check.svg</image:loc>
       <image:title>Check SVG Icon</image:title>
       <image:caption>Free animated vector icon for Check (interface category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/close-x</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/close-x</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/close-x.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/close-x.svg</image:loc>
       <image:title>Close X SVG Icon</image:title>
       <image:caption>Free animated vector icon for Close X (interface category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/plus</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/plus</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/plus.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/plus.svg</image:loc>
       <image:title>Plus SVG Icon</image:title>
       <image:caption>Free animated vector icon for Plus (interface category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/minus</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/minus</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/minus.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/minus.svg</image:loc>
       <image:title>Minus SVG Icon</image:title>
       <image:caption>Free static vector icon for Minus (interface category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/trash-2</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/trash-2</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/trash-2.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/trash-2.svg</image:loc>
       <image:title>Trash SVG Icon</image:title>
       <image:caption>Free animated vector icon for Trash (interface category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/edit</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/edit</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/edit.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/edit.svg</image:loc>
       <image:title>Edit SVG Icon</image:title>
       <image:caption>Free animated vector icon for Edit (interface category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/toggle-right</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/toggle-right</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/toggle-right.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/toggle-right.svg</image:loc>
       <image:title>Toggle Switch SVG Icon</image:title>
       <image:caption>Free animated vector icon for Toggle Switch (interface category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/refresh-cw</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/refresh-cw</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/refresh-cw.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/refresh-cw.svg</image:loc>
       <image:title>Refresh Counter-Clockwise SVG Icon</image:title>
       <image:caption>Free animated vector icon for Refresh Counter-Clockwise (interface category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/mail</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/menu</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/mail.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/menu.svg</image:loc>
+      <image:title>Menu Burger SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Menu Burger (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/more-horizontal</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/more-horizontal.svg</image:loc>
+      <image:title>More Horizontal SVG Icon</image:title>
+      <image:caption>Free animated vector icon for More Horizontal (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/more-vertical</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/more-vertical.svg</image:loc>
+      <image:title>More Vertical SVG Icon</image:title>
+      <image:caption>Free animated vector icon for More Vertical (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/check-circle</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/check-circle.svg</image:loc>
+      <image:title>Check Circle SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Check Circle (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/x-circle</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/x-circle.svg</image:loc>
+      <image:title>X Circle SVG Icon</image:title>
+      <image:caption>Free animated vector icon for X Circle (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/help-circle</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/help-circle.svg</image:loc>
+      <image:title>Help Circle SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Help Circle (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/info</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/info.svg</image:loc>
+      <image:title>Info Indicator SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Info Indicator (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/alert-triangle</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/alert-triangle.svg</image:loc>
+      <image:title>Alert Triangle SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Alert Triangle (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/eye-scanner</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/eye-scanner.svg</image:loc>
+      <image:title>Viewfinder Reticle SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Viewfinder Reticle (interface category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/mail</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/mail.svg</image:loc>
       <image:title>Mail SVG Icon</image:title>
       <image:caption>Free animated vector icon for Mail (communication category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/message-square</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/message-square</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/message-square.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/message-square.svg</image:loc>
       <image:title>Message Square SVG Icon</image:title>
       <image:caption>Free animated vector icon for Message Square (communication category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/send</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/send</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/send.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/send.svg</image:loc>
       <image:title>Send SVG Icon</image:title>
       <image:caption>Free animated vector icon for Send (communication category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/bell</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/bell</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/bell.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/bell.svg</image:loc>
       <image:title>Bell Notification SVG Icon</image:title>
       <image:caption>Free animated vector icon for Bell Notification (communication category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/phone</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/phone</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/phone.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/phone.svg</image:loc>
       <image:title>Phone Call SVG Icon</image:title>
       <image:caption>Free animated vector icon for Phone Call (communication category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/inbox</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/inbox</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/inbox.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/inbox.svg</image:loc>
       <image:title>Inbox SVG Icon</image:title>
       <image:caption>Free static vector icon for Inbox (communication category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/message-circle</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/message-circle</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/message-circle.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/message-circle.svg</image:loc>
       <image:title>Message Circle SVG Icon</image:title>
       <image:caption>Free animated vector icon for Message Circle (communication category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/megaphone</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/megaphone</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/megaphone.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/megaphone.svg</image:loc>
       <image:title>Megaphone SVG Icon</image:title>
       <image:caption>Free animated vector icon for Megaphone (communication category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/heart</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/phone-call</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/phone-call.svg</image:loc>
+      <image:title>Phone Call Active SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Phone Call Active (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/phone-off</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/phone-off.svg</image:loc>
+      <image:title>Phone Hangup SVG Icon</image:title>
+      <image:caption>Free static vector icon for Phone Hangup (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/mail-open</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/mail-open.svg</image:loc>
+      <image:title>Mail Open SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Mail Open (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/bell-off</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/bell-off.svg</image:loc>
+      <image:title>Bell Muted SVG Icon</image:title>
+      <image:caption>Free static vector icon for Bell Muted (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/at-sign</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/heart.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/at-sign.svg</image:loc>
+      <image:title>At Sign Mention SVG Icon</image:title>
+      <image:caption>Free animated vector icon for At Sign Mention (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/rss</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/rss.svg</image:loc>
+      <image:title>RSS Feed SVG Icon</image:title>
+      <image:caption>Free animated vector icon for RSS Feed (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/radio</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/radio.svg</image:loc>
+      <image:title>Radio Broadcast SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Radio Broadcast (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/voicemail</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/voicemail.svg</image:loc>
+      <image:title>Voicemail Record SVG Icon</image:title>
+      <image:caption>Free static vector icon for Voicemail Record (communication category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/heart</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/heart.svg</image:loc>
       <image:title>Heart SVG Icon</image:title>
       <image:caption>Free animated vector icon for Heart (social category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/star</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/star</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/star.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/star.svg</image:loc>
       <image:title>Star SVG Icon</image:title>
       <image:caption>Free animated vector icon for Star (social category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/thumbs-up</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/thumbs-up</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/thumbs-up.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/thumbs-up.svg</image:loc>
       <image:title>Thumbs Up SVG Icon</image:title>
       <image:caption>Free animated vector icon for Thumbs Up (social category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/bookmark</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/bookmark</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/bookmark.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/bookmark.svg</image:loc>
       <image:title>Bookmark SVG Icon</image:title>
       <image:caption>Free animated vector icon for Bookmark (social category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/share-2</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/share-2</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/share-2.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/share-2.svg</image:loc>
       <image:title>Share SVG Icon</image:title>
       <image:caption>Free animated vector icon for Share (social category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/award</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/award</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/award.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/award.svg</image:loc>
       <image:title>Award Badge SVG Icon</image:title>
       <image:caption>Free animated vector icon for Award Badge (social category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/sparkle</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/sparkle</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/sparkle.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/sparkle.svg</image:loc>
       <image:title>Sparkle AI SVG Icon</image:title>
       <image:caption>Free animated vector icon for Sparkle AI (social category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/link</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/link</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/link.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/link.svg</image:loc>
       <image:title>Hyperlink SVG Icon</image:title>
       <image:caption>Free static vector icon for Hyperlink (social category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/file-text</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/thumbs-down</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/file-text.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/thumbs-down.svg</image:loc>
+      <image:title>Thumbs Down SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Thumbs Down (social category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/gift</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/gift.svg</image:loc>
+      <image:title>Gift Present SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Gift Present (social category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/trophy</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/trophy.svg</image:loc>
+      <image:title>Trophy Winner SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Trophy Winner (social category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/heart-off</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/heart-off.svg</image:loc>
+      <image:title>Broken Heart SVG Icon</image:title>
+      <image:caption>Free static vector icon for Broken Heart (social category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/bookmark-check</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/bookmark-check.svg</image:loc>
+      <image:title>Bookmark Saved SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Bookmark Saved (social category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/flame</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/flame.svg</image:loc>
+      <image:title>Flame Trending SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Flame Trending (social category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/crown</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/crown.svg</image:loc>
+      <image:title>Crown VIP SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Crown VIP (social category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/file-text</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/file-text.svg</image:loc>
       <image:title>File Document SVG Icon</image:title>
       <image:caption>Free static vector icon for File Document (files category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/folder</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/folder</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/folder.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/folder.svg</image:loc>
       <image:title>Folder SVG Icon</image:title>
       <image:caption>Free animated vector icon for Folder (files category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/folder-plus</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/folder-plus</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/folder-plus.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/folder-plus.svg</image:loc>
       <image:title>Folder Plus SVG Icon</image:title>
       <image:caption>Free static vector icon for Folder Plus (files category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/download</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/download</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/download.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/download.svg</image:loc>
       <image:title>Download Cloud SVG Icon</image:title>
       <image:caption>Free animated vector icon for Download Cloud (files category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/upload</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/upload</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/upload.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/upload.svg</image:loc>
       <image:title>Upload Cloud SVG Icon</image:title>
       <image:caption>Free animated vector icon for Upload Cloud (files category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/archive</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/archive</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/archive.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/archive.svg</image:loc>
       <image:title>Archive Box SVG Icon</image:title>
       <image:caption>Free static vector icon for Archive Box (files category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/paperclip</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/paperclip</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/paperclip.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/paperclip.svg</image:loc>
       <image:title>Attachment Paperclip SVG Icon</image:title>
       <image:caption>Free static vector icon for Attachment Paperclip (files category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/file-code</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/file-code</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/file-code.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/file-code.svg</image:loc>
       <image:title>File Code SVG Icon</image:title>
       <image:caption>Free animated vector icon for File Code (files category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/play</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/file</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/file.svg</image:loc>
+      <image:title>Blank Document SVG Icon</image:title>
+      <image:caption>Free static vector icon for Blank Document (files category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/file-plus</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/file-plus.svg</image:loc>
+      <image:title>New Document File SVG Icon</image:title>
+      <image:caption>Free animated vector icon for New Document File (files category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/file-check</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/play.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/file-check.svg</image:loc>
+      <image:title>Verified Document SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Verified Document (files category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/folder-minus</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/folder-minus.svg</image:loc>
+      <image:title>Folder Remove SVG Icon</image:title>
+      <image:caption>Free static vector icon for Folder Remove (files category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/folder-open</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/folder-open.svg</image:loc>
+      <image:title>Folder Open SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Folder Open (files category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/clipboard</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/clipboard.svg</image:loc>
+      <image:title>Clipboard Task SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Clipboard Task (files category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/file-diff</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/file-diff.svg</image:loc>
+      <image:title>File Diff Compare SVG Icon</image:title>
+      <image:caption>Free static vector icon for File Diff Compare (files category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/play</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/play.svg</image:loc>
       <image:title>Play Video SVG Icon</image:title>
       <image:caption>Free animated vector icon for Play Video (media category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/pause</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/pause</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/pause.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/pause.svg</image:loc>
       <image:title>Pause Video SVG Icon</image:title>
       <image:caption>Free static vector icon for Pause Video (media category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/volume-2</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/volume-2</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/volume-2.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/volume-2.svg</image:loc>
       <image:title>Volume Sound SVG Icon</image:title>
       <image:caption>Free animated vector icon for Volume Sound (media category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/mic</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/mic</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/mic.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/mic.svg</image:loc>
       <image:title>Microphone SVG Icon</image:title>
       <image:caption>Free animated vector icon for Microphone (media category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/camera</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/camera</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/camera.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/camera.svg</image:loc>
       <image:title>Camera Photo SVG Icon</image:title>
       <image:caption>Free animated vector icon for Camera Photo (media category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/video</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/video</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/video.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/video.svg</image:loc>
       <image:title>Video Recorder SVG Icon</image:title>
       <image:caption>Free static vector icon for Video Recorder (media category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/music</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/music</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/music.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/music.svg</image:loc>
       <image:title>Musical Note SVG Icon</image:title>
       <image:caption>Free animated vector icon for Musical Note (media category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/sliders</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/sliders</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/sliders.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/sliders.svg</image:loc>
       <image:title>Sliders Equalizer SVG Icon</image:title>
       <image:caption>Free animated vector icon for Sliders Equalizer (media category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/shopping-cart</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/skip-forward</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/skip-forward.svg</image:loc>
+      <image:title>Skip Forward Next SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Skip Forward Next (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/skip-back</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/skip-back.svg</image:loc>
+      <image:title>Skip Back Previous SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Skip Back Previous (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/volume-x</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/volume-x.svg</image:loc>
+      <image:title>Volume Mute SVG Icon</image:title>
+      <image:caption>Free static vector icon for Volume Mute (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/mic-off</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/mic-off.svg</image:loc>
+      <image:title>Microphone Muted SVG Icon</image:title>
+      <image:caption>Free static vector icon for Microphone Muted (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/disc</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/shopping-cart.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/disc.svg</image:loc>
+      <image:title>Audio Vinyl Disc SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Audio Vinyl Disc (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/film</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/film.svg</image:loc>
+      <image:title>Film Cinema Reel SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Film Cinema Reel (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/headphones</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/headphones.svg</image:loc>
+      <image:title>Headphones Audio SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Headphones Audio (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/repeat</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/repeat.svg</image:loc>
+      <image:title>Repeat Loop Track SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Repeat Loop Track (media category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/shopping-cart</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/shopping-cart.svg</image:loc>
       <image:title>Shopping Cart SVG Icon</image:title>
       <image:caption>Free animated vector icon for Shopping Cart (commerce category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/shopping-bag</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/shopping-bag</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/shopping-bag.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/shopping-bag.svg</image:loc>
       <image:title>Shopping Bag SVG Icon</image:title>
       <image:caption>Free animated vector icon for Shopping Bag (commerce category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/credit-card</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/credit-card</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/credit-card.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/credit-card.svg</image:loc>
       <image:title>Credit Card SVG Icon</image:title>
       <image:caption>Free animated vector icon for Credit Card (commerce category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/tag</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/tag</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/tag.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/tag.svg</image:loc>
       <image:title>Price Tag SVG Icon</image:title>
       <image:caption>Free animated vector icon for Price Tag (commerce category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/percent</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/percent</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/percent.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/percent.svg</image:loc>
       <image:title>Percent Discount SVG Icon</image:title>
       <image:caption>Free static vector icon for Percent Discount (commerce category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/dollar-sign</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/dollar-sign</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/dollar-sign.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/dollar-sign.svg</image:loc>
       <image:title>Dollar Sign SVG Icon</image:title>
       <image:caption>Free animated vector icon for Dollar Sign (commerce category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/wallet</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/wallet</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/wallet.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/wallet.svg</image:loc>
       <image:title>Wallet SVG Icon</image:title>
       <image:caption>Free static vector icon for Wallet (commerce category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/package</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/package</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/package.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/package.svg</image:loc>
       <image:title>Package Delivery SVG Icon</image:title>
       <image:caption>Free animated vector icon for Package Delivery (commerce category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/shield</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/receipt</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/receipt.svg</image:loc>
+      <image:title>Receipt Bill SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Receipt Bill (commerce category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/coins</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/shield.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/coins.svg</image:loc>
+      <image:title>Coins Currency SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Coins Currency (commerce category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/banknote</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/banknote.svg</image:loc>
+      <image:title>Banknote Cash SVG Icon</image:title>
+      <image:caption>Free static vector icon for Banknote Cash (commerce category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/badge-percent</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/badge-percent.svg</image:loc>
+      <image:title>Promo Discount Badge SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Promo Discount Badge (commerce category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/store</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/store.svg</image:loc>
+      <image:title>Store Front SVG Icon</image:title>
+      <image:caption>Free static vector icon for Store Front (commerce category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/truck</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/truck.svg</image:loc>
+      <image:title>Shipping Freight Truck SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Shipping Freight Truck (commerce category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/barcode</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/barcode.svg</image:loc>
+      <image:title>Product Barcode SVG Icon</image:title>
+      <image:caption>Free static vector icon for Product Barcode (commerce category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/shield</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/shield.svg</image:loc>
       <image:title>Shield Protection SVG Icon</image:title>
       <image:caption>Free animated vector icon for Shield Protection (security category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/shield-check</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/shield-check</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/shield-check.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/shield-check.svg</image:loc>
       <image:title>Shield Verified SVG Icon</image:title>
       <image:caption>Free animated vector icon for Shield Verified (security category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/lock</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/lock</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/lock.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/lock.svg</image:loc>
       <image:title>Lock Closed SVG Icon</image:title>
       <image:caption>Free animated vector icon for Lock Closed (security category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/unlock</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/unlock</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/unlock.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/unlock.svg</image:loc>
       <image:title>Unlock Open SVG Icon</image:title>
       <image:caption>Free static vector icon for Unlock Open (security category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/key</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/key</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/key.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/key.svg</image:loc>
       <image:title>Key Token SVG Icon</image:title>
       <image:caption>Free animated vector icon for Key Token (security category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/eye</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/eye</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/eye.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/eye.svg</image:loc>
       <image:title>Eye Visible SVG Icon</image:title>
       <image:caption>Free animated vector icon for Eye Visible (security category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/eye-off</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/eye-off</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/eye-off.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/eye-off.svg</image:loc>
       <image:title>Eye Concealed SVG Icon</image:title>
       <image:caption>Free static vector icon for Eye Concealed (security category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/fingerprint</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/fingerprint</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/fingerprint.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/fingerprint.svg</image:loc>
       <image:title>Biometric Fingerprint SVG Icon</image:title>
       <image:caption>Free animated vector icon for Biometric Fingerprint (security category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/user</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/shield-alert</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/user.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/shield-alert.svg</image:loc>
+      <image:title>Shield Alert Danger SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Shield Alert Danger (security category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/shield-off</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/shield-off.svg</image:loc>
+      <image:title>Protection Disabled SVG Icon</image:title>
+      <image:caption>Free static vector icon for Protection Disabled (security category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/vault</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/vault.svg</image:loc>
+      <image:title>Bank Safe Vault SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Bank Safe Vault (security category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/lock-keyhole</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/lock-keyhole.svg</image:loc>
+      <image:title>Padlock Keyhole SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Padlock Keyhole (security category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/scan</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/scan.svg</image:loc>
+      <image:title>Biometric Scanner Reticle SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Biometric Scanner Reticle (security category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/key-round</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/key-round.svg</image:loc>
+      <image:title>Security Token Key SVG Icon</image:title>
+      <image:caption>Free static vector icon for Security Token Key (security category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/binary-lock</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/binary-lock.svg</image:loc>
+      <image:title>Encrypted Binary Lock SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Encrypted Binary Lock (security category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/user</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/user.svg</image:loc>
       <image:title>User Person SVG Icon</image:title>
       <image:caption>Free animated vector icon for User Person (users category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/users</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/users</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/users.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/users.svg</image:loc>
       <image:title>User Group SVG Icon</image:title>
       <image:caption>Free animated vector icon for User Group (users category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/user-plus</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/user-plus</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/user-plus.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/user-plus.svg</image:loc>
       <image:title>User Invite SVG Icon</image:title>
       <image:caption>Free animated vector icon for User Invite (users category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/user-check</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/user-check</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/user-check.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/user-check.svg</image:loc>
       <image:title>User Verified SVG Icon</image:title>
       <image:caption>Free static vector icon for User Verified (users category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/user-x</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/user-x</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/user-x.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/user-x.svg</image:loc>
       <image:title>User Blocked SVG Icon</image:title>
       <image:caption>Free static vector icon for User Blocked (users category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/smile</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/smile</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/smile.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/smile.svg</image:loc>
       <image:title>Smile Emoji SVG Icon</image:title>
       <image:caption>Free animated vector icon for Smile Emoji (users category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/badge-check</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/badge-check</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/badge-check.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/badge-check.svg</image:loc>
       <image:title>Badge Check SVG Icon</image:title>
       <image:caption>Free animated vector icon for Badge Check (users category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/contact</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/contact</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/contact.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/contact.svg</image:loc>
       <image:title>Contact Card SVG Icon</image:title>
       <image:caption>Free static vector icon for Contact Card (users category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/sun</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/user-minus</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/user-minus.svg</image:loc>
+      <image:title>User Remove SVG Icon</image:title>
+      <image:caption>Free static vector icon for User Remove (users category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/user-cog</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/sun.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/user-cog.svg</image:loc>
+      <image:title>User Admin Settings SVG Icon</image:title>
+      <image:caption>Free animated vector icon for User Admin Settings (users category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/id-card</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/id-card.svg</image:loc>
+      <image:title>Identity Badge Card SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Identity Badge Card (users category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/heart-handshake</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/heart-handshake.svg</image:loc>
+      <image:title>Partnership Handshake SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Partnership Handshake (users category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/frown</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/frown.svg</image:loc>
+      <image:title>Frown Emoji SVG Icon</image:title>
+      <image:caption>Free static vector icon for Frown Emoji (users category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/meh</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/meh.svg</image:loc>
+      <image:title>Neutral Meh Face SVG Icon</image:title>
+      <image:caption>Free static vector icon for Neutral Meh Face (users category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/user-circle</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/user-circle.svg</image:loc>
+      <image:title>User Avatar Circle SVG Icon</image:title>
+      <image:caption>Free animated vector icon for User Avatar Circle (users category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/sun</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/sun.svg</image:loc>
       <image:title>Sun Bright SVG Icon</image:title>
       <image:caption>Free animated vector icon for Sun Bright (weather category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/moon</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/moon</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/moon.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/moon.svg</image:loc>
       <image:title>Moon Night SVG Icon</image:title>
       <image:caption>Free animated vector icon for Moon Night (weather category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/cloud</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/cloud</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/cloud.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/cloud.svg</image:loc>
       <image:title>Cloud SVG Icon</image:title>
       <image:caption>Free animated vector icon for Cloud (weather category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/cloud-rain</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/cloud-rain</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/cloud-rain.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/cloud-rain.svg</image:loc>
       <image:title>Cloud Rain SVG Icon</image:title>
       <image:caption>Free animated vector icon for Cloud Rain (weather category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/cloud-lightning</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/cloud-lightning</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/cloud-lightning.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/cloud-lightning.svg</image:loc>
       <image:title>Cloud Lightning SVG Icon</image:title>
       <image:caption>Free animated vector icon for Cloud Lightning (weather category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/wind</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/wind</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/wind.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/wind.svg</image:loc>
       <image:title>Wind Breeze SVG Icon</image:title>
       <image:caption>Free animated vector icon for Wind Breeze (weather category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/droplet</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/droplet</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/droplet.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/droplet.svg</image:loc>
       <image:title>Water Droplet SVG Icon</image:title>
       <image:caption>Free animated vector icon for Water Droplet (weather category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/snowflake</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/snowflake</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/snowflake.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/snowflake.svg</image:loc>
       <image:title>Snowflake SVG Icon</image:title>
       <image:caption>Free animated vector icon for Snowflake (weather category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/laptop</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/cloud-sun</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/laptop.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/cloud-sun.svg</image:loc>
+      <image:title>Partly Sunny SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Partly Sunny (weather category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/cloud-snow</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/cloud-snow.svg</image:loc>
+      <image:title>Cloud Snowfall SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Cloud Snowfall (weather category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/cloud-drizzle</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/cloud-drizzle.svg</image:loc>
+      <image:title>Cloud Light Drizzle SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Cloud Light Drizzle (weather category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/thermometer</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/thermometer.svg</image:loc>
+      <image:title>Thermometer Temperature SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Thermometer Temperature (weather category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/sunset</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/sunset.svg</image:loc>
+      <image:title>Sunset Twilight SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Sunset Twilight (weather category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/sunrise</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/sunrise.svg</image:loc>
+      <image:title>Sunrise Dawn SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Sunrise Dawn (weather category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/tornado</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/tornado.svg</image:loc>
+      <image:title>Tornado Vortex SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Tornado Vortex (weather category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/laptop</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/laptop.svg</image:loc>
       <image:title>Laptop Computer SVG Icon</image:title>
       <image:caption>Free static vector icon for Laptop Computer (devices category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/smartphone</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/smartphone</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/smartphone.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/smartphone.svg</image:loc>
       <image:title>Smartphone Mobile SVG Icon</image:title>
       <image:caption>Free animated vector icon for Smartphone Mobile (devices category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/monitor</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/monitor</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/monitor.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/monitor.svg</image:loc>
       <image:title>Display Monitor SVG Icon</image:title>
       <image:caption>Free static vector icon for Display Monitor (devices category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/cpu</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/cpu</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/cpu.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/cpu.svg</image:loc>
       <image:title>CPU Processor SVG Icon</image:title>
       <image:caption>Free animated vector icon for CPU Processor (devices category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/wifi</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/wifi</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/wifi.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/wifi.svg</image:loc>
       <image:title>WiFi Signal SVG Icon</image:title>
       <image:caption>Free animated vector icon for WiFi Signal (devices category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/battery-charging</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/battery-charging</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/battery-charging.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/battery-charging.svg</image:loc>
       <image:title>Battery Charging SVG Icon</image:title>
       <image:caption>Free animated vector icon for Battery Charging (devices category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/hard-drive</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/hard-drive</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/hard-drive.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/hard-drive.svg</image:loc>
       <image:title>Hard Drive SVG Icon</image:title>
       <image:caption>Free static vector icon for Hard Drive (devices category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/tablet</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/tablet</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/tablet.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/tablet.svg</image:loc>
       <image:title>Tablet iPad SVG Icon</image:title>
       <image:caption>Free static vector icon for Tablet iPad (devices category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/code</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/server</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/code.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/server.svg</image:loc>
+      <image:title>Server Rack Cluster SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Server Rack Cluster (devices category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/mouse</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/mouse.svg</image:loc>
+      <image:title>Computer Mouse SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Computer Mouse (devices category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/keyboard</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/keyboard.svg</image:loc>
+      <image:title>Mechanical Keyboard SVG Icon</image:title>
+      <image:caption>Free static vector icon for Mechanical Keyboard (devices category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/printer</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/printer.svg</image:loc>
+      <image:title>Office Printer SVG Icon</image:title>
+      <image:caption>Free static vector icon for Office Printer (devices category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/radio</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/radio.svg</image:loc>
+      <image:title>Radio Receiver Antenna SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Radio Receiver Antenna (devices category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/watch</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/watch.svg</image:loc>
+      <image:title>Smartwatch Wearable SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Smartwatch Wearable (devices category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/bluetooth</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/bluetooth.svg</image:loc>
+      <image:title>Bluetooth Wireless SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Bluetooth Wireless (devices category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/code</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/code.svg</image:loc>
       <image:title>Code Brackets SVG Icon</image:title>
       <image:caption>Free animated vector icon for Code Brackets (development category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/terminal</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/terminal</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/terminal.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/terminal.svg</image:loc>
       <image:title>Terminal Console SVG Icon</image:title>
       <image:caption>Free animated vector icon for Terminal Console (development category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/git-branch</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/git-branch</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/git-branch.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/git-branch.svg</image:loc>
       <image:title>Git Branch SVG Icon</image:title>
       <image:caption>Free animated vector icon for Git Branch (development category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/git-commit</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/git-commit</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/git-commit.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/git-commit.svg</image:loc>
       <image:title>Git Commit SVG Icon</image:title>
       <image:caption>Free animated vector icon for Git Commit (development category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/git-pull-request</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/git-pull-request</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/git-pull-request.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/git-pull-request.svg</image:loc>
       <image:title>Git Pull Request SVG Icon</image:title>
       <image:caption>Free animated vector icon for Git Pull Request (development category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/database</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/database</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/database.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/database.svg</image:loc>
       <image:title>Database Storage SVG Icon</image:title>
       <image:caption>Free animated vector icon for Database Storage (development category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/bug</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/bug</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/bug.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/bug.svg</image:loc>
       <image:title>Software Bug SVG Icon</image:title>
       <image:caption>Free animated vector icon for Software Bug (development category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/binary</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/binary</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/binary.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/binary.svg</image:loc>
       <image:title>Binary Data SVG Icon</image:title>
       <image:caption>Free static vector icon for Binary Data (development category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/api-endpoint</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/api-endpoint</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/api-endpoint.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/api-endpoint.svg</image:loc>
       <image:title>API Endpoint SVG Icon</image:title>
       <image:caption>Free animated vector icon for API Endpoint (development category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/briefcase</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/git-fork</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/briefcase.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/git-fork.svg</image:loc>
+      <image:title>Git Fork Repo SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Git Fork Repo (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/git-merge</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/git-merge.svg</image:loc>
+      <image:title>Git Merge Branch SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Git Merge Branch (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/webhook</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/webhook.svg</image:loc>
+      <image:title>Webhook Event SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Webhook Event (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/braces</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/braces.svg</image:loc>
+      <image:title>Curly Braces Syntax SVG Icon</image:title>
+      <image:caption>Free static vector icon for Curly Braces Syntax (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/file-json</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/file-json.svg</image:loc>
+      <image:title>JSON Config File SVG Icon</image:title>
+      <image:caption>Free animated vector icon for JSON Config File (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/server-crash</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/server-crash.svg</image:loc>
+      <image:title>Server Error 500 SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Server Error 500 (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/code-xml</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/code-xml.svg</image:loc>
+      <image:title>HTML XML Tags SVG Icon</image:title>
+      <image:caption>Free animated vector icon for HTML XML Tags (development category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/briefcase</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/briefcase.svg</image:loc>
       <image:title>Briefcase Portfolio SVG Icon</image:title>
       <image:caption>Free static vector icon for Briefcase Portfolio (business category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/bar-chart</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/bar-chart</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/bar-chart.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/bar-chart.svg</image:loc>
       <image:title>Bar Chart Analytics SVG Icon</image:title>
       <image:caption>Free animated vector icon for Bar Chart Analytics (business category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/target</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/target</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/target.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/target.svg</image:loc>
       <image:title>Target Goal SVG Icon</image:title>
       <image:caption>Free animated vector icon for Target Goal (business category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/pie-chart</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/pie-chart</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/pie-chart.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/pie-chart.svg</image:loc>
       <image:title>Pie Chart SVG Icon</image:title>
       <image:caption>Free animated vector icon for Pie Chart (business category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/calculator</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/calculator</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/calculator.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/calculator.svg</image:loc>
       <image:title>Calculator Math SVG Icon</image:title>
       <image:caption>Free static vector icon for Calculator Math (business category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/presentation</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/presentation</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/presentation.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/presentation.svg</image:loc>
       <image:title>Presentation Pitch SVG Icon</image:title>
       <image:caption>Free static vector icon for Presentation Pitch (business category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/calendar</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/calendar</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/calendar.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/calendar.svg</image:loc>
       <image:title>Calendar Schedule SVG Icon</image:title>
       <image:caption>Free animated vector icon for Calendar Schedule (business category). MIT licensed.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://vectofi.vercel.app/icon/clock</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/clock</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://vectofi.vercel.app/icons/clock.svg</image:loc>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/clock.svg</image:loc>
       <image:title>Clock Time SVG Icon</image:title>
       <image:caption>Free animated vector icon for Clock Time (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/trending-up</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/trending-up.svg</image:loc>
+      <image:title>Trending Up Growth SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Trending Up Growth (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/trending-down</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/trending-down.svg</image:loc>
+      <image:title>Trending Down Loss SVG Icon</image:title>
+      <image:caption>Free static vector icon for Trending Down Loss (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/award</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/award.svg</image:loc>
+      <image:title>Award Trophy Medal SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Award Trophy Medal (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/building</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/building.svg</image:loc>
+      <image:title>Corporate Office Building SVG Icon</image:title>
+      <image:caption>Free static vector icon for Corporate Office Building (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/landmark</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/landmark.svg</image:loc>
+      <image:title>Bank Financial Landmark SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Bank Financial Landmark (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/line-chart</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/line-chart.svg</image:loc>
+      <image:title>Financial Line Chart SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Financial Line Chart (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/kanban</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/kanban.svg</image:loc>
+      <image:title>Kanban Project Board SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Kanban Project Board (business category). MIT licensed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icon/badge-dollar-sign</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://ais-dev-p47rry35ytevdek7l44vla-1030295253002.asia-southeast1.run.app/icons/badge-dollar-sign.svg</image:loc>
+      <image:title>Revenue Badge SVG Icon</image:title>
+      <image:caption>Free animated vector icon for Revenue Badge (business category). MIT licensed.</image:caption>
     </image:image>
   </url>
 </urlset>
