@@ -1,148 +1,204 @@
 # Vectofi User Guide (USAGE.md)
 
-Welcome to the **Vectofi** user guide. This walkthrough explains how to browse the icon library, inspect and animate vectors in the Laboratory, customize icon styles, and export code across multiple web frameworks.
+Welcome to the **Vectofi** user guide. This walkthrough explains how to discover icons, customize vectors in the interactive Laboratory, organize project collections, and export code across modern web frameworks.
 
 ---
 
 ## 1. Browsing & Searching Icons
 
-### Search Bar
-- Click the search bar at the top or press `/` to instantly search across icon names, slugs, and descriptive keywords (e.g. typing `"arrow"`, `"download"`, `"cog"`, or `"check"`).
-- Search results update in real-time.
+### Real-Time Search Bar
+- Press <kbd>/</kbd> anywhere in the application or click the top search input to instantly filter across icon titles, slugs, and semantic synonyms (e.g. typing `"search"`, `"cart"`, `"database"`, `"user"`, or `"trend"`).
+- Search evaluates multi-word queries, exact slug matches, and semantic tag associations with instant zero-lag response.
 
-### Category Filters
-Filter icons by category pills:
-- **All Icons** (121)
-- **Navigation**
-- **Media**
-- **Actions**
-- **Communication**
-- **Commerce**
-- **Devices**
-- **Editor**
-- **Files**
-- **System**
-- **Weather**
+### 20 Functional Categories
+Filter icons via the category navigation bar or sidebar:
+- **Interface & Controls** (125 icons)
+- **Arrows & Directions** (98 icons)
+- **Media, Audio & Video** (69 icons)
+- **Communication** (59 icons)
+- **Files & Folders** (59 icons)
+- **Devices & Hardware** (57 icons)
+- **Security & Privacy** (56 icons)
+- **Weather & Atmosphere** (52 icons)
+- **Navigation & Places** (52 icons)
+- **Social & Engagement** (51 icons)
+- **Business & Analytics** (50 icons)
+- **Development & Code** (49 icons)
+- **Design & Creative** (41 icons)
+- **Users & Teams** (41 icons)
+- **Commerce & Finance** (40 icons)
+- **Editor & Text** (39 icons)
+- **Travel & Transport** (38 icons)
+- **Food & Dining** (30 icons)
+- **Health & Wellness** (22 icons)
+- **Sports & Gaming** (16 icons)
 
-### Animation Filter
-Use the **Animation Toggle** in the filter toolbar:
-- **All**: Displays both static and animated icons.
-- **Animated Only**: Displays only icons with active path morphing capabilities.
-- **Static Only**: Displays standard non-animated icons.
+### Animation & Style Filters
+- **All Icons**: Displays both static and animated icons.
+- **Animated Only (900+)**: Highlights icons with active motion presets (`pulse`, `bounce`, `spin`, `shake`, `slide`, `morph`, `float`, `draw`).
+- **Static Only**: Displays clean, un-animated vector geometry.
 
 ---
 
 ## 2. Interactive SVG Laboratory
 
-Click on any icon card in the grid to launch the **Icon Detail Laboratory**.
+Click any icon card or launch the Laboratory from the navigation bar to inspect and customize vector attributes in real-time.
 
-### 2.1 Static ↔ Morphing Controls
-- **Static**: Renders the authentic, static SVG vector geometry.
-- **Morph from None**: Activates the vector morphing engine, expanding the icon outward from its center point using cubic Bézier interpolation.
-- **Compare Side-by-Side**: Splits the inspection canvas into two synchronized boxes:
-  - **Left Box**: Static final icon reference.
-  - **Right Box**: Live loop of the icon morphing from none.
+### 2.1 Live Canvas Inspection
+- **Static vs. Animated Comparison**: Toggle side-by-side mode to preview static vector geometry alongside its live animated keyframe loop.
+- **Centroid & Grid Crosshairs**: Inspect pixel alignment on the official $24 \times 24$ coordinate system.
+- **Zoom & Stage Controls**: Scale preview up to 400% with technical blueprint, dark canvas, or light canvas backdrops.
 
-### 2.2 Vector Customization Controls
-Inside the laboratory's control drawer:
-- **Size**: Adjust the render dimension from `16px` to `96px` (defaults to `32px` in stage).
-- **Stroke Width**: Adjust vector thickness from `0.5px` (hairline) to `4.0px` (ultra-bold).
-- **Color Picker**: Choose from curated design presets (Pure White, Electric Blue, Emerald Green, Indigo, Amber, Rose, Purple) or enter any arbitrary Hex/RGB color code.
-- **Animation Speed**: Choose between `Fast (1.2s)`, `Normal (2.4s)`, or `Slow (4.0s)`.
-- **Stage Background**: Toggle the laboratory backdrop between Dark Canvas, Light Canvas, Technical Blueprint Grid, Slate, or Subtle Gradient to test contrast.
+### 2.2 Vector Styling Controls
+- **Stroke Width**: Real-time slider from `0.5px` (ultra-thin hairline) to `4.0px` (bold display).
+- **Size**: Adjust rendered container dimensions from `16px` to `128px`.
+- **Color Customizer**: Pick from theme presets or enter custom Hex / RGB / `currentColor` values.
+- **Animation Speed**: Choose between `Slow (3.5s)`, `Normal (2.0s)`, or `Fast (1.0s)`.
 
 ---
 
-## 3. Exporting Icons & Code Generation
+## 3. Code Generation & Multi-Framework Export
 
-On the right panel of the Laboratory, select your target framework to preview and copy production-ready code.
+Vectofi generates production-ready, accessible code snippets for all major web frameworks:
 
-### 3.1 Supported Code Formats
-
-#### 1. Raw SVG
-Standard standalone `<svg>` tag with inline attributes and `<animate>` tags (if animated).
-```html
-<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="...">
-    <animate attributeName="d" dur="2.4s" repeatCount="indefinite" values="..." />
-  </path>
-</svg>
-```
-
-#### 2. React / TSX
-Modular functional React component with typed props:
+### 1. React / Next.js (TSX / JSX)
 ```tsx
 import React from 'react';
 
-export const PlayIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <polygon points="5 3 19 12 5 21 5 3" />
+export const SparklesIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
+  width = 24,
+  height = 24,
+  stroke = 'currentColor',
+  strokeWidth = 2,
+  ...props
+}) => (
+  <svg
+    width={width}
+    height={height}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke={stroke}
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
   </svg>
 );
 ```
 
-#### 3. Vue 3 (Composition API)
-Native Vue Single File Component with `<script setup>` and template binding:
+### 2. Vue 3 (Composition API)
 ```vue
 <template>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round">
-    <polygon points="5 3 19 12 5 21 5 3" />
+  <svg
+    :width="size"
+    :height="size"
+    viewBox="0 0 24 24"
+    fill="none"
+    :stroke="color"
+    :stroke-width="strokeWidth"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
   </svg>
 </template>
 
 <script setup lang="ts">
-withDefaults(defineProps<{ strokeWidth?: number }>(), { strokeWidth: 2 });
+withDefaults(
+  defineProps<{
+    size?: number | string;
+    color?: string;
+    strokeWidth?: number;
+  }>(),
+  {
+    size: 24,
+    color: 'currentColor',
+    strokeWidth: 2,
+  }
+);
 </script>
 ```
 
-#### 4. Svelte
-Svelte component with reactive prop declarations:
+### 3. Svelte (Svelte 4 & 5)
 ```svelte
 <script lang="ts">
-  export let size: number = 24;
+  export let size: number | string = 24;
+  export let color: string = 'currentColor';
   export let strokeWidth: number = 2;
-  export let color: string = "currentColor";
 </script>
 
-<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} stroke-width={strokeWidth} stroke-linecap="round" stroke-linejoin="round">
-  <polygon points="5 3 19 12 5 21 5 3" />
+<svg
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke={color}
+  stroke-width={strokeWidth}
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  {...$$restProps}
+>
+  <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
 </svg>
 ```
 
-#### 5. Tailwind CSS
-Inline vector snippet with utility classes applied directly:
+### 4. Angular Standalone Component
+```typescript
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-icon-sparkles',
+  standalone: true,
+  template: `
+    <svg
+      [attr.width]="size"
+      [attr.height]="size"
+      viewBox="0 0 24 24"
+      fill="none"
+      [attr.stroke]="color"
+      [attr.stroke-width]="strokeWidth"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+    </svg>
+  `,
+  styles: [':host { display: inline-flex; }']
+})
+export class SparklesIconComponent {
+  @Input() size: number | string = 24;
+  @Input() color: string = 'currentColor';
+  @Input() strokeWidth: number = 2;
+}
+```
+
+### 5. Tailwind CSS Utility Markup
 ```html
 <svg class="w-6 h-6 text-blue-500 stroke-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-  <polygon points="5 3 19 12 5 21 5 3" />
+  <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
 </svg>
 ```
-
-#### 6. SVG Sprite
-Reference symbol ID for large-scale icon sprite systems:
-```html
-<svg class="icon icon-play" width="24" height="24">
-  <use href="#icon-play" />
-</svg>
-```
-
-### 3.2 File Downloads
-- **Download SVG**: Downloads a sanitized `.svg` file containing the configured stroke width, color, and optional animation.
-- **Download PNG**: Renders the vector to an HTML5 offscreen canvas at high resolution ($1024 \times 1024$) and triggers a `.png` download.
 
 ---
 
-## 4. Managing Collections & Favorites
+## 4. Collections & Batch Management
 
-- **Favorites**: Click the heart button on any card or inside the Laboratory to quickly favorite an icon. Filter by Favorites in the category bar to view your curated set.
-- **Collections**: Create named project collections (e.g. *"Dashboard v2"*, *"E-Commerce Header"*, *"Mobile Nav"*). Add icons to specific collections from the dropdown and export collection metadata as JSON.
+- **Favorites**: Click the heart button on any icon card to pin it to your favorites list.
+- **Project Collections**: Create custom named collections (e.g. *"Fintech Mobile App"*, *"Admin Dashboard v3"*). Add or remove icons with a single click.
+- **Batch Export**: Download all icons in a collection at once as optimized `.svg` files or bundle them into a `.zip` archive.
+- **Import / Export JSON**: Back up your collections and share presets across team members.
 
 ---
 
 ## 5. Keyboard Shortcuts
 
-| Key | Action |
+| Shortcut | Action |
 | :--- | :--- |
-| <kbd>/</kbd> | Focus icon search input |
-| <kbd>Esc</kbd> | Close Laboratory modal |
-| <kbd>Tab</kbd> / <kbd>Shift+Tab</kbd> | Cycle focus between icon cards |
-| <kbd>Enter</kbd> / <kbd>Space</kbd> | Open selected icon in Laboratory |
+| <kbd>/</kbd> or <kbd>Cmd</kbd> + <kbd>K</kbd> | Focus global icon search / Open command palette |
+| <kbd>Esc</kbd> | Close modal / laboratory inspector |
+| <kbd>←</kbd> / <kbd>→</kbd> | Navigate to previous / next icon in laboratory |
+| <kbd>C</kbd> | Copy active SVG code to clipboard |
+| <kbd>F</kbd> | Toggle favorite on current icon |
+| <kbd>D</kbd> | Trigger SVG download |

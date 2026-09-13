@@ -1,12 +1,12 @@
 # Vectofi Setup Guide (SETUP.md)
 
-This document provides complete instructions for configuring, running, and deploying the Vectofi application locally or in a containerized production environment.
+This document provides complete instructions for configuring, running, testing, and deploying the **Vectofi** application locally or in containerized production environments.
 
 ---
 
 ## 1. System Requirements
 
-Ensure your environment meets the following specifications:
+Ensure your development environment meets the following specifications:
 
 - **Node.js**: v18.0.0 or higher (v20+ recommended)
 - **Package Manager**: `npm` (v9+), `pnpm` (v8+), `yarn` (v1.22+), or `bun` (v1.0+)
@@ -20,8 +20,8 @@ Clone the repository and install project dependencies:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Ankit628792/Vectofi.git
-cd Vectofi
+git clone https://github.com/ankit628792/vectofi.git
+cd vectofi
 
 # Install dependencies using npm
 npm install
@@ -34,7 +34,7 @@ npm install
 
 ## 3. Environment Configuration
 
-Vectofi is a zero-configuration, standalone vector icon studio and path morphing engine. All rendering, interpolation calculations, and code generations run directly in modern browsers without requiring third-party API keys or external database credentials.
+Vectofi is a zero-configuration, standalone vector icon studio, SVG laboratory, and framework code generator. All rendering, interpolation calculations, and code generations run directly in modern browsers without requiring third-party API keys or external database credentials.
 
 If you are customizing host configurations or deployment base URLs, you can optionally configure `.env.example`:
 
@@ -73,7 +73,8 @@ The following npm scripts are defined in `package.json`:
 | Command | Action | Description |
 | :--- | :--- | :--- |
 | `npm run dev` | `vite --port=3000 --host=0.0.0.0` | Starts hot-reloading development server |
-| `npm run build` | `vite build` | Compiles production assets into `dist/` |
+| `npm run build` | `tsx scripts/generate-sitemap.ts && vite build` | Generates `sitemap.xml` with 1,080+ routes and compiles production assets into `dist/` |
+| `npm run generate:sitemap` | `tsx scripts/generate-sitemap.ts` | Builds `sitemap.xml` and `robots.txt` dynamically |
 | `npm run preview` | `vite preview` | Locally serves the compiled production build |
 | `npm run lint` | `tsc --noEmit` | Runs the TypeScript compiler in strict typecheck mode |
 | `npm run clean` | `rm -rf dist server.js` | Cleans up previous build artifacts |
@@ -88,11 +89,11 @@ Before pushing changes or deploying, verify that the project passes TypeScript v
 # 1. Typecheck the codebase
 npm run lint
 
-# 2. Compile production bundle
+# 2. Compile production bundle & sitemap
 npm run build
 ```
 
-Successful compilation outputs static HTML, JavaScript, and CSS bundles to the `dist/` directory.
+Successful compilation outputs static HTML, JavaScript, and CSS bundles to the `dist/` directory alongside `sitemap.xml` and `robots.txt`.
 
 ---
 

@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
 import { FrameworkType } from '../types';
+import {
+  ICON_COUNT_DISPLAY,
+  ANIMATED_ICONS_DISPLAY,
+  CATEGORIES_COUNT,
+  AUTHOR_NAME,
+  AUTHOR_PROFILE_URL,
+  APP_REPOSITORY_URL,
+} from '../utils/common';
 
 export const DocsPage: React.FC = () => {
   const [activeFw, setActiveFw] = useState<FrameworkType>('react');
@@ -8,9 +16,14 @@ export const DocsPage: React.FC = () => {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-[#e5e5e5]">
       {/* Header */}
       <div className="mb-12 border-b border-white/10 pb-8">
-        <span className="text-[10px] font-bold uppercase tracking-widest text-blue-400">
-          Developer Reference & Integration
-        </span>
+        <div className="flex flex-wrap items-center gap-2 mb-2">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">
+            Developer Reference & Integration
+          </span>
+          <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+            {ICON_COUNT_DISPLAY} Icons • {CATEGORIES_COUNT} Categories
+          </span>
+        </div>
         <h1 className="font-display font-light text-3xl sm:text-4xl text-white mt-1 tracking-tight">
           Vectofi <span className="font-bold">Documentation</span>
         </h1>
@@ -43,7 +56,7 @@ export const DocsPage: React.FC = () => {
             Static vs. Animated Icons
           </h2>
           <p className="text-sm text-white/60 leading-relaxed">
-            Vectofi supports two distinct export paradigms:
+            Vectofi supports two distinct export paradigms across {ICON_COUNT_DISPLAY} vector assets:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -58,7 +71,7 @@ export const DocsPage: React.FC = () => {
 
             <div className="p-6 rounded-2xl border border-blue-500/20 bg-blue-500/5 space-y-3">
               <h3 className="font-display font-bold text-base text-blue-300 flex items-center gap-2">
-                <span>Self-Contained Animated SVG</span>
+                <span>Self-Contained Animated SVG ({ANIMATED_ICONS_DISPLAY})</span>
                 <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
               </h3>
               <p className="text-xs text-white/50 leading-relaxed">
@@ -68,10 +81,43 @@ export const DocsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* SECTION 3: FRAMEWORK INTEGRATION GUIDES */}
-        <section className="space-y-6">
+        {/* SECTION 3: MOTION PRESETS MATRIX */}
+        <section className="space-y-4">
           <h2 className="font-display font-bold text-2xl text-white flex items-center gap-2">
             <span className="text-blue-400 font-mono text-lg">03.</span>
+            Motion Presets & Keyframe Types
+          </h2>
+          <p className="text-sm text-white/60 leading-relaxed">
+            Vectofi provides 8 specialized vector motion animation presets:
+          </p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {[
+              { type: 'pulse', label: 'Pulse', desc: 'Rhythmic heartbeat scale' },
+              { type: 'bounce', label: 'Bounce', desc: 'Playful vertical spring' },
+              { type: 'spin', label: 'Spin', desc: 'Continuous 360° rotation' },
+              { type: 'shake', label: 'Shake', desc: 'Subtle alert vibration' },
+              { type: 'slide', label: 'Slide', desc: 'Directional linear sweep' },
+              { type: 'morph', label: 'Morph', desc: 'Organic Bézier path blossom' },
+              { type: 'float', label: 'Float', desc: 'Gentle atmospheric hover' },
+              { type: 'draw', label: 'Draw', desc: 'Stroke-dasharray trace effect' },
+            ].map(preset => (
+              <div key={preset.type} className="p-3.5 rounded-xl border border-white/10 bg-white/5 space-y-1">
+                <div className="flex items-center justify-between">
+                  <span className="font-mono text-xs text-blue-300 font-bold">{preset.type}</span>
+                  <span className="text-[10px] text-white/40 font-mono">preset</span>
+                </div>
+                <div className="text-xs text-white font-medium">{preset.label}</div>
+                <div className="text-[11px] text-white/40 leading-snug">{preset.desc}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* SECTION 4: FRAMEWORK INTEGRATION GUIDES */}
+        <section className="space-y-6">
+          <h2 className="font-display font-bold text-2xl text-white flex items-center gap-2">
+            <span className="text-blue-400 font-mono text-lg">04.</span>
             Framework Integration Guides
           </h2>
 
@@ -251,10 +297,10 @@ export class CheckCircleIconComponent {
           </div>
         </section>
 
-        {/* SECTION 4: ACCESSIBILITY */}
+        {/* SECTION 5: ACCESSIBILITY */}
         <section className="space-y-4">
           <h2 className="font-display font-bold text-2xl text-white flex items-center gap-2">
-            <span className="text-blue-400 font-mono text-lg">04.</span>
+            <span className="text-blue-400 font-mono text-lg">05.</span>
             Accessibility Best Practices (WCAG AA)
           </h2>
           <div className="space-y-3 text-sm text-white/60">
@@ -281,7 +327,7 @@ export class CheckCircleIconComponent {
           </div>
         </section>
 
-        {/* SECTION 5: LICENSE */}
+        {/* SECTION 6: LICENSE */}
         <section className="p-6 rounded-2xl border border-white/10 bg-white/5 space-y-3">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <h3 className="font-display font-bold text-base text-white flex items-center gap-2">
@@ -292,7 +338,7 @@ export class CheckCircleIconComponent {
             </h3>
             <div className="flex flex-wrap items-center gap-3 text-xs font-mono">
               <a
-                href="https://github.com/Ankit628792/Vectofi/blob/main/LICENSE"
+                href={`${APP_REPOSITORY_URL}/blob/main/LICENSE`}
                 target="_blank"
                 rel="noreferrer"
                 className="text-blue-400 hover:text-blue-300 inline-flex items-center gap-1 hover:underline whitespace-nowrap"
@@ -322,12 +368,12 @@ export class CheckCircleIconComponent {
             All icons, animations, and code utilities in Vectofi are licensed under the permissive{' '}
             <strong className="text-white font-medium">MIT License</strong> by{' '}
             <a
-              href="https://www.instagram.com/ankit_628792"
+              href={AUTHOR_PROFILE_URL}
               target="_blank"
               rel="noreferrer"
               className="text-blue-400 hover:underline"
             >
-              Ankit Kumar
+              {AUTHOR_NAME}
             </a>
             . You are free to use, modify, distribute, remix, and integrate them into personal, commercial, internal, and open-source applications without royalty or mandatory attribution.
           </p>

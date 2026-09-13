@@ -91,112 +91,74 @@ morphablePaths.forEach(mp => {
 
 ---
 
-## 2. Core Data Models (`src/types.ts`)
+## 2. Multi-Framework Code Generators (`src/utils/codeGenerators.ts`)
 
-### `IconData`
+Vectofi provides 8 output generators supporting modern front-end frameworks:
+
 ```typescript
-export interface IconData {
-  name: string;        // Human-readable title (e.g. "Arrow Right")
-  slug: string;        // Unique identifier (e.g. "arrow-right")
-  category: string;    // Category slug (e.g. "navigation", "media")
-  tags: string[];      // Searchable keywords
-  body: string;        // Raw inner SVG markup
-  hasAnimation: boolean; // Indicates if icon supports path morphing
+import { generateFrameworkCode } from './codeGenerators';
+
+const code = generateFrameworkCode(icon, {
+  framework: 'react', // 'react' | 'vue' | 'svelte' | 'angular' | 'html' | 'css' | 'sprite' | 'native'
+  size: 24,
+  strokeWidth: 2,
+  color: '#3B82F6',
+  animated: true,
+  animationSpeed: 'normal'
+});
+```
+
+### Supported Frameworks:
+1. **React / TSX**: Standalone functional component with `React.SVGProps<SVGSVGElement>` typing.
+2. **Vue 3**: Single File Component with `<script setup lang="ts">` and reactive props.
+3. **Svelte**: Svelte 4/5 component with reactive `export let` variables.
+4. **Angular**: Standalone Angular component with `@Input()` bindings.
+5. **Raw Inline SVG**: Self-contained SVG markup with embedded `<style>` keyframe animations or `<animate>` elements.
+6. **Tailwind CSS**: Semantic HTML with Tailwind utility classes.
+7. **SVG Sprite Reference**: `<svg><use href="#icon-slug" /></svg>` symbol reference.
+8. **CSS Data URI**: URL-encoded SVG string for `background-image` CSS rules.
+
+---
+
+## 3. Core Data Models (`src/types.ts`)
+
+### `IconDefinition`
+```typescript
+export interface IconDefinition {
+  id: string;                    // Unique identifier (matches slug)
+  name: string;                  // Human-readable title (e.g. "Arrow Right")
+  slug: string;                  // URL-friendly slug (e.g. "arrow-right")
+  category: string;              // Category ID (e.g. "arrows", "media", "interface")
+  tags: string[];                // Search and discovery keyword array
+  style: 'outline' | 'solid' | 'duotone'; // Visual style
+  body: string;                  // Inner SVG child markup
+  hasAnimation: boolean;         // Animation availability flag
+  animationType?: AnimationType; // 'pulse' | 'bounce' | 'spin' | 'shake' | 'slide' | 'morph' | 'float' | 'draw'
+  popularity?: number;           // Search ranking score (0 - 100)
+  featured?: boolean;            // Featured badge display flag
+  license?: string;              // "MIT"
+  author?: string;               // Author attribution
+  isNew?: boolean;               // New release badge flag
 }
 ```
 
-### `MorphablePath`
+### `IconCategory`
 ```typescript
-export interface MorphablePath {
-  id: string;             // Unique path instance ID
-  originalD: string;      // The completed final path 'd' attribute
-  valuesString: string;   // Semicolon-delimited frame string for <animate values="...">
-  strokeWidth?: string;
-  fill?: string;
-}
-```
-
-### `LabSettings`
-```typescript
-export interface LabSettings {
-  size: number;           // Icon pixel dimension (e.g. 24, 32, 48)
-  strokeWidth: number;    // Vector stroke width (e.g. 2)
-  color: string;          // Hex or CSS color string
-  animated: boolean;      // Static vs morphing toggle
-  speed: 'fast' | 'normal' | 'slow';
-  bgTheme: 'dark' | 'light' | 'grid' | 'slate' | 'gradient';
+export interface IconCategory {
+  id: string;                    // Category key (e.g. "interface")
+  name: string;                  // Display title (e.g. "Interface & Controls")
+  description: string;           // Concise domain description
+  iconSymbol: string;            // Visual category glyph or symbol
+  count?: number;                // Dynamically counted icons in category
 }
 ```
 
 ---
 
-## 3. UI Component Reference
+## 4. Central Utilities & Constants (`src/utils/common.ts`)
 
-### `<AnimatedIconRenderer />`
-High-level rendering component that automatically renders either authentic vector markup (when static) or synchronized morphing paths with `<animate>` elements (when active).
-
-```tsx
-import { AnimatedIconRenderer } from './components/vector/AnimatedIconRenderer';
-
-<AnimatedIconRenderer
-  icon={iconData}
-  size={32}
-  color="#3b82f6"
-  strokeWidth={2}
-  animated={true}
-  speed="normal"
-/>
-```
-
-#### Props
-| Prop | Type | Default | Description |
-| :--- | :--- | :--- | :--- |
-| `icon` | `IconData` | **Required** | The icon object to render |
-| `size` | `number` | `24` | Width and height in pixels |
-| `color` | `string` | `"currentColor"` | Stroke color |
-| `strokeWidth` | `number` | `2` | Stroke thickness in pixels |
-| `animated` | `boolean` | `true` | When `false`, renders native static markup |
-| `speed` | `'fast' \| 'normal' \| 'slow'` | `'normal'` | Morphing loop duration (1.2s, 2.4s, 4.0s) |
-| `className` | `string` | `""` | Additional CSS classes |
-
----
-
-## 4. Integration Guide
-
-### Vanilla JavaScript / Canvas Loop
-You can use `createPathMorphTransition` or `interpolatePathData` inside a `requestAnimationFrame` loop:
-
-```javascript
-import { interpolatePathData } from './src/utils/animations';
-
-const pathA = "M 12 2 L 22 22 L 2 22 Z";
-const pathB = "M 6 4 L 18 12 L 6 20 Z";
-const pathElement = document.querySelector('#morphing-path');
-
-let start = null;
-function animate(timestamp) {
-  if (!start) start = timestamp;
-  const progress = (timestamp - start) / 2000; // 2-second cycle
-  const t = (Math.sin(progress * Math.PI * 2) + 1) / 2; // Oscillate 0 -> 1 -> 0
-  
-  pathElement.setAttribute('d', interpolatePathData(pathA, pathB, t));
-  requestAnimationFrame(animate);
-}
-requestAnimationFrame(animate);
-```
-
-### Pure SVG Export
-All generated animations use standard W3C SVG SMIL attributes:
-```html
-<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#2563eb" stroke-width="2">
-  <path d="M 12 2 L 22 22 L 2 22 Z">
-    <animate
-      attributeName="d"
-      dur="2.4s"
-      repeatCount="indefinite"
-      values="M 12 12 C 12 12 ...; M 12 2 C 15.3 8.6 ...; M 12 2 L 22 22 L 2 22 Z"
-    />
-  </path>
-</svg>
-```
-Because this requires no JavaScript, the exported SVG files are 100% compatible with HTML `<img>` tags, CSS backgrounds, and standalone vector renderers.
+- `ICON_COUNT_DISPLAY`: Display string formatted as `'1,000+'`.
+- `ANIMATED_ICONS_DISPLAY`: Display string formatted as `'900+'`.
+- `CATEGORIES_COUNT`: Total registered categories evaluated dynamically as `${ICON_CATEGORIES.length}` (`20`).
+- `APP_CANONICAL_URL`: `https://vectofi.vercel.app/`.
+- `APP_REPOSITORY_URL`: `https://github.com/ankit628792/vectofi`.
