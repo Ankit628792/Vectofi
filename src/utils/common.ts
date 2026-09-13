@@ -10,7 +10,7 @@
 // ============================================================================
 
 export const APP_NAME = 'Vectofi';
-export const APP_VERSION = '2.4';
+export const APP_VERSION = '2.4.1';
 export const APP_TAGLINE = 'Free Static & Animated Vector Icons';
 export const APP_DESCRIPTION =
   'Developer-first SVG icon library with 220+ static and animated icons, interactive SVG laboratory, framework code generators, and vector art design system.';
@@ -33,7 +33,7 @@ export const AUTHOR_ROLE_LABEL = 'Designed & Developed by';
 /** Consistent display strings for counts across all views */
 export const ICON_COUNT_DISPLAY = '220+';
 export const ANIMATED_ICONS_DISPLAY = '90+';
-export const CATEGORIES_COUNT = 14;
+export const CATEGORIES_COUNT = '10+';
 export const DEFAULT_LICENSE = 'MIT';
 
 /** Standardized UI Text & Labels */

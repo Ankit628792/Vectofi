@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://vectofi.dev/sitemap.xml
+Sitemap: https://vectofi.vercel.app/sitemap.xml
