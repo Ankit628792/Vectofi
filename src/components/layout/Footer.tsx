@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+  AUTHOR_NAME,
+  AUTHOR_PROFILE_URL,
+  AUTHOR_ROLE_LABEL,
+  DEFAULT_LICENSE,
+  UI_TEXT,
+} from '../../utils/common';
 
 interface FooterProps {
   onNavigate: (route: string) => void;
@@ -45,10 +52,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenShortcuts }) =
             <div className="pt-1 flex items-center gap-3">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-mono rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
                 <span className="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block animate-pulse" />
-                110+ Vector Icons
+                {UI_TEXT.vectorIconsBadge}
               </span>
               <span className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-mono rounded-full bg-white/5 text-white/60 border border-white/10">
-                MIT License
+                {DEFAULT_LICENSE} License
               </span>
             </div>
           </div>
@@ -220,19 +227,19 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenShortcuts }) =
               <span>CDN Status: Optimal</span>
             </div>
             <span className="text-white/20 hidden sm:inline">|</span>
-            <span>Registry: 120+ Production SVGs</span>
+            <span>{UI_TEXT.registryBadge}</span>
           </div>
 
           {/* Creator Attribution */}
           <div className="flex items-center gap-1.5 text-xs text-white/60 font-medium">
-            <span>Designed &amp; Developed by</span>
+            <span>{AUTHOR_ROLE_LABEL}</span>
             <a
-              href="https://www.instagram.com/ankit_628792"
+              href={AUTHOR_PROFILE_URL}
               target="_blank"
               rel="noreferrer"
               className="text-blue-400 hover:text-blue-300 transition-colors font-semibold inline-flex items-center gap-1 group cursor-pointer"
             >
-              <span>Ankit Kumar</span>
+              <span>{AUTHOR_NAME}</span>
               <svg
                 className="w-3 h-3 text-blue-400/70 group-hover:text-blue-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
                 viewBox="0 0 24 24"

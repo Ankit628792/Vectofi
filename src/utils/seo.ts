@@ -1,5 +1,6 @@
 import { IconItem } from '../types';
 import { ICON_CATEGORIES } from '../data/categories';
+import { APP_DESCRIPTION, APP_DEFAULT_BASE_URL, ICON_COUNT_DISPLAY } from './common';
 
 export interface SEOConfig {
   title: string;
@@ -10,10 +11,9 @@ export interface SEOConfig {
   jsonLd?: Record<string, any>;
 }
 
-const BASE_URL = process.env.APP_URL || 'https://vectofi.vercel.app';
+const BASE_URL = process.env.APP_URL || APP_DEFAULT_BASE_URL;
 const DEFAULT_TITLE = 'Vectofi — Free Static & Animated Vector Icons';
-const DEFAULT_DESCRIPTION =
-  'Developer-first SVG icon library with 110+ static and animated icons, interactive SVG laboratory, framework code generators, and vector art design system.';
+const DEFAULT_DESCRIPTION = APP_DESCRIPTION;
 const DEFAULT_KEYWORDS = [
   'svg icons',
   'animated icons',
@@ -156,7 +156,7 @@ export function getSEOForRoute(
     if (query) {
       return {
         title: `Search "${query}" Icons — Vectofi`,
-        description: `Explore search results for "${query}" across 110+ precision static and animated vector icons.`,
+        description: `Explore search results for "${query}" across ${ICON_COUNT_DISPLAY} precision static and animated vector icons.`,
         keywords: [query, 'svg search', 'icon search', 'vector search', ...DEFAULT_KEYWORDS],
         canonicalUrl: `${BASE_URL}/icons?q=${encodeURIComponent(query)}`,
       };
@@ -174,8 +174,8 @@ export function getSEOForRoute(
     }
 
     return {
-      title: 'Browse 110+ Precision SVG Icons — Vectofi',
-      description: 'Explore 110+ developer-first static and morphing SVG vector icons with real-time framework code generation and interactive customization.',
+      title: `Browse ${ICON_COUNT_DISPLAY} Precision SVG Icons — Vectofi`,
+      description: `Explore ${ICON_COUNT_DISPLAY} developer-first static and morphing SVG vector icons with real-time framework code generation and interactive customization.`,
       keywords: ['icon catalog', 'all icons', 'svg collection', ...DEFAULT_KEYWORDS],
       canonicalUrl: `${BASE_URL}/icons`,
     };

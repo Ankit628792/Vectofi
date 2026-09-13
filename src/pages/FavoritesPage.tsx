@@ -4,6 +4,7 @@ import { IconCard } from '../components/icons/IconCard';
 import { VirtualizedIconGrid } from '../components/icons/VirtualizedIconGrid';
 import { EmptyState } from '../components/ui/EmptyState';
 import { downloadSvgFile } from '../utils/svgExport';
+import { UI_TEXT } from '../utils/common';
 
 interface FavoritesPageProps {
   icons: IconItem[];
@@ -180,7 +181,7 @@ export const FavoritesPage: React.FC<FavoritesPageProps> = ({
                     <rect x="14" y="14" width="7" height="7" />
                     <rect x="3" y="14" width="7" height="7" />
                   </svg>
-                  Browse All 110+ Icons
+                  {UI_TEXT.browseAllIcons}
                 </button>
 
                 <button

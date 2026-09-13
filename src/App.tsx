@@ -20,6 +20,7 @@ import { KeyboardShortcutsModal } from './components/ui/KeyboardShortcutsModal';
 import { ToastContainer } from './components/ui/Toast';
 import { generateSvgCode, downloadSvgFile } from './utils/svgExport';
 import { useSEO } from './hooks/useSEO';
+import { UI_TEXT } from './utils/common';
 
 // Initial curated collections
 const INITIAL_COLLECTIONS: CollectionItem[] = [
@@ -484,7 +485,7 @@ export default function App() {
               reducedMotion={reducedMotion}
               onToggleReducedMotion={toggleReducedMotion}
               title="All SVG Icons"
-              subtitle="Explore 110+ precision vector icons across 14 functional categories."
+              subtitle={UI_TEXT.allIconsSubtitle}
             />
           )}
 

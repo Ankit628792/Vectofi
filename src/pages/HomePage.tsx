@@ -14,6 +14,12 @@ import {
 import { IconCard } from '../components/icons/IconCard';
 import { CATEGORIES } from '../data/categories';
 import { AnimatedIconRenderer } from '../components/icons/AnimatedIconRenderer';
+import {
+  APP_VERSION,
+  ICON_COUNT_DISPLAY,
+  CATEGORIES_COUNT,
+  UI_TEXT,
+} from '../utils/common';
 
 interface HomePageProps {
   icons: IconItem[];
@@ -71,8 +77,8 @@ export const HomePage: React.FC<HomePageProps> = ({
               {/* Feature Pill with VectorBadge */}
               <div>
                 <VectorBadge
-                  text="Version 2.4 Live"
-                  subtext="110+ SVGs"
+                  text={`Version ${APP_VERSION} Live`}
+                  subtext={`${ICON_COUNT_DISPLAY} SVGs`}
                   variant="tech"
                   color="#3b82f6"
                   statusPulse={true}
@@ -109,7 +115,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                     type="text"
                     value={heroSearch}
                     onChange={e => setHeroSearch(e.target.value)}
-                    placeholder="Search 110+ icons (e.g. arrow, heart, code, rocket)..."
+                    placeholder={UI_TEXT.searchHeroPlaceholder}
                     className="w-full pl-11 pr-28 py-3 rounded-full border border-white/10 bg-white/5 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 font-sans transition-all"
                   />
                   <button
@@ -144,7 +150,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               <div className="pt-4 grid grid-cols-3 sm:grid-cols-4 gap-4 border-t border-white/10 max-w-lg mx-auto lg:mx-0 text-left">
                 <div>
                   <p className="text-xl sm:text-2xl font-bold text-white font-display">
-                    110+
+                    {ICON_COUNT_DISPLAY}
                   </p>
                   <p className="text-xs font-mono text-white/40 whitespace-nowrap">
                     Vector Icons
@@ -152,7 +158,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 </div>
                 <div>
                   <p className="text-xl sm:text-2xl font-bold text-blue-400 font-display">
-                    90+
+                    {icons.filter(i => i.hasAnimation).length}+
                   </p>
                   <p className="text-xs font-mono text-white/40 whitespace-nowrap">
                     Animated
@@ -160,7 +166,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 </div>
                 <div>
                   <p className="text-xl sm:text-2xl font-bold text-white font-display">
-                    14
+                    {CATEGORIES_COUNT}
                   </p>
                   <p className="text-xs font-mono text-white/40 whitespace-nowrap">
                     Categories
@@ -365,7 +371,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               onClick={() => onNavigate('/icons')}
               className="px-5 py-2.5 rounded-full text-xs font-bold bg-blue-600 hover:bg-blue-500 text-white transition-colors flex items-center gap-1.5 shadow-md shadow-blue-600/20 cursor-pointer whitespace-nowrap shrink-0"
             >
-              <span>Explore All 110+ Icons</span>
+              <span>{UI_TEXT.exploreAllIcons}</span>
               <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />

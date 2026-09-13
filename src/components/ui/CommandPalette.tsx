@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { IconItem } from '../../types';
 import { AnimatedIconRenderer } from '../icons/AnimatedIconRenderer';
+import { UI_TEXT } from '../../utils/common';
 
 interface CommandPaletteProps {
   isOpen: boolean;
@@ -132,7 +133,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
           <input
             ref={inputRef}
             type="text"
-            placeholder="Type a command or search 110+ icons..."
+            placeholder={UI_TEXT.commandPalettePlaceholder}
             value={query}
             onChange={e => {
               setQuery(e.target.value);
@@ -236,7 +237,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
             <span>↑↓ to navigate</span>
             <span>↵ to select</span>
           </div>
-          <span className="whitespace-nowrap shrink-0">110+ icons registered</span>
+          <span className="whitespace-nowrap shrink-0">{UI_TEXT.registeredIconsLabel}</span>
         </div>
       </div>
     </div>

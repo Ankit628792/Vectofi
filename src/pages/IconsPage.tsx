@@ -4,6 +4,7 @@ import { FilterBar } from '../components/icons/FilterBar';
 import { EmptyState } from '../components/ui/EmptyState';
 import { VectorGrid } from '../components/vectors/VectorGrid';
 import { VirtualizedIconGrid } from '../components/icons/VirtualizedIconGrid';
+import { UI_TEXT } from '../utils/common';
 
 interface IconsPageProps {
   icons: IconItem[];
@@ -38,7 +39,7 @@ export const IconsPage: React.FC<IconsPageProps> = ({
   reducedMotion = false,
   onToggleReducedMotion,
   title = 'SVG Icon Gallery',
-  subtitle = 'Browse, customize, and export 110+ production-ready vector icons with motion and framework bindings.',
+  subtitle = UI_TEXT.gallerySubtitle,
 }) => {
   // Apply filtering
   const filteredIcons = icons.filter(icon => {

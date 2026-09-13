@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { UI_TEXT, LOADER_TICK_MS } from '../../utils/common';
 
 interface InitialLoaderProps {
   onComplete?: () => void;
@@ -22,7 +23,7 @@ export const InitialLoader: React.FC<InitialLoaderProps> = ({
         }
         return prev + Math.floor(Math.random() * 20) + 10;
       });
-    }, 120);
+    }, LOADER_TICK_MS);
 
     // Minimum display timer before initiating smooth fadeout
     const timer = setTimeout(() => {
@@ -128,7 +129,7 @@ export const InitialLoader: React.FC<InitialLoaderProps> = ({
             />
           </div>
           <div className="flex justify-between items-center text-[10px] font-mono text-white/40 px-0.5">
-            <span>Loading 110+ SVGs</span>
+            <span>{UI_TEXT.loadingSvgs}</span>
             <span>{Math.min(progress, 100)}%</span>
           </div>
         </div>

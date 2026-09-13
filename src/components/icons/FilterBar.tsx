@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { FilterState, IconCategory } from '../../types';
 import { CATEGORIES } from '../../data/categories';
+import { UI_TEXT } from '../../utils/common';
 
 interface FilterBarProps {
   filters: FilterState;
@@ -62,7 +63,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
             type="text"
             value={filters.query}
             onChange={e => onFilterChange({ ...filters, query: e.target.value })}
-            placeholder="Search 110+ icons by name, category, or tag (press /)..."
+            placeholder={UI_TEXT.searchFullPlaceholder}
             className="w-full pl-10 pr-16 sm:pr-20 py-2.5 rounded-full border border-white/10 bg-white/5 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all font-sans min-h-[42px]"
             aria-label="Search icons"
           />
