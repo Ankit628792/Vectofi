@@ -14,6 +14,12 @@ import { WEATHER_ICONS } from './icons/weather';
 import { DEVICES_ICONS } from './icons/devices';
 import { DEVELOPMENT_ICONS } from './icons/development';
 import { BUSINESS_ICONS } from './icons/business';
+import { DESIGN_ICONS } from './icons/design';
+import { EDITOR_ICONS } from './icons/editor';
+import { TRAVEL_ICONS } from './icons/travel';
+import { HEALTH_ICONS } from './icons/health';
+import { FOOD_ICONS } from './icons/food';
+import { SPORTS_ICONS } from './icons/sports';
 
 export const ICONS_DEFINITIONS: IconDefinition[] = [
   ...ARROWS_ICONS,
@@ -30,6 +36,12 @@ export const ICONS_DEFINITIONS: IconDefinition[] = [
   ...DEVICES_ICONS,
   ...DEVELOPMENT_ICONS,
   ...BUSINESS_ICONS,
+  ...DESIGN_ICONS,
+  ...EDITOR_ICONS,
+  ...TRAVEL_ICONS,
+  ...HEALTH_ICONS,
+  ...FOOD_ICONS,
+  ...SPORTS_ICONS,
 ];
 
 export const iconRegistry = new IconRegistry(ICONS_DEFINITIONS);

@@ -8,7 +8,6 @@ export const ICON_CATEGORIES: CategoryMeta[] = [
     description: 'Directional indicators, navigation arrows, exchanges, and trending vectors.',
     iconSymbol: '↗',
     colorAccent: '#6366F1',
-    iconCount: 18,
   },
   {
     id: 'navigation',
@@ -17,7 +16,6 @@ export const ICON_CATEGORIES: CategoryMeta[] = [
     description: 'Wayfinding, maps, compasses, locations, pins, and spatial positioning.',
     iconSymbol: '⌁',
     colorAccent: '#06B6D4',
-    iconCount: 16,
   },
   {
     id: 'interface',
@@ -26,7 +24,6 @@ export const ICON_CATEGORIES: CategoryMeta[] = [
     description: 'Core UI controls, toggles, settings, search, action buttons, and sliders.',
     iconSymbol: '⚙',
     colorAccent: '#8B5CF6',
-    iconCount: 20,
   },
   {
     id: 'communication',
@@ -35,7 +32,6 @@ export const ICON_CATEGORIES: CategoryMeta[] = [
     description: 'Messages, mail, chat bubbles, notifications, megaphones, and alerts.',
     iconSymbol: '✉',
     colorAccent: '#EC4899',
-    iconCount: 16,
   },
   {
     id: 'social',
@@ -44,7 +40,6 @@ export const ICON_CATEGORIES: CategoryMeta[] = [
     description: 'Shares, hearts, stars, bookmarks, likes, engagement, and awards.',
     iconSymbol: '✦',
     colorAccent: '#F43F5E',
-    iconCount: 15,
   },
   {
     id: 'files',
@@ -53,7 +48,6 @@ export const ICON_CATEGORIES: CategoryMeta[] = [
     description: 'Documents, directories, archives, attachments, downloads, and code files.',
     iconSymbol: '▣',
     colorAccent: '#3B82F6',
-    iconCount: 15,
   },
   {
     id: 'media',
@@ -62,7 +56,6 @@ export const ICON_CATEGORIES: CategoryMeta[] = [
     description: 'Audio playback, video cameras, microphones, musical notes, and volume.',
     iconSymbol: '▶',
     colorAccent: '#10B981',
-    iconCount: 16,
   },
   {
     id: 'commerce',
@@ -71,7 +64,6 @@ export const ICON_CATEGORIES: CategoryMeta[] = [
     description: 'Shopping carts, payment cards, pricing tags, wallets, and transactions.',
     iconSymbol: '$',
     colorAccent: '#14B8A6',
-    iconCount: 15,
   },
   {
     id: 'security',
@@ -80,7 +72,6 @@ export const ICON_CATEGORIES: CategoryMeta[] = [
     description: 'Shields, locks, keys, verification badges, biometrics, and privacy.',
     iconSymbol: '◈',
     colorAccent: '#F59E0B',
-    iconCount: 15,
   },
   {
     id: 'users',
@@ -89,7 +80,6 @@ export const ICON_CATEGORIES: CategoryMeta[] = [
     description: 'User profiles, group management, permissions, smiles, and contacts.',
     iconSymbol: '웃',
     colorAccent: '#84CC16',
-    iconCount: 15,
   },
   {
     id: 'weather',
@@ -98,7 +88,6 @@ export const ICON_CATEGORIES: CategoryMeta[] = [
     description: 'Atmospheric conditions, sun, clouds, precipitation, wind, and lightning.',
     iconSymbol: '☼',
     colorAccent: '#EAB308',
-    iconCount: 15,
   },
   {
     id: 'devices',
@@ -107,7 +96,6 @@ export const ICON_CATEGORIES: CategoryMeta[] = [
     description: 'Hardware, laptops, smartphones, monitors, connectivity, and chips.',
     iconSymbol: '⌨',
     colorAccent: '#64748B',
-    iconCount: 15,
   },
   {
     id: 'development',
@@ -116,7 +104,6 @@ export const ICON_CATEGORIES: CategoryMeta[] = [
     description: 'Code brackets, terminals, git branching, databases, and APIs.',
     iconSymbol: '< >',
     colorAccent: '#A855F7',
-    iconCount: 16,
   },
   {
     id: 'business',
@@ -125,7 +112,54 @@ export const ICON_CATEGORIES: CategoryMeta[] = [
     description: 'Analytics, growth charts, briefcases, calendars, targets, and presentation.',
     iconSymbol: '📈',
     colorAccent: '#0EA5E9',
-    iconCount: 16,
+  },
+  {
+    id: 'design',
+    name: 'Design & Creative',
+    slug: 'design',
+    description: 'Vector tools, color palettes, typography, shapes, canvas, and drawing pens.',
+    iconSymbol: '🎨',
+    colorAccent: '#F97316',
+  },
+  {
+    id: 'editor',
+    name: 'Editor & Text',
+    slug: 'editor',
+    description: 'Typography formatting, text alignment, lists, headings, and markdown controls.',
+    iconSymbol: '¶',
+    colorAccent: '#0284C7',
+  },
+  {
+    id: 'travel',
+    name: 'Travel & Transport',
+    slug: 'travel',
+    description: 'Vehicles, flights, logistics, tickets, lodging, luggage, and destinations.',
+    iconSymbol: '✈',
+    colorAccent: '#10B981',
+  },
+  {
+    id: 'health',
+    name: 'Health & Wellness',
+    slug: 'health',
+    description: 'Medical symbols, vital signs, diagnostics, wellness, and healthcare.',
+    iconSymbol: '♥',
+    colorAccent: '#EF4444',
+  },
+  {
+    id: 'food',
+    name: 'Food & Dining',
+    slug: 'food',
+    description: 'Coffee, dining utensils, beverages, snacks, ingredients, and hospitality.',
+    iconSymbol: '☕',
+    colorAccent: '#D97706',
+  },
+  {
+    id: 'sports',
+    name: 'Sports & Gaming',
+    slug: 'sports',
+    description: 'Fitness gear, gaming controllers, trophies, competitions, and activities.',
+    iconSymbol: '🎮',
+    colorAccent: '#8B5CF6',
   },
 ];
 

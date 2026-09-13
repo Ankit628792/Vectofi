@@ -1,8 +1,33 @@
 {
-  "name": "react-example",
+  "name": "vectofi",
+  "version": "2.5.0",
+  "description": "Developer-first SVG icon library with 1,000+ static and animated vector icons across 20 categories, interactive SVG laboratory, framework code generators, and vector art design system.",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "author": "Ankit Kumar <ankit628792@gmail.com> (https://www.instagram.com/ankit_628792)",
+  "homepage": "https://vectofi.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ankit628792/vectofi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ankit628792/vectofi/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "svg",
+    "icons",
+    "animated-icons",
+    "vector-icons",
+    "react-icons",
+    "vue-icons",
+    "svelte-icons",
+    "icon-library",
+    "svg-laboratory",
+    "developer-tools",
+    "vector-art",
+    "tailwind"
+  ],
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "tsx scripts/generate-sitemap.ts && vite build",
