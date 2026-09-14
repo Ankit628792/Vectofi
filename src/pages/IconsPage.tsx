@@ -5,6 +5,8 @@ import { EmptyState } from '../components/ui/EmptyState';
 import { VectorGrid } from '../components/vector/VectorGrid';
 import { VirtualizedIconGrid } from '../components/icons/VirtualizedIconGrid';
 import { UI_TEXT } from '../utils/common';
+import { CatalogLoadingProgress } from '../data/icons';
+import { useWorkerIconFilter } from '../hooks/useWorkerIconFilter';
 
 interface IconsPageProps {
   icons: IconItem[];
@@ -22,6 +24,9 @@ interface IconsPageProps {
   onToggleReducedMotion?: () => void;
   title?: string;
   subtitle?: string;
+  isHydrating?: boolean;
+  catalogProgress?: CatalogLoadingProgress;
+  isLoading?: boolean;
 }
 
 export const IconsPage: React.FC<IconsPageProps> = ({
@@ -40,55 +45,12 @@ export const IconsPage: React.FC<IconsPageProps> = ({
   onToggleReducedMotion,
   title = 'SVG Icon Gallery',
   subtitle = UI_TEXT.gallerySubtitle,
+  isHydrating = false,
+  catalogProgress,
+  isLoading = false,
 }) => {
-  // Apply filtering
-  const filteredIcons = icons.filter(icon => {
-    // Search query
-    if (filters.query.trim()) {
-      const q = filters.query.toLowerCase().trim();
-      const matchName = icon.name.toLowerCase().includes(q);
-      const matchSlug = icon.slug.toLowerCase().includes(q);
-      const matchCat = icon.category.toLowerCase().includes(q);
-      const matchTags = icon.tags.some(t => t.toLowerCase().includes(q));
-      if (!matchName && !matchSlug && !matchCat && !matchTags) {
-        return false;
-      }
-    }
-
-    // Category
-    if (filters.category !== 'all' && icon.category !== filters.category) {
-      return false;
-    }
-
-    // Style
-    if (filters.style !== 'all' && icon.style !== filters.style) {
-      return false;
-    }
-
-    // Animation
-    if (filters.hasAnimation === 'animated' && !icon.hasAnimation) {
-      return false;
-    }
-    if (filters.hasAnimation === 'static' && icon.hasAnimation) {
-      return false;
-    }
-
-    return true;
-  });
-
-  // Apply sorting
-  const sortedIcons = [...filteredIcons].sort((a, b) => {
-    if (filters.sortBy === 'name') {
-      return a.name.localeCompare(b.name);
-    }
-    if (filters.sortBy === 'popular') {
-      return (b.popularity || 50) - (a.popularity || 50);
-    }
-    if (filters.sortBy === 'newest') {
-      return (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0);
-    }
-    return 0;
-  });
+  // Execute high-speed search and filtering off-thread in the Web Worker
+  const { filteredIcons, isFiltering } = useWorkerIconFilter(icons, filters);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 text-[#e5e5e5]">
@@ -112,8 +74,18 @@ export const IconsPage: React.FC<IconsPageProps> = ({
         {/* Technical Layout Precision Indicator */}
         <div className="flex flex-wrap items-center gap-2 self-start sm:self-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 whitespace-nowrap">
-            <span className={`w-2 h-2 rounded-full shrink-0 ${reducedMotion ? 'bg-amber-400' : 'bg-cyan-400 animate-pulse'}`} />
-            <span>Virtualized Engine Active</span>
+            <span
+              className={`w-2 h-2 rounded-full shrink-0 ${
+                isFiltering
+                  ? 'bg-amber-400 animate-ping'
+                  : reducedMotion
+                  ? 'bg-amber-400'
+                  : 'bg-cyan-400 animate-pulse'
+              }`}
+            />
+            <span>
+              {isFiltering ? 'Worker Searching...' : 'Worker Engine Active'}
+            </span>
           </div>
           {reducedMotion && (
             <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-xs font-mono text-amber-300 whitespace-nowrap">
@@ -128,14 +100,14 @@ export const IconsPage: React.FC<IconsPageProps> = ({
         filters={filters}
         onFilterChange={onFilterChange}
         totalCount={icons.length}
-        filteredCount={sortedIcons.length}
+        filteredCount={filteredIcons.length}
         globalAnimated={globalAnimated}
         onToggleGlobalAnimated={onToggleGlobalAnimated}
         onResetFilters={onResetFilters}
       />
 
       {/* Icons Grid or Empty State */}
-      {sortedIcons.length > 0 ? (
+      {filteredIcons.length > 0 || isHydrating || isLoading ? (
         <div className="relative group/library-grid">
           {/* Interactive Architectural VectorGrid with Magnet Points */}
           <div className="absolute -inset-3 sm:-inset-5 lg:-inset-6 pointer-events-none overflow-hidden rounded-2xl z-0">
@@ -158,7 +130,7 @@ export const IconsPage: React.FC<IconsPageProps> = ({
 
           <div className="relative z-10">
             <VirtualizedIconGrid
-              icons={sortedIcons}
+              icons={filteredIcons}
               favorites={favorites}
               onToggleFavorite={onToggleFavorite}
               onSelectIcon={onSelectIcon}
@@ -166,6 +138,9 @@ export const IconsPage: React.FC<IconsPageProps> = ({
               onQuickDownload={onQuickDownload}
               globalAnimated={globalAnimated}
               reducedMotion={reducedMotion}
+              isLoading={isLoading}
+              isHydrating={isHydrating}
+              catalogProgress={catalogProgress}
             />
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { IconItem } from '../types';
 import { IconCard } from '../components/icons/IconCard';
+import { IconCardSkeleton } from '../components/icons/IconCardSkeleton';
 import { VirtualizedIconGrid } from '../components/icons/VirtualizedIconGrid';
 import { EmptyState } from '../components/ui/EmptyState';
 import { downloadSvgFile } from '../utils/svgExport';
@@ -97,7 +98,7 @@ export const FavoritesPage: React.FC<FavoritesPageProps> = ({
         )}
       </div>
 
-      {favoriteIcons.length > 0 ? (
+      {favoriteIcons.length > 0 || favorites.length > 0 ? (
         favoriteIcons.length > 24 ? (
           <VirtualizedIconGrid
             icons={favoriteIcons}
@@ -108,9 +109,10 @@ export const FavoritesPage: React.FC<FavoritesPageProps> = ({
             onQuickDownload={onQuickDownload}
             globalAnimated={false}
             reducedMotion={reducedMotion}
+            isLoading={favoriteIcons.length === 0 && favorites.length > 0}
           />
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div id="favorites-icons-grid" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {favoriteIcons.map(icon => (
               <IconCard
                 key={icon.slug}
@@ -123,6 +125,15 @@ export const FavoritesPage: React.FC<FavoritesPageProps> = ({
                 globalAnimated={!reducedMotion}
               />
             ))}
+            {/* Show skeleton placeholders for any favorites pending background hydration */}
+            {Array.from({ length: Math.max(0, favorites.length - favoriteIcons.length) }).map(
+              (_, idx) => (
+                <IconCardSkeleton
+                  key={`fav-skel-${idx}`}
+                  id={`fav-skel-${idx}`}
+                />
+              )
+            )}
           </div>
         )
       ) : (

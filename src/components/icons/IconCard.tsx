@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { IconItem } from '../../types';
 import { AnimatedIconRenderer } from './AnimatedIconRenderer';
+import { iconRegistry } from '../../data/icons';
 
 interface IconCardProps {
   icon: IconItem;
@@ -12,7 +13,7 @@ interface IconCardProps {
   globalAnimated?: boolean;
 }
 
-export const IconCard: React.FC<IconCardProps> = ({
+const IconCardComponent: React.FC<IconCardProps> = ({
   icon,
   isFavorite,
   onToggleFavorite,
@@ -22,12 +23,54 @@ export const IconCard: React.FC<IconCardProps> = ({
   globalAnimated = false,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Viewport Intersection Observer for lazy path hydration
+  useEffect(() => {
+    // If icon already has resolved body, no need to observe
+    if (icon.hasAnimation && (icon as any).hasResolvedBody?.()) {
+      setIsVisible(true);
+      return;
+    }
+
+    const elem = cardRef.current;
+    if (!elem || typeof IntersectionObserver === 'undefined') {
+      setIsVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            // Pre-request path body on intersection
+            iconRegistry.requestBody(icon.slug);
+            observer.disconnect();
+          }
+        });
+      },
+      {
+        rootMargin: '200px 0px', // Pre-fetch 200px before scrolling into view
+        threshold: 0.01,
+      }
+    );
+
+    observer.observe(elem);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [icon.slug]);
 
   // Animate if hovered OR if page-wide globalAnimated mode is on
   const shouldAnimate = (isHovered || globalAnimated) && icon.hasAnimation;
 
   return (
     <div
+      ref={cardRef}
+      id={`icon-card-${icon.slug}`}
       onClick={() => onSelectIcon(icon)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -51,6 +94,7 @@ export const IconCard: React.FC<IconCardProps> = ({
 
         {/* Favorite heart button */}
         <button
+          id={`btn-fav-${icon.slug}`}
           type="button"
           onClick={e => {
             e.stopPropagation();
@@ -87,6 +131,7 @@ export const IconCard: React.FC<IconCardProps> = ({
             size={32}
             strokeWidth={1.8}
             animated={shouldAnimate}
+            lazy={isVisible}
           />
         </div>
       </div>
@@ -114,6 +159,7 @@ export const IconCard: React.FC<IconCardProps> = ({
         {/* Quick Copy & Download buttons */}
         <div className="flex items-center gap-0.5 opacity-80 sm:opacity-0 sm:group-hover:opacity-100 focus-within:opacity-100 transition-opacity shrink-0">
           <button
+            id={`btn-copy-${icon.slug}`}
             type="button"
             onClick={e => onQuickCopy(icon, e)}
             className="p-1.5 rounded-lg text-white/50 hover:text-white hover:bg-white/10 transition-colors"
@@ -126,6 +172,7 @@ export const IconCard: React.FC<IconCardProps> = ({
             </svg>
           </button>
           <button
+            id={`btn-dl-${icon.slug}`}
             type="button"
             onClick={e => onQuickDownload(icon, e)}
             className="p-1.5 rounded-lg text-white/50 hover:text-white hover:bg-white/10 transition-colors"
@@ -143,3 +190,15 @@ export const IconCard: React.FC<IconCardProps> = ({
     </div>
   );
 };
+
+export const IconCard = React.memo(IconCardComponent, (prev, next) => {
+  return (
+    prev.icon.slug === next.icon.slug &&
+    prev.isFavorite === next.isFavorite &&
+    prev.globalAnimated === next.globalAnimated &&
+    prev.onToggleFavorite === next.onToggleFavorite &&
+    prev.onSelectIcon === next.onSelectIcon &&
+    prev.onQuickCopy === next.onQuickCopy &&
+    prev.onQuickDownload === next.onQuickDownload
+  );
+});

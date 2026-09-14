@@ -1,6 +1,6 @@
 {
   "name": "vectofi",
-  "version": "2.5.1",
+  "version": "2.6.0",
   "description": "Developer-first SVG icon library with 17,000+ static and animated vector icons across 20 categories, interactive SVG laboratory, framework code generators, and vector art design system.",
   "private": true,
   "type": "module",
@@ -8,10 +8,10 @@
   "homepage": "https://vectofi.vercel.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ankit628792/vectofi.git"
+    "url": "https://github.com/Ankit628792/vectofi.git"
   },
   "bugs": {
-    "url": "https://github.com/ankit628792/vectofi/issues"
+    "url": "https://github.com/Ankit628792/vectofi/issues"
   },
   "license": "MIT",
   "keywords": [

@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { IconItem, FrameworkType, LaboratorySettings, CollectionItem } from '../../types';
 import { AnimatedIconRenderer } from '../icons/AnimatedIconRenderer';
 import { generateFrameworkCode, downloadSvgFile, isFillBasedIcon } from '../../utils/svgExport';
+import { useIconBody } from '../../hooks/useIconBody';
 
 interface IconDetailLaboratoryProps {
   icon: IconItem;
@@ -28,6 +29,15 @@ export const IconDetailLaboratory: React.FC<IconDetailLaboratoryProps> = ({
   collections,
   onAddToCollection,
 }) => {
+  // Lazily resolve SVG path body on demand when laboratory opens
+  const { body: resolvedBody } = useIconBody(icon, isOpen);
+  const resolvedIcon: IconItem = useMemo(() => {
+    if (resolvedBody) {
+      return { ...icon, body: resolvedBody };
+    }
+    return icon;
+  }, [icon, resolvedBody]);
+
   const [activeTab, setActiveTab] = useState<FrameworkType>('react');
   const [compareMode, setCompareMode] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -55,7 +65,7 @@ export const IconDetailLaboratory: React.FC<IconDetailLaboratoryProps> = ({
     }));
   }, [icon.slug, icon.hasAnimation]);
 
-  const isFill = isFillBasedIcon(icon.body, icon.style);
+  const isFill = isFillBasedIcon(resolvedIcon.body, resolvedIcon.style);
 
   // Handle keyboard shortcuts when laboratory is open
   useEffect(() => {
@@ -100,24 +110,24 @@ export const IconDetailLaboratory: React.FC<IconDetailLaboratoryProps> = ({
     .slice(0, 6);
 
   const handleCopyCode = () => {
-    const code = generateFrameworkCode(icon, activeTab, settings);
+    const code = generateFrameworkCode(resolvedIcon, activeTab, settings);
     navigator.clipboard.writeText(code);
     setCopied(true);
-    onShowToast(`Copied ${activeTab.toUpperCase()} code!`, `${icon.name} ready to paste.`);
+    onShowToast(`Copied ${activeTab.toUpperCase()} code!`, `${resolvedIcon.name} ready to paste.`);
     setTimeout(() => setCopied(false), 2000);
   };
 
   const handleCopySvg = () => {
-    const svgCode = generateFrameworkCode(icon, 'svg', settings);
+    const svgCode = generateFrameworkCode(resolvedIcon, 'svg', settings);
     navigator.clipboard.writeText(svgCode);
-    onShowToast('SVG code copied!', `${icon.name} markup in clipboard.`);
+    onShowToast('SVG code copied!', `${resolvedIcon.name} markup in clipboard.`);
   };
 
   const handleDownload = (asAnimated: boolean) => {
-    downloadSvgFile(icon, asAnimated, settings);
+    downloadSvgFile(resolvedIcon, asAnimated, settings);
     onShowToast(
       'Download started',
-      `${icon.slug}${asAnimated ? '-animated' : ''}.svg saved.`,
+      `${resolvedIcon.slug}${asAnimated ? '-animated' : ''}.svg saved.`,
       'download'
     );
   };
@@ -136,7 +146,7 @@ export const IconDetailLaboratory: React.FC<IconDetailLaboratoryProps> = ({
     customStyle = { backgroundColor: settings.customBgColor };
   }
 
-  const generatedCode = generateFrameworkCode(icon, activeTab, settings);
+  const generatedCode = generateFrameworkCode(resolvedIcon, activeTab, settings);
 
   return (
     <div

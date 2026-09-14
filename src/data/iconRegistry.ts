@@ -8,6 +8,7 @@ import {
   RegistryStats,
   FrameworkType,
 } from '../types';
+import { LightweightIconItem } from '../types/worker';
 import { CATEGORIES } from './categories';
 import {
   generateStaticSvg,
@@ -15,90 +16,176 @@ import {
   generateSvgSprite,
   generateFrameworkCode,
 } from '../utils/svgExport';
+import { iconWorkerClient } from '../services/iconWorkerClient';
 
 /**
- * Normalizes an IconDefinition into a complete IconItem with standalone SVG strings (lazy-computed on demand)
+ * Normalized Icon Item implementing lazy-evaluated SVG properties on its prototype.
+ * Using class prototype getters reduces memory usage and avoids Object.defineProperty overhead.
+ * Supports on-demand path body hydration without blocking rendering.
  */
-function normalizeIcon(def: IconDefinition): IconItem {
-  const hasAnimation = Boolean(def.hasAnimation ?? (def.animationType !== undefined));
-  const style = def.style ?? 'outline';
-  const license = def.license ?? 'MIT';
-  const viewBox = def.viewBox ?? '0 0 24 24';
+class NormalizedIcon implements IconItem {
+  id: string;
+  name: string;
+  slug: string;
+  category: string;
+  tags: string[];
+  style: IconStyle;
+  viewBox: string;
+  hasAnimation: boolean;
+  animationType: any;
+  license: string;
+  popularity: number;
+  featured: boolean;
+  author: string;
+  isNew: boolean;
 
-  const baseItem: any = {
-    id: def.id,
-    name: def.name,
-    slug: def.slug,
-    category: def.category,
-    tags: Array.isArray(def.tags) ? def.tags : [],
-    style,
-    viewBox,
-    body: def.body,
-    hasAnimation,
-    animationType: def.animationType ?? 'pulse',
-    license,
-    popularity: def.popularity ?? 50,
-    featured: def.featured ?? false,
-    author: def.author ?? 'Vectofi Core',
-    isNew: def.isNew ?? false,
-  };
+  private _body?: string;
+  private _staticSvg?: string;
+  private _animatedSvg?: string;
+  private _isResolving = false;
 
-  let _staticSvg: string | null = def.staticSvg || null;
-  let _animatedSvg: string | null = def.animatedSvg || null;
+  constructor(def: IconDefinition | LightweightIconItem) {
+    this.id = def.id;
+    this.name = def.name;
+    this.slug = def.slug;
+    this.category = def.category;
+    this.tags = Array.isArray(def.tags) ? def.tags : [];
+    this.style = def.style ?? 'outline';
+    this.viewBox = def.viewBox ?? '0 0 24 24';
+    this.hasAnimation = Boolean(def.hasAnimation ?? (def.animationType !== undefined));
+    this.animationType = def.animationType ?? 'pulse';
+    this.license = def.license ?? 'MIT';
+    this.popularity = def.popularity ?? 50;
+    this.featured = def.featured ?? false;
+    this.author = def.author ?? 'Vectofi Core';
+    this.isNew = def.isNew ?? false;
 
-  Object.defineProperty(baseItem, 'staticSvg', {
-    get() {
-      if (!_staticSvg) {
-        _staticSvg = generateStaticSvg(baseItem);
-      }
-      return _staticSvg;
-    },
-    enumerable: true,
-    configurable: true,
-  });
+    // If body was provided up front (e.g. core icons)
+    if ('body' in def && def.body) {
+      this._body = def.body;
+      iconWorkerClient.setCachedBody(this.slug, def.body);
+    }
+  }
 
-  Object.defineProperty(baseItem, 'animatedSvg', {
-    get() {
-      if (!_animatedSvg) {
-        _animatedSvg = hasAnimation ? generateAnimatedSvg(baseItem) : baseItem.staticSvg;
-      }
-      return _animatedSvg;
-    },
-    enumerable: true,
-    configurable: true,
-  });
+  get body(): string {
+    if (this._body) {
+      return this._body;
+    }
 
-  return baseItem as IconItem;
+    // Check worker client cache
+    const cached = iconWorkerClient.getCachedBody(this.slug);
+    if (cached) {
+      this._body = cached;
+      return cached;
+    }
+
+    // Auto-trigger lazy resolution in background if not already in flight
+    if (!this._isResolving && typeof window !== 'undefined') {
+      this._isResolving = true;
+      iconWorkerClient.requestPathBody(this.slug, body => {
+        this._body = body;
+        this._staticSvg = undefined;
+        this._animatedSvg = undefined;
+        this._isResolving = false;
+      }).catch(() => {
+        this._isResolving = false;
+      });
+    }
+
+    return '';
+  }
+
+  set body(value: string) {
+    this._body = value;
+    this._staticSvg = undefined;
+    this._animatedSvg = undefined;
+    if (value) {
+      iconWorkerClient.setCachedBody(this.slug, value);
+    }
+  }
+
+  public setBodyDirect(value: string): void {
+    this._body = value;
+    this._staticSvg = undefined;
+    this._animatedSvg = undefined;
+    if (value) {
+      iconWorkerClient.setCachedBody(this.slug, value);
+    }
+  }
+
+  public hasResolvedBody(): boolean {
+    return Boolean(this._body || iconWorkerClient.getCachedBody(this.slug));
+  }
+
+  get staticSvg(): string {
+    if (!this._staticSvg) {
+      this._staticSvg = generateStaticSvg(this);
+    }
+    return this._staticSvg;
+  }
+
+  get animatedSvg(): string {
+    if (!this._animatedSvg) {
+      this._animatedSvg = this.hasAnimation ? generateAnimatedSvg(this) : this.staticSvg;
+    }
+    return this._animatedSvg;
+  }
+}
+
+function normalizeIcon(def: IconDefinition | LightweightIconItem): NormalizedIcon {
+  return new NormalizedIcon(def);
 }
 
 /**
- * Scalable Centralized Icon Registry Architecture (Phase 3)
+ * Scalable Centralized Icon Registry Architecture
  * Provides indexed O(1) lookups, multi-token fuzzy/scoring search, categorization,
- * batch export, and dynamic registration for thousands of icons.
+ * batch export, Web Worker off-thread filtering, and on-demand path lazy loading.
  */
 export class IconRegistry {
-  private iconsById: Map<string, IconItem> = new Map();
-  private iconsBySlug: Map<string, IconItem> = new Map();
-  private iconsByCategory: Map<string, IconItem[]> = new Map();
+  private iconsById: Map<string, NormalizedIcon> = new Map();
+  private iconsBySlug: Map<string, NormalizedIcon> = new Map();
+  private iconsByCategory: Map<string, NormalizedIcon[]> = new Map();
   private iconsByTag: Map<string, Set<string>> = new Map();
-  private iconsByStyle: Map<IconStyle, IconItem[]> = new Map();
-  private allIcons: IconItem[] = [];
+  private iconsByStyle: Map<IconStyle, NormalizedIcon[]> = new Map();
+  private allIcons: NormalizedIcon[] = [];
   private categoriesMap: Map<string, CategoryMeta> = new Map();
+  private listeners: Set<(icons: IconItem[]) => void> = new Set();
+  private bodyListeners = new Map<string, Set<(body: string) => void>>();
 
   constructor(initialIcons: IconDefinition[] = [], categories: CategoryMeta[] = CATEGORIES) {
     // Initialize categories
     categories.forEach(cat => this.categoriesMap.set(cat.id, cat));
-    
-    // Register initial icons
+
+    // Register initial core icons
     if (initialIcons.length > 0) {
       this.registerBatch(initialIcons);
     }
   }
 
   /**
+   * Subscribes to registry updates when new icon batches are loaded
+   */
+  public subscribe(listener: (icons: IconItem[]) => void): () => void {
+    this.listeners.add(listener);
+    return () => {
+      this.listeners.delete(listener);
+    };
+  }
+
+  private notifyListeners(): void {
+    this.listeners.forEach(cb => {
+      try {
+        cb(this.allIcons);
+      } catch {
+        // ignore listener errors
+      }
+    });
+  }
+
+  /**
    * Registers a new icon into the centralized registry and updates indexes
    */
-  public register(def: IconDefinition): IconItem {
+  public register(def: IconDefinition | LightweightIconItem): IconItem {
     const item = normalizeIcon(def);
 
     this.iconsById.set(item.id, item);
@@ -127,14 +214,15 @@ export class IconRegistry {
 
     // Update flat array
     this.allIcons = Array.from(this.iconsBySlug.values());
+    this.notifyListeners();
 
     return item;
   }
 
   /**
-   * Registers a batch of icons efficiently
+   * Registers a batch of icons efficiently without memory bloat
    */
-  public registerBatch(definitions: IconDefinition[]): void {
+  public registerBatch(definitions: (IconDefinition | LightweightIconItem)[]): void {
     definitions.forEach(def => {
       const item = normalizeIcon(def);
       this.iconsById.set(item.id, item);
@@ -163,6 +251,88 @@ export class IconRegistry {
     });
 
     this.allIcons = Array.from(this.iconsBySlug.values());
+    this.notifyListeners();
+  }
+
+  /**
+   * Resolves SVG path bodies for a batch of icons asynchronously
+   */
+  public async resolveBodies(slugs: string[]): Promise<void> {
+    const missingSlugs = slugs.filter(s => {
+      const item = this.iconsBySlug.get(s);
+      return item && !item.hasResolvedBody();
+    });
+
+    if (missingSlugs.length === 0) return;
+
+    try {
+      const resolved = await iconWorkerClient.resolveBatchPaths(missingSlugs);
+      Object.entries(resolved).forEach(([slug, body]) => {
+        const item = this.iconsBySlug.get(slug);
+        if (item) {
+          item.setBodyDirect(body);
+        }
+        const listeners = this.bodyListeners.get(slug);
+        if (listeners) {
+          listeners.forEach(cb => cb(body));
+        }
+      });
+    } catch (err) {
+      console.warn('Failed to resolve bodies batch:', err);
+    }
+  }
+
+  /**
+   * Resolves a single icon's path body and returns the full IconItem
+   */
+  public async resolveIcon(slug: string): Promise<IconItem | undefined> {
+    const item = this.iconsBySlug.get(slug);
+    if (!item) return undefined;
+
+    if (item.hasResolvedBody()) {
+      return item;
+    }
+
+    try {
+      const body = await iconWorkerClient.requestPathBody(slug);
+      if (body) {
+        item.setBodyDirect(body);
+      }
+      return item;
+    } catch {
+      return item;
+    }
+  }
+
+  /**
+   * Request body for a specific slug with callback
+   */
+  public requestBody(slug: string, callback?: (body: string) => void): void {
+    const item = this.iconsBySlug.get(slug);
+    if (item && item.hasResolvedBody()) {
+      if (callback) callback(item.body);
+      return;
+    }
+
+    if (callback) {
+      let listeners = this.bodyListeners.get(slug);
+      if (!listeners) {
+        listeners = new Set();
+        this.bodyListeners.set(slug, listeners);
+      }
+      listeners.add(callback);
+    }
+
+    iconWorkerClient.requestPathBody(slug, body => {
+      if (item) {
+        item.setBodyDirect(body);
+      }
+      const listeners = this.bodyListeners.get(slug);
+      if (listeners) {
+        listeners.forEach(cb => cb(body));
+        this.bodyListeners.delete(slug);
+      }
+    });
   }
 
   /**
@@ -215,7 +385,7 @@ export class IconRegistry {
     if (!slugSet) return [];
     return Array.from(slugSet)
       .map(slug => this.iconsBySlug.get(slug))
-      .filter((i): i is IconItem => Boolean(i));
+      .filter((i): i is NormalizedIcon => Boolean(i));
   }
 
   /**
@@ -239,6 +409,7 @@ export class IconRegistry {
    */
   public search(filters: FilterState): IconItem[] {
     const q = filters.query.trim().toLowerCase();
+    const tokens = q.split(/\s+/).filter(Boolean);
 
     const filtered = this.allIcons.filter(icon => {
       // Category filter
@@ -260,13 +431,20 @@ export class IconRegistry {
       }
 
       // Query match
-      if (q) {
-        const nameMatch = icon.name.toLowerCase().includes(q);
-        const slugMatch = icon.slug.toLowerCase().includes(q);
-        const catMatch = icon.category.toLowerCase().includes(q);
-        const tagMatch = icon.tags.some(t => t.toLowerCase().includes(q));
-        if (!nameMatch && !slugMatch && !catMatch && !tagMatch) {
-          return false;
+      if (tokens.length > 0) {
+        const nameLower = icon.name.toLowerCase();
+        const slugLower = icon.slug.toLowerCase();
+        const catLower = icon.category.toLowerCase();
+
+        for (let i = 0; i < tokens.length; i++) {
+          const token = tokens[i];
+          const match =
+            nameLower.includes(token) ||
+            slugLower.includes(token) ||
+            catLower.includes(token) ||
+            icon.tags.some(t => t.toLowerCase().includes(token));
+
+          if (!match) return false;
         }
       }
 
@@ -400,10 +578,21 @@ export class IconRegistry {
   /**
    * Generates an SVG sprite sheet containing all or selected icons
    */
-  public generateSpriteSheet(slugs?: string[]): string {
+  public async generateSpriteSheet(slugs?: string[]): Promise<string> {
+    if (iconWorkerClient.isWorkerAvailable()) {
+      try {
+        return await iconWorkerClient.generateSpriteSheet(slugs);
+      } catch {
+        // Fallback to local
+      }
+    }
+
     const targetIcons = slugs
-      ? slugs.map(s => this.iconsBySlug.get(s)).filter((i): i is IconItem => Boolean(i))
+      ? slugs.map(s => this.iconsBySlug.get(s)).filter((i): i is NormalizedIcon => Boolean(i))
       : this.allIcons;
+
+    // Ensure all target icons have bodies loaded
+    await this.resolveBodies(targetIcons.map(i => i.slug));
 
     return generateSvgSprite(targetIcons);
   }
@@ -411,10 +600,12 @@ export class IconRegistry {
   /**
    * Exports multiple icons into code snippets for a given framework
    */
-  public exportBatch(
+  public async exportBatch(
     slugs: string[],
     framework: FrameworkType
-  ): Record<string, string> {
+  ): Promise<Record<string, string>> {
+    await this.resolveBodies(slugs);
+
     const result: Record<string, string> = {};
     slugs.forEach(slug => {
       const icon = this.iconsBySlug.get(slug);
@@ -425,3 +616,4 @@ export class IconRegistry {
     return result;
   }
 }
+

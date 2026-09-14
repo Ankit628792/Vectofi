@@ -12,13 +12,13 @@ import { ICON_CATEGORIES } from '../data/categories';
 // ============================================================================
 
 export const APP_NAME = 'Vectofi';
-export const APP_VERSION = '2.5.0';
+export const APP_VERSION = '2.6.0';
 export const APP_TAGLINE = 'Free Static & Animated Vector Icons';
 export const APP_DESCRIPTION =
   'Developer-first SVG icon library with 17,000+ static and animated icons, interactive SVG laboratory, framework code generators, and vector art design system.';
 export const APP_CANONICAL_URL = 'https://vectofi.vercel.app/';
 export const APP_DEFAULT_BASE_URL = 'https://vectofi.vercel.app';
-export const APP_REPOSITORY_URL = 'https://github.com/ankit628792/vectofi';
+export const APP_REPOSITORY_URL = 'https://github.com/Ankit628792/vectofi';
 
 // ============================================================================
 // 2. CREATOR & ATTRIBUTION

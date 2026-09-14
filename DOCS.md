@@ -155,10 +155,32 @@ export interface IconCategory {
 
 ---
 
-## 4. Central Utilities & Constants (`src/utils/common.ts`)
+## 4. Web Worker Service & Streaming Architecture (`src/services/iconWorkerClient.ts` & `src/hooks/useIconBody.ts`)
 
-- `ICON_COUNT_DISPLAY`: Display string formatted as `'1,000+'`.
-- `ANIMATED_ICONS_DISPLAY`: Display string formatted as `'900+'`.
+Vectofi runs a dedicated background Web Worker to parse 17,000+ icons, index search tokens, filter by category/style, and generate SVG sprites asynchronously without blocking the main UI thread.
+
+### Web Worker Client API (`IconWorkerClient`)
+- `initializeCatalog()`: Boots the background worker and progressively streams icon batches as they load.
+- `searchAndFilter(filters: FilterState, limit?: number)`: Runs off-thread fuzzy matching and returns lightweight icon metadata.
+- `resolvePaths(slugs: string[])`: Fetches exact raw SVG markup bodies on-demand for visible cards in the virtual grid.
+- `resolveIcon(slug: string)`: Resolves full icon definition for laboratory inspection and multi-framework exports.
+- `generateSprite(slugs?: string[])`: Bundles selected icons into an optimized SVG `<symbol>` sprite document.
+
+### On-Demand Path Hook (`useIconBody`)
+```typescript
+import { useIconBody } from '../hooks/useIconBody';
+
+// Lazily queries SVG body from the Web Worker or in-memory cache when visible
+const { body, isLoaded } = useIconBody(icon, isIntersecting);
+```
+
+---
+
+## 5. Central Utilities & Constants (`src/utils/common.ts`)
+
+- `APP_VERSION`: Current application release (`'2.6.0'`).
+- `ICON_COUNT_DISPLAY`: Display string formatted as `'17,000+'`.
+- `ANIMATED_ICONS_DISPLAY`: Display string formatted as `'16,000+'`.
 - `CATEGORIES_COUNT`: Total registered categories evaluated dynamically as `${ICON_CATEGORIES.length}` (`20`).
 - `APP_CANONICAL_URL`: `https://vectofi.vercel.app/`.
-- `APP_REPOSITORY_URL`: `https://github.com/ankit628792/vectofi`.
+- `APP_REPOSITORY_URL`: `https://github.com/Ankit628792/vectofi`.

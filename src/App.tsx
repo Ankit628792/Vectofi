@@ -1,7 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { IconItem, FilterState, CollectionItem, ToastMessage } from './types';
-import { ICONS } from './data/icons';
+import {
+  iconRegistry,
+  loadExtendedIconLibrary,
+  subscribeCatalogProgress,
+  CatalogLoadingProgress,
+} from './data/icons';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { HomePage } from './pages/HomePage';
@@ -63,6 +68,34 @@ export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
   const currentRoute = location.pathname;
+
+  // Dynamic icon library state (starts with instant core icons, hydrates extended packs in background)
+  const [icons, setIcons] = useState<IconItem[]>(() => iconRegistry.getAll());
+  const [catalogProgress, setCatalogProgress] = useState<CatalogLoadingProgress>({
+    loadedCount: iconRegistry.getCount(),
+    totalEstimated: 17049,
+    currentPack: 'Core Curated',
+    isComplete: false,
+  });
+
+  // Background non-blocking progressive hydration of 17,000+ icons
+  useEffect(() => {
+    const unsubRegistry = iconRegistry.subscribe(updatedIcons => {
+      setIcons(updatedIcons);
+    });
+
+    const unsubProgress = subscribeCatalogProgress(progress => {
+      setCatalogProgress(progress);
+    });
+
+    // Start background hydration without blocking initial paint
+    loadExtendedIconLibrary();
+
+    return () => {
+      unsubRegistry();
+      unsubProgress();
+    };
+  }, []);
 
   // Filter State
   const [filters, setFilters] = useState<FilterState>({
@@ -204,7 +237,7 @@ export default function App() {
 
     if (location.pathname.startsWith('/icon/')) {
       const slug = location.pathname.replace('/icon/', '').split('/')[0].trim();
-      const foundIcon = ICONS.find(i => i.slug === slug || i.id === slug);
+      const foundIcon = iconRegistry.getBySlug(slug) || iconRegistry.getById(slug) || icons.find(i => i.slug === slug || i.id === slug);
       if (foundIcon) {
         setSelectedIcon(foundIcon);
       } else {
@@ -218,7 +251,7 @@ export default function App() {
       const params = new URLSearchParams(location.search);
       const iconSlug = params.get('icon');
       if (iconSlug) {
-        const foundIcon = ICONS.find(i => i.slug === iconSlug || i.id === iconSlug);
+        const foundIcon = iconRegistry.getBySlug(iconSlug) || iconRegistry.getById(iconSlug) || icons.find(i => i.slug === iconSlug || i.id === iconSlug);
         if (foundIcon) {
           setSelectedIcon(foundIcon);
         }
@@ -427,7 +460,7 @@ export default function App() {
               path="/"
               element={
                 <HomePage
-                  icons={ICONS}
+                  icons={icons}
                   favorites={favorites}
                   onToggleFavorite={handleToggleFavorite}
                   onSelectIcon={handleOpenIcon}
@@ -446,7 +479,7 @@ export default function App() {
               path="/icons"
               element={
                 <IconsPage
-                  icons={ICONS}
+                  icons={icons}
                   filters={filters}
                   onFilterChange={setFilters}
                   favorites={favorites}
@@ -459,6 +492,8 @@ export default function App() {
                   onResetFilters={resetFilters}
                   reducedMotion={reducedMotion}
                   onToggleReducedMotion={toggleReducedMotion}
+                  isHydrating={!catalogProgress.isComplete}
+                  catalogProgress={catalogProgress}
                   title="All SVG Icons"
                   subtitle={UI_TEXT.allIconsSubtitle}
                 />
@@ -469,7 +504,7 @@ export default function App() {
               path="/icon/:slug"
               element={
                 <IconsPage
-                  icons={ICONS}
+                  icons={icons}
                   filters={filters}
                   onFilterChange={setFilters}
                   favorites={favorites}
@@ -482,6 +517,8 @@ export default function App() {
                   onResetFilters={resetFilters}
                   reducedMotion={reducedMotion}
                   onToggleReducedMotion={toggleReducedMotion}
+                  isHydrating={!catalogProgress.isComplete}
+                  catalogProgress={catalogProgress}
                   title="All SVG Icons"
                   subtitle={UI_TEXT.allIconsSubtitle}
                 />
@@ -492,7 +529,7 @@ export default function App() {
               path="/animated"
               element={
                 <IconsPage
-                  icons={ICONS}
+                  icons={icons}
                   filters={{ ...filters, hasAnimation: 'animated' }}
                   onFilterChange={setFilters}
                   favorites={favorites}
@@ -505,6 +542,8 @@ export default function App() {
                   onResetFilters={resetFilters}
                   reducedMotion={reducedMotion}
                   onToggleReducedMotion={toggleReducedMotion}
+                  isHydrating={!catalogProgress.isComplete}
+                  catalogProgress={catalogProgress}
                   title="Animated SVG Icons"
                   subtitle="Self-contained animated vector icons powered by encapsulated CSS keyframes."
                 />
@@ -515,7 +554,7 @@ export default function App() {
               path="/categories"
               element={
                 <CategoriesPage
-                  icons={ICONS}
+                  icons={icons}
                   onSelectCategory={catId => {
                     setFilters(f => ({ ...f, category: catId as any }));
                     navigateTo('/icons');
@@ -529,7 +568,7 @@ export default function App() {
               path="/collections"
               element={
                 <CollectionsPage
-                  icons={ICONS}
+                  icons={icons}
                   collections={collections}
                   onCreateCollection={handleCreateCollection}
                   onDeleteCollection={handleDeleteCollection}
@@ -549,7 +588,7 @@ export default function App() {
               path="/favorites"
               element={
                 <FavoritesPage
-                  icons={ICONS}
+                  icons={icons}
                   favorites={favorites}
                   onToggleFavorite={handleToggleFavorite}
                   onSelectIcon={handleOpenIcon}
@@ -587,7 +626,7 @@ export default function App() {
       {selectedIcon && (
         <IconDetailLaboratory
           icon={selectedIcon}
-          allIcons={ICONS}
+          allIcons={icons}
           isOpen={Boolean(selectedIcon)}
           onClose={handleCloseIcon}
           onSelectIcon={handleOpenIcon}
@@ -603,7 +642,7 @@ export default function App() {
       <CommandPalette
         isOpen={commandPaletteOpen}
         onClose={() => setCommandPaletteOpen(false)}
-        icons={ICONS}
+        icons={icons}
         onSelectIcon={handleOpenIcon}
         onNavigate={navigateTo}
         onToggleDarkMode={() => setDarkMode(!darkMode)}

@@ -20,7 +20,7 @@ Clone the repository and install project dependencies:
 
 ```bash
 # Clone the repository
-git clone https://github.com/ankit628792/vectofi.git
+git clone https://github.com/Ankit628792/vectofi.git
 cd vectofi
 
 # Install dependencies using npm

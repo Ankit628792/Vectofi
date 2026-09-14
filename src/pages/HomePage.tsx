@@ -12,6 +12,7 @@ import {
   VectorSystemShowcase,
 } from '../components/vector';
 import { IconCard } from '../components/icons/IconCard';
+import { IconCardSkeleton } from '../components/icons/IconCardSkeleton';
 import { CATEGORIES } from '../data/categories';
 import { AnimatedIconRenderer } from '../components/icons/AnimatedIconRenderer';
 import {
@@ -227,36 +228,48 @@ export const HomePage: React.FC<HomePageProps> = ({
           </div>
 
           {/* Animated Icons Grid matching Design HTML aspect-square cards */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
-            {animatedIcons.map((icon, idx) => {
-              const colorClasses = [
-                'text-blue-400',
-                'text-cyan-400',
-                'text-indigo-400',
-                'text-purple-400',
-              ];
-              const accentColor = colorClasses[idx % colorClasses.length];
+          <div id="home-animated-icons-grid" className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+            {animatedIcons.length > 0
+              ? animatedIcons.map((icon, idx) => {
+                  const colorClasses = [
+                    'text-blue-400',
+                    'text-cyan-400',
+                    'text-indigo-400',
+                    'text-purple-400',
+                  ];
+                  const accentColor = colorClasses[idx % colorClasses.length];
 
-              return (
-                <div
-                  key={icon.slug}
-                  onClick={() => onSelectIcon(icon)}
-                  className="aspect-square bg-white/5 border border-white/10 rounded-2xl flex flex-col items-center justify-center group hover:border-blue-500/50 hover:bg-blue-500/5 transition-all cursor-pointer p-2"
-                >
-                  <div className={`${accentColor} group-hover:scale-110 transition-transform`}>
-                    <AnimatedIconRenderer
-                      icon={icon}
-                      size={32}
-                      strokeWidth={1.8}
-                      animated={true}
-                    />
+                  return (
+                    <div
+                      key={icon.slug}
+                      id={`home-animated-icon-${icon.slug}`}
+                      onClick={() => onSelectIcon(icon)}
+                      className="aspect-square bg-white/5 border border-white/10 rounded-2xl flex flex-col items-center justify-center group hover:border-blue-500/50 hover:bg-blue-500/5 transition-all cursor-pointer p-2"
+                    >
+                      <div className={`${accentColor} group-hover:scale-110 transition-transform`}>
+                        <AnimatedIconRenderer
+                          icon={icon}
+                          size={32}
+                          strokeWidth={1.8}
+                          animated={true}
+                        />
+                      </div>
+                      <span className="text-[10px] mt-2 font-medium text-white/40 group-hover:text-white font-mono truncate max-w-full">
+                        {icon.slug}
+                      </span>
+                    </div>
+                  );
+                })
+              : Array.from({ length: 8 }).map((_, idx) => (
+                  <div
+                    key={`home-anim-skel-${idx}`}
+                    id={`home-anim-skel-${idx}`}
+                    className="aspect-square bg-white/[0.02] border border-white/[0.06] rounded-2xl flex flex-col items-center justify-center p-3 animate-pulse"
+                  >
+                    <div className="w-8 h-8 rounded-xl bg-white/[0.06] mb-2" />
+                    <div className="w-14 h-2 rounded bg-white/[0.04]" />
                   </div>
-                  <span className="text-[10px] mt-2 font-medium text-white/40 group-hover:text-white font-mono truncate max-w-full">
-                    {icon.slug}
-                  </span>
-                </div>
-              );
-            })}
+                ))}
           </div>
         </div>
       </section>
@@ -380,18 +393,25 @@ export const HomePage: React.FC<HomePageProps> = ({
           </div>
 
           {/* Grid of featured icons */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {featuredIcons.map(icon => (
-              <IconCard
-                key={icon.slug}
-                icon={icon}
-                isFavorite={favorites.includes(icon.slug)}
-                onToggleFavorite={onToggleFavorite}
-                onSelectIcon={onSelectIcon}
-                onQuickCopy={onQuickCopy}
-                onQuickDownload={onQuickDownload}
-              />
-            ))}
+          <div id="home-featured-icons-grid" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {featuredIcons.length > 0
+              ? featuredIcons.map(icon => (
+                  <IconCard
+                    key={icon.slug}
+                    icon={icon}
+                    isFavorite={favorites.includes(icon.slug)}
+                    onToggleFavorite={onToggleFavorite}
+                    onSelectIcon={onSelectIcon}
+                    onQuickCopy={onQuickCopy}
+                    onQuickDownload={onQuickDownload}
+                  />
+                ))
+              : Array.from({ length: 12 }).map((_, idx) => (
+                  <IconCardSkeleton
+                    key={`home-featured-skel-${idx}`}
+                    id={`home-featured-skel-${idx}`}
+                  />
+                ))}
           </div>
         </div>
       </section>

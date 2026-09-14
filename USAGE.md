@@ -12,31 +12,36 @@ Welcome to the **Vectofi** user guide. This walkthrough explains how to discover
 
 ### 20 Functional Categories
 Filter icons via the category navigation bar or sidebar:
-- **Interface & Controls** (125 icons)
-- **Arrows & Directions** (98 icons)
-- **Media, Audio & Video** (69 icons)
-- **Communication** (59 icons)
-- **Files & Folders** (59 icons)
-- **Devices & Hardware** (57 icons)
-- **Security & Privacy** (56 icons)
-- **Weather & Atmosphere** (52 icons)
-- **Navigation & Places** (52 icons)
-- **Social & Engagement** (51 icons)
-- **Business & Analytics** (50 icons)
-- **Development & Code** (49 icons)
-- **Design & Creative** (41 icons)
-- **Users & Teams** (41 icons)
-- **Commerce & Finance** (40 icons)
-- **Editor & Text** (39 icons)
-- **Travel & Transport** (38 icons)
-- **Food & Dining** (30 icons)
-- **Health & Wellness** (22 icons)
-- **Sports & Gaming** (16 icons)
+- **Interface & Controls** (5,527 icons)
+- **Arrows & Directions** (1,109 icons)
+- **Editor & Typography** (871 icons)
+- **Communication** (863 icons)
+- **Files & Folders** (858 icons)
+- **Design & Creative** (829 icons)
+- **Social & Engagement** (804 icons)
+- **Media, Audio & Video** (793 icons)
+- **Devices & Hardware** (760 icons)
+- **Commerce & Finance** (680 icons)
+- **Weather & Climate** (547 icons)
+- **Security & Privacy** (519 icons)
+- **Navigation & Places** (505 icons)
+- **Business & Analytics** (450 icons)
+- **Travel & Transport** (438 icons)
+- **Users & Teams** (412 icons)
+- **Development & Code** (379 icons)
+- **Sports & Gaming** (276 icons)
+- **Food & Dining** (253 icons)
+- **Health & Wellness** (176 icons)
 
 ### Animation & Style Filters
-- **All Icons**: Displays both static and animated icons.
-- **Animated Only (900+)**: Highlights icons with active motion presets (`pulse`, `bounce`, `spin`, `shake`, `slide`, `morph`, `float`, `draw`).
+- **All Icons (17,000+)**: Displays full static and animated vector icon collection.
+- **Animated Only (16,000+)**: Highlights icons with active motion presets (`pulse`, `bounce`, `spin`, `shake`, `slide`, `morph`, `float`, `draw`).
 - **Static Only**: Displays clean, un-animated vector geometry.
+- **Style Filters**: Switch between Outline, Solid, and Duotone variants.
+
+### High-Performance Web Worker Architecture
+- **Off-Thread Processing**: Search filtering, category queries, and sprite creation run in a dedicated Web Worker to avoid blocking UI frame rates.
+- **Virtual Grid & Lazy Geometry**: Icons in the virtual grid stream raw SVG path geometry on-demand through intersection observers and pre-warming heuristics, reducing initial DOM payload and RAM usage.
 
 ---
 

@@ -1239,6 +1239,12 @@ export interface MorphablePathElement {
 }
 
 /**
+ * Cache for parsed morphable path elements to prevent redundant geometry calculations.
+ */
+const morphablePathCache = new Map<string, MorphablePathElement[]>();
+const MAX_MORPH_CACHE_SIZE = 500;
+
+/**
  * Parses raw SVG icon inner body markup into individual morphable path elements.
  * Generates the "none" state for each path and builds transition frames showing
  * the creation of the final icon from none.
@@ -1249,6 +1255,10 @@ export function parseSvgBodyToMorphablePaths(
   steps: number = 14
 ): MorphablePathElement[] {
   if (!svgBody || typeof svgBody !== 'string') return [];
+
+  const cacheKey = `${slug || svgBody.slice(0, 40)}_${steps}`;
+  const cached = morphablePathCache.get(cacheKey);
+  if (cached) return cached;
 
   // Pass 1: Extract and convert all shapes to paths
   const rawItems: {
@@ -1354,6 +1364,12 @@ export function parseSvgBodyToMorphablePaths(
       opacity: opacityMatch ? parseFloat(opacityMatch[1]) : undefined,
     });
   });
+
+  if (morphablePathCache.size >= MAX_MORPH_CACHE_SIZE) {
+    const firstKey = morphablePathCache.keys().next().value;
+    if (firstKey) morphablePathCache.delete(firstKey);
+  }
+  morphablePathCache.set(cacheKey, elements);
 
   return elements;
 }

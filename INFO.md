@@ -11,6 +11,7 @@
 | **Total Registered Icons** | **17,049 production-grade vector icons** |
 | **Animated Icons Count** | **16,906 icons** with native motion presets |
 | **Total Categories** | **20 domain-specific categories** |
+| **Release Version** | **v2.6.0** |
 | **Animation Types** | `pulse`, `bounce`, `spin`, `shake`, `slide`, `morph`, `float`, `draw` |
 | **Color Inheritance** | `currentColor` by default; custom Hex/RGB configurable in Laboratory |
 | **Framework Code Generators** | React (TSX/JSX), Vue 3 SFC, Svelte 4/5, Angular Standalone, Inline SVG, CSS Data URI, Tailwind CSS |
@@ -73,5 +74,5 @@ Vectofi implements lightweight, standards-compliant CSS and SVG keyframe animati
 
 - **Author**: Ankit Kumar
 - **Instagram**: [https://www.instagram.com/ankit_628792](https://www.instagram.com/ankit_628792)
-- **Repository**: [https://github.com/Ankit628792/Vectofi](https://github.com/Ankit628792/Vectofi)
+- **Repository**: [https://github.com/Ankit628792/vectofi](https://github.com/Ankit628792/vectofi)
 - **Live Studio**: [https://vectofi.vercel.app](https://vectofi.vercel.app)

@@ -463,4 +463,14 @@ html:not(.dark) .bg-checkerboard-light {
     linear-gradient(-45deg, transparent 75%, #e2e8f0 75%) !important;
 }
 
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
 
