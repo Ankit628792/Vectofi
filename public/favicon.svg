@@ -1,26 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
   <defs>
-    <linearGradient id="vectofi-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="vectofi-logo-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#3B82F6" />
-      <stop offset="50%" stop-color="#2563EB" />
-      <stop offset="100%" stop-color="#06B6D4" />
-    </linearGradient>
-    <linearGradient id="vectofi-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#121212" />
-      <stop offset="100%" stop-color="#050505" />
+      <stop offset="100%" stop-color="#2563EB" />
     </linearGradient>
   </defs>
-  <!-- Background squircle container -->
-  <rect x="1.5" y="1.5" width="29" height="29" rx="8" fill="url(#vectofi-bg)" stroke="#27272a" stroke-width="1.2" />
+  <!-- Background rounded squircle matching the in-app logo -->
+  <rect x="0" y="0" width="32" height="32" rx="8" fill="url(#vectofi-logo-bg)" />
   
-  <!-- Precision vector path (stylized "V" with bezier curves) -->
-  <path d="M7 8.5 L16 23.5 L25 8.5" fill="none" stroke="url(#vectofi-grad)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
-  
-  <!-- Central anchor point and bezier node points -->
-  <circle cx="16" cy="23.5" r="2.2" fill="#38BDF8" stroke="#09090b" stroke-width="0.8" />
-  <circle cx="7" cy="8.5" r="1.8" fill="#60A5FA" stroke="#09090b" stroke-width="0.8" />
-  <circle cx="25" cy="8.5" r="1.8" fill="#22D3EE" stroke="#09090b" stroke-width="0.8" />
-  
-  <!-- Subtle center crosshair precision point -->
-  <circle cx="16" cy="14" r="1.2" fill="#FFFFFF" opacity="0.9" />
+  <!-- Isometric vector cube matching application logo -->
+  <g transform="translate(4, 4)" fill="none" stroke="#FFFFFF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m7.5 4.27 9 5.15" />
+    <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+    <path d="m3.3 7 8.7 5 8.7-5" />
+    <path d="M12 22V12" />
+  </g>
 </svg>
+
