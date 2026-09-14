@@ -32,7 +32,6 @@ export const Header: React.FC<HeaderProps> = ({
 
   const navLinks: NavLinkItem[] = [
     { label: 'Icons', route: '/icons' },
-    { label: 'Animated', route: '/animated' },
     { label: 'Categories', route: '/categories' },
     { label: 'Collections', route: '/collections' },
     { label: 'Docs', route: '/docs' },
@@ -113,10 +112,10 @@ export const Header: React.FC<HeaderProps> = ({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-full py-1.5 pl-9 pr-10 text-xs w-44 md:w-52 lg:w-64 text-white/60 group-hover:border-blue-500/50 group-hover:bg-white/[0.08] transition-all flex items-center justify-between">
+            <div className="bg-white/5 border border-white/10 rounded-full py-1.5 pl-8 pr-10 text-xs w-44 md:w-52 lg:w-64 text-white/60 group-hover:border-blue-500/50 group-hover:bg-white/[0.08] transition-all flex items-center justify-between">
               <span className="truncate">{UI_TEXT.searchCompactPlaceholder}</span>
               <kbd className="absolute right-2.5 top-1.5 text-[10px] bg-white/10 px-1.5 py-0.5 rounded text-white/40 border border-white/10 font-mono whitespace-nowrap shrink-0">
-                ⌘K
+                ⌘ K
               </kbd>
             </div>
           </div>
@@ -184,7 +183,7 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* GitHub Repository Link */}
           <a
-            href="https://github.com/Ankit628792/Vectofi"
+            href="https://github.com/Ankit628792/vectofi"
             target="_blank"
             rel="noreferrer"
             className="min-w-[38px] min-h-[38px] p-2 rounded-xl bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-colors flex items-center justify-center cursor-pointer"
@@ -276,7 +275,7 @@ export const Header: React.FC<HeaderProps> = ({
 
           <div className="pt-2 space-y-2">
             <a
-              href="https://github.com/Ankit628792/Vectofi"
+              href="https://github.com/Ankit628792/vectofi"
               target="_blank"
               rel="noreferrer"
               className="w-full py-2.5 rounded-xl text-xs font-mono font-medium bg-white/5 hover:bg-white/10 text-white/80 hover:text-white border border-white/10 flex items-center justify-center gap-2 transition-colors min-h-[44px] whitespace-nowrap"

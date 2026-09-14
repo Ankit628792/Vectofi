@@ -1,7 +1,12 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo, useDeferredValue } from 'react';
 import { FilterState, IconCategory } from '../../types';
 import { CATEGORIES } from '../../data/categories';
 import { UI_TEXT } from '../../utils/common';
+import {
+  getSearchSuggestions,
+  getSynonymsForToken,
+  POPULAR_SEARCH_SUGGESTIONS,
+} from '../../services/synonyms';
 
 interface FilterBarProps {
   filters: FilterState;
@@ -22,7 +27,34 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   onToggleGlobalAnimated,
   onResetFilters,
 }) => {
+  const [localQuery, setLocalQuery] = useState(filters.query);
+  const [isFocused, setIsFocused] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const debounceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Sync external filters.query with local state if changed from outside
+  useEffect(() => {
+    setLocalQuery(filters.query);
+  }, [filters.query]);
+
+  // Deferred value for smooth rendering
+  const deferredLocalQuery = useDeferredValue(localQuery);
+
+  // Handle debouncing
+  const handleQueryChange = (val: string) => {
+    setLocalQuery(val);
+    if (debounceTimerRef.current) {
+      clearTimeout(debounceTimerRef.current);
+    }
+
+    if (!val.trim()) {
+      onFilterChange({ ...filters, query: '' });
+    } else {
+      debounceTimerRef.current = setTimeout(() => {
+        onFilterChange({ ...filters, query: val });
+      }, 35);
+    }
+  };
 
   // Focus search input when pressing `/`
   useEffect(() => {
@@ -39,6 +71,18 @@ export const FilterBar: React.FC<FilterBarProps> = ({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  // Compute search suggestions
+  const suggestions = useMemo(() => {
+    return getSearchSuggestions(deferredLocalQuery, 6);
+  }, [deferredLocalQuery]);
+
+  // Active synonyms for the current query
+  const activeSynonyms = useMemo(() => {
+    const clean = deferredLocalQuery.trim().toLowerCase();
+    if (!clean) return [];
+    return getSynonymsForToken(clean).slice(0, 5);
+  }, [deferredLocalQuery]);
+
   const hasActiveFilters =
     filters.query.trim() !== '' ||
     filters.category !== 'all' ||
@@ -52,7 +96,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         {/* Search Input matching Design HTML */}
         <div className="relative flex-1 group">
           <div className="absolute inset-y-0 left-3.5 flex items-center pointer-events-none text-white/40">
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg className="w-4 h-4 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
@@ -61,19 +105,24 @@ export const FilterBar: React.FC<FilterBarProps> = ({
           <input
             ref={searchInputRef}
             type="text"
-            value={filters.query}
-            onChange={e => onFilterChange({ ...filters, query: e.target.value })}
+            value={localQuery}
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setTimeout(() => setIsFocused(false), 200)}
+            onChange={e => handleQueryChange(e.target.value)}
             placeholder={UI_TEXT.searchFullPlaceholder}
             className="w-full pl-10 pr-16 sm:pr-20 py-2.5 rounded-full border border-white/10 bg-white/5 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all font-sans min-h-[42px]"
-            aria-label="Search icons"
+            aria-label="Search icons with synonyms"
           />
 
           <div className="absolute inset-y-0 right-0 pr-3 flex items-center gap-1.5">
-            {filters.query && (
+            {localQuery && (
               <button
                 type="button"
-                onClick={() => onFilterChange({ ...filters, query: '' })}
-                className="p-1 rounded-md text-white/40 hover:text-white"
+                onClick={() => {
+                  handleQueryChange('');
+                  searchInputRef.current?.focus();
+                }}
+                className="p-1 rounded-md text-white/40 hover:text-white transition-colors cursor-pointer"
                 title="Clear search"
               >
                 <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -143,6 +192,45 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         </div>
       </div>
 
+      {/* Dynamic Search Suggestions & Active Synonym Highlights */}
+      {(suggestions.length > 0 || activeSynonyms.length > 0) && (
+        <div className="flex flex-wrap items-center gap-1.5 text-xs pt-0.5">
+          {activeSynonyms.length > 0 ? (
+            <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-none py-0.5">
+              <span className="text-[11px] font-mono text-emerald-400/90 shrink-0 flex items-center gap-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                Synonyms:
+              </span>
+              {activeSynonyms.map(syn => (
+                <button
+                  key={syn}
+                  type="button"
+                  onClick={() => handleQueryChange(syn)}
+                  className="px-2 py-0.5 text-[11px] font-mono rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 hover:bg-emerald-500/20 transition-colors cursor-pointer"
+                  title={`Search explicitly for "${syn}"`}
+                >
+                  {syn}
+                </button>
+              ))}
+            </div>
+          ) : isFocused || !localQuery ? (
+            <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-none py-0.5">
+              <span className="text-[11px] font-mono text-white/40 shrink-0">Popular:</span>
+              {POPULAR_SEARCH_SUGGESTIONS.slice(0, 6).map(pop => (
+                <button
+                  key={pop.term}
+                  type="button"
+                  onClick={() => handleQueryChange(pop.term)}
+                  className="px-2 py-0.5 text-[11px] font-mono rounded-md bg-white/5 border border-white/10 text-white/60 hover:text-white hover:bg-white/10 transition-colors cursor-pointer whitespace-nowrap"
+                >
+                  {pop.term}
+                </button>
+              ))}
+            </div>
+          ) : null}
+        </div>
+      )}
+
       {/* Categories & Sorting Row */}
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-1">
         {/* Category Horizontal Scroll Pills with touch support */}
@@ -200,7 +288,10 @@ export const FilterBar: React.FC<FilterBarProps> = ({
           {hasActiveFilters && (
             <button
               type="button"
-              onClick={onResetFilters}
+              onClick={() => {
+                setLocalQuery('');
+                onResetFilters();
+              }}
               className="text-xs font-mono text-blue-400 hover:text-blue-300 hover:underline cursor-pointer min-h-[32px] px-1 flex items-center whitespace-nowrap shrink-0"
             >
               Reset

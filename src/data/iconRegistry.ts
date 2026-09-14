@@ -17,6 +17,10 @@ import {
   generateFrameworkCode,
 } from '../utils/svgExport';
 import { iconWorkerClient } from '../services/iconWorkerClient';
+import {
+  getSynonymsForToken,
+  calculateRelevanceScoreWithSynonyms,
+} from '../services/synonyms';
 
 /**
  * Normalized Icon Item implementing lazy-evaluated SVG properties on its prototype.
@@ -405,11 +409,17 @@ export class IconRegistry {
   }
 
   /**
-   * Multi-token search algorithm with relevance weighting
+   * Multi-token search algorithm with bidirectional synonym expansion
    */
   public search(filters: FilterState): IconItem[] {
     const q = filters.query.trim().toLowerCase();
     const tokens = q.split(/\s+/).filter(Boolean);
+
+    // Pre-expand tokens with their synonym variants
+    const tokenSynonymMap = tokens.map(token => {
+      const synonyms = getSynonymsForToken(token);
+      return [token, ...synonyms];
+    });
 
     const filtered = this.allIcons.filter(icon => {
       // Category filter
@@ -430,21 +440,31 @@ export class IconRegistry {
         return false;
       }
 
-      // Query match
-      if (tokens.length > 0) {
+      // Query match with synonym expansion
+      if (tokenSynonymMap.length > 0) {
         const nameLower = icon.name.toLowerCase();
         const slugLower = icon.slug.toLowerCase();
         const catLower = icon.category.toLowerCase();
+        const tagsLower = icon.tags.map(t => t.toLowerCase());
 
-        for (let i = 0; i < tokens.length; i++) {
-          const token = tokens[i];
-          const match =
-            nameLower.includes(token) ||
-            slugLower.includes(token) ||
-            catLower.includes(token) ||
-            icon.tags.some(t => t.toLowerCase().includes(token));
+        for (let i = 0; i < tokenSynonymMap.length; i++) {
+          const variants = tokenSynonymMap[i];
+          let tokenMatched = false;
 
-          if (!match) return false;
+          for (let j = 0; j < variants.length; j++) {
+            const variant = variants[j];
+            if (
+              nameLower.includes(variant) ||
+              slugLower.includes(variant) ||
+              catLower.includes(variant) ||
+              tagsLower.some(t => t.includes(variant))
+            ) {
+              tokenMatched = true;
+              break;
+            }
+          }
+
+          if (!tokenMatched) return false;
         }
       }
 
@@ -488,21 +508,17 @@ export class IconRegistry {
   }
 
   /**
-   * Calculates a relevance score for a given query against an icon
+   * Calculates a relevance score for a given query against an icon using synonym metrics
    */
   private calculateSearchScore(icon: IconItem, query: string): number {
-    const slug = icon.slug.toLowerCase();
-    const name = icon.name.toLowerCase();
-
-    if (slug === query) return 100;
-    if (slug.startsWith(query)) return 75;
-    if (name.startsWith(query)) return 60;
-    if (name.includes(query)) return 40;
-    if (icon.tags.some(t => t.toLowerCase() === query)) return 50;
-    if (icon.tags.some(t => t.toLowerCase().startsWith(query))) return 30;
-    if (icon.category.toLowerCase() === query) return 20;
-
-    return 10;
+    const result = calculateRelevanceScoreWithSynonyms(
+      icon.slug,
+      icon.name,
+      icon.category,
+      icon.tags,
+      query
+    );
+    return result.score;
   }
 
   /**

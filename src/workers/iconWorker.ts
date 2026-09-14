@@ -4,6 +4,10 @@ import {
   WorkerRequestMessage,
   WorkerResponseMessage,
 } from '../types/worker';
+import {
+  getSynonymsForToken,
+  calculateRelevanceScoreWithSynonyms,
+} from '../services/synonyms';
 
 // In-worker storage structures
 const pathsBySlug = new Map<string, string>();
@@ -17,29 +21,33 @@ let isCatalogInitialized = false;
 let initPromise: Promise<void> | null = null;
 
 /**
- * Calculates a search relevance score for a given query against an icon
+ * Calculates a search relevance score for a given query against an icon,
+ * taking into account exact matches, prefixes, tags, and synonym mappings.
  */
 function calculateSearchScore(icon: LightweightIconItem, query: string): number {
-  const slug = icon.slug.toLowerCase();
-  const name = icon.name.toLowerCase();
-
-  if (slug === query) return 100;
-  if (slug.startsWith(query)) return 75;
-  if (name.startsWith(query)) return 60;
-  if (name.includes(query)) return 40;
-  if (icon.tags.some(t => t.toLowerCase() === query)) return 50;
-  if (icon.tags.some(t => t.toLowerCase().startsWith(query))) return 30;
-  if (icon.category.toLowerCase() === query) return 20;
-
-  return 10;
+  const result = calculateRelevanceScoreWithSynonyms(
+    icon.slug,
+    icon.name,
+    icon.category,
+    icon.tags,
+    query
+  );
+  return result.score;
 }
 
 /**
  * Performs high-speed multi-token fuzzy search and filtering in the worker
+ * with full bidirectional synonym expansion (e.g. searching 'delete' finds 'trash').
  */
 function executeSearchFilter(filters: FilterState, limit?: number): { results: LightweightIconItem[]; total: number } {
   const q = (filters.query || '').trim().toLowerCase();
   const tokens = q.split(/\s+/).filter(Boolean);
+
+  // Pre-expand tokens with their synonym variants
+  const tokenSynonymMap = tokens.map(token => {
+    const synonyms = getSynonymsForToken(token);
+    return [token, ...synonyms];
+  });
 
   const filtered = allItems.filter(icon => {
     // Category filter
@@ -60,22 +68,32 @@ function executeSearchFilter(filters: FilterState, limit?: number): { results: L
       return false;
     }
 
-    // Multi-token query match
-    if (tokens.length > 0) {
+    // Multi-token query match with synonym fallback
+    if (tokenSynonymMap.length > 0) {
       const nameLower = icon.name.toLowerCase();
       const slugLower = icon.slug.toLowerCase();
       const catLower = icon.category.toLowerCase();
+      const tagsLower = icon.tags.map(t => t.toLowerCase());
 
-      // All tokens must match at least one field
-      for (let i = 0; i < tokens.length; i++) {
-        const token = tokens[i];
-        const match =
-          nameLower.includes(token) ||
-          slugLower.includes(token) ||
-          catLower.includes(token) ||
-          icon.tags.some(t => t.toLowerCase().includes(token));
+      // All user tokens must match either directly or through a synonym
+      for (let i = 0; i < tokenSynonymMap.length; i++) {
+        const variants = tokenSynonymMap[i];
+        let tokenMatched = false;
 
-        if (!match) {
+        for (let j = 0; j < variants.length; j++) {
+          const variant = variants[j];
+          if (
+            nameLower.includes(variant) ||
+            slugLower.includes(variant) ||
+            catLower.includes(variant) ||
+            tagsLower.some(t => t.includes(variant))
+          ) {
+            tokenMatched = true;
+            break;
+          }
+        }
+
+        if (!tokenMatched) {
           return false;
         }
       }
