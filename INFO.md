@@ -8,13 +8,13 @@
 | **Default Stroke Width** | `2px` (customizable from `0.5px` to `4.0px`) |
 | **Stroke Linecap** | `round` |
 | **Stroke Linejoin** | `round` |
-| **Total Registered Icons** | **1,052 production-grade vector icons** |
-| **Animated Icons Count** | **909 icons** with native motion presets |
+| **Total Registered Icons** | **17,049 production-grade vector icons** |
+| **Animated Icons Count** | **16,906 icons** with native motion presets |
 | **Total Categories** | **20 domain-specific categories** |
 | **Animation Types** | `pulse`, `bounce`, `spin`, `shake`, `slide`, `morph`, `float`, `draw` |
 | **Color Inheritance** | `currentColor` by default; custom Hex/RGB configurable in Laboratory |
 | **Framework Code Generators** | React (TSX/JSX), Vue 3 SFC, Svelte 4/5, Angular Standalone, Inline SVG, CSS Data URI, Tailwind CSS |
-| **License** | MIT Permissive Open Source License |
+| **License** | MIT & Apache 2.0 Permissive Open Source Licenses |
 
 ---
 
@@ -22,26 +22,26 @@
 
 | Category | Slug | Icon Count | Typical Examples |
 | :--- | :--- | :---: | :--- |
-| **Interface & Controls** | `interface` | 125 | `check`, `x`, `sliders`, `toggle-left`, `menu`, `search`, `filter`, `settings`, `power` |
-| **Arrows & Directions** | `arrows` | 98 | `arrow-up`, `arrow-right`, `chevron-down`, `corner-down-left`, `rotate-cw`, `shuffle` |
-| **Media, Audio & Video** | `media` | 69 | `play`, `pause`, `volume-2`, `mic`, `camera`, `video`, `music`, `disc`, `film` |
-| **Files & Folders** | `files` | 59 | `file`, `folder`, `file-text`, `folder-plus`, `archive`, `clipboard`, `receipt` |
-| **Communication** | `communication` | 59 | `mail`, `message-square`, `phone`, `send`, `inbox`, `bell`, `megaphone`, `quote` |
-| **Devices & Hardware** | `devices` | 57 | `smartphone`, `laptop`, `monitor`, `cpu`, `wifi`, `battery-charging`, `hard-drive` |
-| **Security & Privacy** | `security` | 56 | `lock`, `unlock`, `shield`, `shield-check`, `key`, `fingerprint`, `scan`, `eye` |
-| **Weather & Climate** | `weather` | 52 | `sun`, `moon`, `cloud`, `cloud-rain`, `cloud-snow`, `wind`, `zap`, `thermometer` |
-| **Navigation & Places** | `navigation` | 52 | `compass`, `map`, `map-pin`, `navigation`, `signpost`, `globe`, `waypoint` |
-| **Social & Engagement** | `social` | 51 | `heart`, `star`, `bookmark`, `thumbs-up`, `award`, `trophy`, `sparkles`, `flame` |
-| **Business & Analytics** | `business` | 50 | `bar-chart`, `pie-chart`, `presentation`, `calendar`, `briefcase`, `kanban`, `clock` |
-| **Development & Code** | `development` | 49 | `code`, `terminal`, `git-branch`, `git-commit`, `database`, `webhook`, `api`, `braces` |
-| **Design & Creative** | `design` | 41 | `pen-tool`, `palette`, `brush`, `crop`, `layers`, `ruler`, `scissors`, `wand` |
-| **Users & Teams** | `users` | 41 | `user`, `users`, `user-plus`, `user-check`, `contact`, `group`, `id-card` |
-| **Commerce & Finance** | `commerce` | 40 | `shopping-cart`, `shopping-bag`, `credit-card`, `wallet`, `dollar-sign`, `percent` |
-| **Editor & Typography** | `editor` | 39 | `bold`, `italic`, `underline`, `align-left`, `list`, `heading`, `highlighter` |
-| **Travel & Transport** | `travel` | 38 | `plane`, `train`, `car`, `bus`, `ship`, `bike`, `rocket`, `fuel`, `hotel`, `luggage` |
-| **Food & Dining** | `food` | 30 | `coffee`, `cup-soda`, `utensils`, `pizza`, `wine`, `beer`, `cake`, `cookie`, `apple` |
-| **Health & Wellness** | `health` | 22 | `heart-pulse`, `pill`, `hospital`, `stethoscope`, `dna`, `syringe`, `activity` |
-| **Sports & Gaming** | `sports` | 16 | `gamepad-2`, `dice-5`, `trophy`, `dumbbell`, `target`, `joystick`, `medal` |
+| **Interface & Controls** | `interface` | 5,527 | `check`, `x`, `sliders`, `toggle-left`, `menu`, `search`, `filter`, `settings`, `power` |
+| **Arrows & Directions** | `arrows` | 1,109 | `arrow-up`, `arrow-right`, `chevron-down`, `corner-down-left`, `rotate-cw`, `shuffle` |
+| **Editor & Typography** | `editor` | 871 | `bold`, `italic`, `underline`, `align-left`, `list`, `heading`, `highlighter`, `typography` |
+| **Communication** | `communication` | 863 | `mail`, `message-square`, `phone`, `send`, `inbox`, `bell`, `megaphone`, `quote` |
+| **Files & Folders** | `files` | 858 | `file`, `folder`, `file-text`, `folder-plus`, `archive`, `clipboard`, `receipt` |
+| **Design & Creative** | `design` | 829 | `pen-tool`, `palette`, `brush`, `crop`, `layers`, `ruler`, `scissors`, `wand`, `shapes` |
+| **Social & Engagement** | `social` | 804 | `heart`, `star`, `bookmark`, `thumbs-up`, `award`, `trophy`, `sparkles`, `flame`, `brands` |
+| **Media, Audio & Video** | `media` | 793 | `play`, `pause`, `volume-2`, `mic`, `camera`, `video`, `music`, `disc`, `film` |
+| **Devices & Hardware** | `devices` | 760 | `smartphone`, `laptop`, `monitor`, `cpu`, `wifi`, `battery-charging`, `hard-drive` |
+| **Commerce & Finance** | `commerce` | 680 | `shopping-cart`, `shopping-bag`, `credit-card`, `wallet`, `dollar-sign`, `percent`, `coins` |
+| **Weather & Climate** | `weather` | 547 | `sun`, `moon`, `cloud`, `cloud-rain`, `cloud-snow`, `wind`, `zap`, `thermometer` |
+| **Security & Privacy** | `security` | 519 | `lock`, `unlock`, `shield`, `shield-check`, `key`, `fingerprint`, `scan`, `eye` |
+| **Navigation & Places** | `navigation` | 505 | `compass`, `map`, `map-pin`, `navigation`, `signpost`, `globe`, `waypoint` |
+| **Business & Analytics** | `business` | 450 | `bar-chart`, `pie-chart`, `presentation`, `calendar`, `briefcase`, `kanban`, `clock` |
+| **Travel & Transport** | `travel` | 438 | `plane`, `train`, `car`, `bus`, `ship`, `bike`, `rocket`, `fuel`, `hotel`, `luggage` |
+| **Users & Teams** | `users` | 412 | `user`, `users`, `user-plus`, `user-check`, `contact`, `group`, `id-card`, `gender` |
+| **Development & Code** | `development` | 379 | `code`, `terminal`, `git-branch`, `git-commit`, `database`, `webhook`, `api`, `braces` |
+| **Sports & Gaming** | `sports` | 276 | `gamepad-2`, `dice-5`, `trophy`, `dumbbell`, `target`, `joystick`, `medal`, `ball` |
+| **Food & Dining** | `food` | 253 | `coffee`, `cup-soda`, `utensils`, `pizza`, `wine`, `beer`, `cake`, `cookie`, `apple` |
+| **Health & Wellness** | `health` | 176 | `heart-pulse`, `pill`, `hospital`, `stethoscope`, `dna`, `syringe`, `activity` |
 
 ---
 

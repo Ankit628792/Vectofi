@@ -15,7 +15,7 @@ export const APP_NAME = 'Vectofi';
 export const APP_VERSION = '2.5.0';
 export const APP_TAGLINE = 'Free Static & Animated Vector Icons';
 export const APP_DESCRIPTION =
-  'Developer-first SVG icon library with 1,000+ static and animated icons, interactive SVG laboratory, framework code generators, and vector art design system.';
+  'Developer-first SVG icon library with 17,000+ static and animated icons, interactive SVG laboratory, framework code generators, and vector art design system.';
 export const APP_CANONICAL_URL = 'https://vectofi.vercel.app/';
 export const APP_DEFAULT_BASE_URL = 'https://vectofi.vercel.app';
 export const APP_REPOSITORY_URL = 'https://github.com/ankit628792/vectofi';
@@ -33,8 +33,8 @@ export const AUTHOR_ROLE_LABEL = 'Designed & Developed by';
 // ============================================================================
 
 /** Consistent display strings for counts across all views */
-export const ICON_COUNT_DISPLAY = '1,000+';
-export const ANIMATED_ICONS_DISPLAY = '900+';
+export const ICON_COUNT_DISPLAY = '17,000+';
+export const ANIMATED_ICONS_DISPLAY = '16,000+';
 export const CATEGORIES_COUNT = `${ICON_CATEGORIES.length}`;
 export const DEFAULT_LICENSE = 'MIT';
 

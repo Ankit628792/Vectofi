@@ -1,4 +1,4 @@
-import { IconItem, IconDefinition } from '../types';
+import { IconItem, IconDefinition, AnimationType } from '../types';
 import { IconRegistry } from './iconRegistry';
 import { ARROWS_ICONS } from './icons/arrows';
 import { NAVIGATION_ICONS } from './icons/navigation';
@@ -20,6 +20,66 @@ import { TRAVEL_ICONS } from './icons/travel';
 import { HEALTH_ICONS } from './icons/health';
 import { FOOD_ICONS } from './icons/food';
 import { SPORTS_ICONS } from './icons/sports';
+import expandedData from './expandedIcons.json';
+import remixData from './remixIcons.json';
+import materialData from './materialIcons.json';
+
+const EXPANDED_ICONS: IconDefinition[] = (expandedData as [string, string, string, string[], string, AnimationType][]).map(
+  ([slug, name, category, tags, body, animationType], idx) => ({
+    id: `tb-${slug}`,
+    name,
+    slug,
+    category,
+    tags,
+    style: 'outline',
+    body,
+    hasAnimation: true,
+    animationType: animationType as AnimationType,
+    license: 'MIT',
+    popularity: 50 + (idx % 45),
+    featured: idx % 100 === 0,
+    author: 'Tabler & Vectofi',
+    isNew: true,
+  })
+);
+
+const REMIX_ICONS: IconDefinition[] = (remixData as [string, string, string, string[], string, AnimationType][]).map(
+  ([slug, name, category, tags, body, animationType], idx) => ({
+    id: `ri-${slug}`,
+    name,
+    slug,
+    category,
+    tags,
+    style: slug.endsWith('-fill') ? 'filled' : 'outline',
+    body,
+    hasAnimation: true,
+    animationType: animationType as AnimationType,
+    license: 'Apache-2.0',
+    popularity: 50 + (idx % 45),
+    featured: idx % 120 === 0,
+    author: 'Remix & Vectofi',
+    isNew: true,
+  })
+);
+
+const MATERIAL_ICONS: IconDefinition[] = (materialData as [string, string, string, string[], string, AnimationType][]).map(
+  ([slug, name, category, tags, body, animationType], idx) => ({
+    id: `mdi-${slug}`,
+    name,
+    slug,
+    category,
+    tags,
+    style: slug.endsWith('-outline') ? 'outline' : 'filled',
+    body,
+    hasAnimation: true,
+    animationType: animationType as AnimationType,
+    license: 'Apache-2.0',
+    popularity: 50 + (idx % 45),
+    featured: idx % 150 === 0,
+    author: 'Material & Vectofi',
+    isNew: true,
+  })
+);
 
 export const ICONS_DEFINITIONS: IconDefinition[] = [
   ...ARROWS_ICONS,
@@ -42,8 +102,12 @@ export const ICONS_DEFINITIONS: IconDefinition[] = [
   ...HEALTH_ICONS,
   ...FOOD_ICONS,
   ...SPORTS_ICONS,
+  ...EXPANDED_ICONS,
+  ...REMIX_ICONS,
+  ...MATERIAL_ICONS,
 ];
 
 export const iconRegistry = new IconRegistry(ICONS_DEFINITIONS);
 export const ICONS: IconItem[] = iconRegistry.getAll();
 export const ICONS_DATA: IconItem[] = ICONS;
+

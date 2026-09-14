@@ -8,6 +8,7 @@ import {
   generateSvgSprite,
   cleanSvgMarkup,
   optimizeSvg,
+  isFillBasedIcon,
 } from './svgUtils';
 
 export {
@@ -19,6 +20,7 @@ export {
   generateSvgSprite,
   cleanSvgMarkup,
   optimizeSvg,
+  isFillBasedIcon,
 };
 
 /**
@@ -46,6 +48,8 @@ export function generateFrameworkCode(
   const size = settings.size || 24;
   const color = settings.color || 'currentColor';
   const strokeWidth = settings.strokeWidth || 2;
+  const viewBox = icon.viewBox || '0 0 24 24';
+  const isFill = isFillBasedIcon(icon.body, icon.style);
   const pascalName = icon.slug
     .split('-')
     .map(p => p.charAt(0).toUpperCase() + p.slice(1))
@@ -56,8 +60,14 @@ export function generateFrameworkCode(
       return generateSvgCode(icon, settings);
 
     case 'html':
+      if (isFill) {
+        return `<!-- ${icon.name} Icon -->
+<svg class="icon icon-${icon.slug}" width="${size}" height="${size}" viewBox="${viewBox}" fill="${color}">
+  ${icon.body}
+</svg>`;
+      }
       return `<!-- ${icon.name} Icon -->
-<svg class="icon icon-${icon.slug}" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round">
+<svg class="icon icon-${icon.slug}" width="${size}" height="${size}" viewBox="${viewBox}" fill="none" stroke="${color}" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round">
   ${icon.body}
 </svg>`;
 
@@ -68,7 +78,36 @@ export function generateFrameworkCode(
         .replace(/stroke-linecap/g, 'strokeLinecap')
         .replace(/stroke-linejoin/g, 'strokeLinejoin')
         .replace(/stroke-dasharray/g, 'strokeDasharray')
-        .replace(/stroke-dashoffset/g, 'strokeDashoffset');
+        .replace(/stroke-dashoffset/g, 'strokeDashoffset')
+        .replace(/fill-rule/g, 'fillRule')
+        .replace(/clip-rule/g, 'clipRule');
+
+      if (isFill) {
+        return `import React from 'react';
+
+interface ${pascalName}IconProps extends React.SVGProps<SVGSVGElement> {
+  size?: number | string;
+  color?: string;
+}
+
+export const ${pascalName}Icon: React.FC<${pascalName}IconProps> = ({
+  size = ${size},
+  color = '${color}',
+  className = '',
+  ...props
+}) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="${viewBox}"
+    fill={color}
+    className={className}
+    {...props}
+  >
+    ${jsxBody}
+  </svg>
+);`;
+      }
 
       return `import React from 'react';
 
@@ -88,7 +127,7 @@ export const ${pascalName}Icon: React.FC<${pascalName}IconProps> = ({
   <svg
     width={size}
     height={size}
-    viewBox="0 0 24 24"
+    viewBox="${viewBox}"
     fill="none"
     stroke={color}
     strokeWidth={strokeWidth}
@@ -102,6 +141,26 @@ export const ${pascalName}Icon: React.FC<${pascalName}IconProps> = ({
 );`;
 
     case 'vue':
+      if (isFill) {
+        return `<script setup>
+defineProps({
+  size: { type: [Number, String], default: ${size} },
+  color: { type: String, default: '${color}' }
+})
+</script>
+
+<template>
+  <svg
+    :width="size"
+    :height="size"
+    viewBox="${viewBox}"
+    :fill="color"
+  >
+    ${icon.body}
+  </svg>
+</template>`;
+      }
+
       return `<script setup>
 defineProps({
   size: { type: [Number, String], default: ${size} },
@@ -114,7 +173,7 @@ defineProps({
   <svg
     :width="size"
     :height="size"
-    viewBox="0 0 24 24"
+    viewBox="${viewBox}"
     fill="none"
     :stroke="color"
     :stroke-width="strokeWidth"
@@ -126,6 +185,23 @@ defineProps({
 </template>`;
 
     case 'svelte':
+      if (isFill) {
+        return `<script>
+  export let size = ${size};
+  export let color = '${color}';
+</script>
+
+<svg
+  width={size}
+  height={size}
+  viewBox="${viewBox}"
+  fill={color}
+  {...$$restProps}
+>
+  {@html \`${icon.body}\`}
+</svg>`;
+      }
+
       return `<script>
   export let size = ${size};
   export let color = '${color}';
@@ -135,7 +211,7 @@ defineProps({
 <svg
   width={size}
   height={size}
-  viewBox="0 0 24 24"
+  viewBox="${viewBox}"
   fill="none"
   stroke={color}
   stroke-width={strokeWidth}
@@ -143,10 +219,33 @@ defineProps({
   stroke-linejoin="round"
   {...$$restProps}
 >
-  ${icon.body}
+  {@html \`${icon.body}\`}
 </svg>`;
 
     case 'angular':
+      if (isFill) {
+        return `import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'icon-${icon.slug}',
+  template: \`
+    <svg
+      [attr.width]="size"
+      [attr.height]="size"
+      viewBox="${viewBox}"
+      [attr.fill]="color"
+    >
+      ${icon.body}
+    </svg>
+  \`,
+  styles: [':host { display: inline-flex; }']
+})
+export class ${pascalName}IconComponent {
+  @Input() size: number | string = ${size};
+  @Input() color: string = '${color}';
+}`;
+      }
+
       return `import { Component, Input } from '@angular/core';
 
 @Component({
@@ -155,7 +254,7 @@ defineProps({
     <svg
       [attr.width]="size"
       [attr.height]="size"
-      viewBox="0 0 24 24"
+      viewBox="${viewBox}"
       fill="none"
       [attr.stroke]="color"
       [attr.stroke-width]="strokeWidth"

@@ -1,7 +1,7 @@
 {
   "name": "vectofi",
-  "version": "2.5.0",
-  "description": "Developer-first SVG icon library with 1,000+ static and animated vector icons across 20 categories, interactive SVG laboratory, framework code generators, and vector art design system.",
+  "version": "2.5.1",
+  "description": "Developer-first SVG icon library with 17,000+ static and animated vector icons across 20 categories, interactive SVG laboratory, framework code generators, and vector art design system.",
   "private": true,
   "type": "module",
   "author": "Ankit Kumar <ankit628792@gmail.com> (https://www.instagram.com/ankit_628792)",
@@ -30,13 +30,14 @@
   ],
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "tsx scripts/generate-sitemap.ts && vite build",
-    "generate:sitemap": "tsx scripts/generate-sitemap.ts",
+    "build": "vite build && tsx scripts/generate-sitemap.ts --outDir=dist",
+    "generate:sitemap": "tsx scripts/generate-sitemap.ts --outDir=dist",
     "preview": "vite preview",
-    "clean": "rm -rf dist server.js",
+    "clean": "rm -rf dist public/sitemap.xml",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
+    "@tabler/icons": "^3.46.0",
     "@tailwindcss/vite": "^4.1.14",
     "@types/react-window": "^2.0.0",
     "@vitejs/plugin-react": "^5.0.4",
@@ -51,6 +52,11 @@
     "vite": "^6.2.3"
   },
   "devDependencies": {
+    "@iconify-json/bi": "^1.2.7",
+    "@iconify-json/carbon": "^1.2.27",
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/ph": "^1.2.2",
+    "@iconify-json/ri": "^1.2.10",
     "@types/express": "^4.17.21",
     "@types/node": "^22.14.0",
     "@types/react": "^19.2.18",

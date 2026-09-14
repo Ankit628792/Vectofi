@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { IconItem, FrameworkType, LaboratorySettings, CollectionItem } from '../../types';
 import { AnimatedIconRenderer } from '../icons/AnimatedIconRenderer';
-import { generateFrameworkCode, downloadSvgFile } from '../../utils/svgExport';
+import { generateFrameworkCode, downloadSvgFile, isFillBasedIcon } from '../../utils/svgExport';
 
 interface IconDetailLaboratoryProps {
   icon: IconItem;
@@ -54,6 +54,8 @@ export const IconDetailLaboratory: React.FC<IconDetailLaboratoryProps> = ({
       isPlaying: true,
     }));
   }, [icon.slug, icon.hasAnimation]);
+
+  const isFill = isFillBasedIcon(icon.body, icon.style);
 
   // Handle keyboard shortcuts when laboratory is open
   useEffect(() => {
@@ -338,7 +340,7 @@ export const IconDetailLaboratory: React.FC<IconDetailLaboratoryProps> = ({
 
                   {/* Corner dimension label matching Design HTML */}
                   <div className="absolute bottom-2.5 right-2.5 text-[10px] font-mono text-blue-400 bg-blue-900/30 px-2 py-0.5 sm:py-1 rounded border border-blue-500/20 backdrop-blur-xs">
-                    {settings.size} x {settings.size} • {settings.strokeWidth}px
+                    {settings.size} x {settings.size} • {isFill ? 'Fill Vector' : `${settings.strokeWidth}px`}
                   </div>
                 </div>
               )}
@@ -506,48 +508,60 @@ export const IconDetailLaboratory: React.FC<IconDetailLaboratoryProps> = ({
                 </div>
               </div>
 
-              {/* Stroke Width Slider */}
-              <div className="flex flex-col sm:grid sm:grid-cols-12 gap-1.5 sm:gap-3 items-stretch sm:items-center text-xs">
-                <div className="sm:col-span-4 flex items-center justify-between font-mono text-white/50">
-                  <span>Stroke ({settings.strokeWidth}px):</span>
-                  <div className="flex sm:hidden items-center gap-1">
+              {/* Stroke Width / Fill Geometry Control */}
+              {isFill ? (
+                <div className="flex items-center justify-between px-3 py-2 rounded-xl bg-white/5 border border-white/10 text-xs">
+                  <div className="flex items-center gap-2 font-mono text-white/70">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
+                    <span>Geometry: Solid / Fill Vector</span>
+                  </div>
+                  <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                    Optically Balanced
+                  </span>
+                </div>
+              ) : (
+                <div className="flex flex-col sm:grid sm:grid-cols-12 gap-1.5 sm:gap-3 items-stretch sm:items-center text-xs">
+                  <div className="sm:col-span-4 flex items-center justify-between font-mono text-white/50">
+                    <span>Stroke ({settings.strokeWidth}px):</span>
+                    <div className="flex sm:hidden items-center gap-1">
+                      {[1, 2, 3].map(st => (
+                        <button
+                          key={st}
+                          type="button"
+                          onClick={() => setSettings(s => ({ ...s, strokeWidth: st }))}
+                          className="px-2 py-0.5 text-[10px] font-mono rounded bg-white/5 border border-white/10 text-white/50"
+                        >
+                          {st}x
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="sm:col-span-5 flex items-center">
+                    <input
+                      type="range"
+                      min="1"
+                      max="4"
+                      step="0.5"
+                      value={settings.strokeWidth}
+                      onChange={e => setSettings(s => ({ ...s, strokeWidth: Number(e.target.value) }))}
+                      className="w-full accent-blue-500 min-h-[24px]"
+                      aria-label="Stroke width slider"
+                    />
+                  </div>
+                  <div className="hidden sm:flex col-span-3 items-center justify-end gap-1">
                     {[1, 2, 3].map(st => (
                       <button
                         key={st}
                         type="button"
                         onClick={() => setSettings(s => ({ ...s, strokeWidth: st }))}
-                        className="px-2 py-0.5 text-[10px] font-mono rounded bg-white/5 border border-white/10 text-white/50"
+                        className="px-2 py-0.5 text-[10px] font-mono rounded-lg bg-white/5 border border-white/10 text-white/50 hover:bg-white/10 hover:text-white cursor-pointer"
                       >
                         {st}x
                       </button>
                     ))}
                   </div>
                 </div>
-                <div className="sm:col-span-5 flex items-center">
-                  <input
-                    type="range"
-                    min="1"
-                    max="4"
-                    step="0.5"
-                    value={settings.strokeWidth}
-                    onChange={e => setSettings(s => ({ ...s, strokeWidth: Number(e.target.value) }))}
-                    className="w-full accent-blue-500 min-h-[24px]"
-                    aria-label="Stroke width slider"
-                  />
-                </div>
-                <div className="hidden sm:flex col-span-3 items-center justify-end gap-1">
-                  {[1, 2, 3].map(st => (
-                    <button
-                      key={st}
-                      type="button"
-                      onClick={() => setSettings(s => ({ ...s, strokeWidth: st }))}
-                      className="px-2 py-0.5 text-[10px] font-mono rounded-lg bg-white/5 border border-white/10 text-white/50 hover:bg-white/10 hover:text-white cursor-pointer"
-                    >
-                      {st}x
-                    </button>
-                  ))}
-                </div>
-              </div>
+              )}
 
               {/* Speed Controls (if animated) */}
               {icon.hasAnimation && settings.animated && (

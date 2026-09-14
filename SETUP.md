@@ -72,12 +72,12 @@ The following npm scripts are defined in `package.json`:
 
 | Command | Action | Description |
 | :--- | :--- | :--- |
-| `npm run dev` | `vite --port=3000 --host=0.0.0.0` | Starts hot-reloading development server |
-| `npm run build` | `tsx scripts/generate-sitemap.ts && vite build` | Generates `sitemap.xml` with 1,080+ routes and compiles production assets into `dist/` |
-| `npm run generate:sitemap` | `tsx scripts/generate-sitemap.ts` | Builds `sitemap.xml` and `robots.txt` dynamically |
+| `npm run dev` | `vite --port=3000 --host=0.0.0.0` | Starts development server (does not generate sitemap files) |
+| `npm run build` | `vite build && tsx scripts/generate-sitemap.ts --outDir=dist` | Compiles production assets and generates production `sitemap.xml` in `dist/` |
+| `npm run generate:sitemap` | `tsx scripts/generate-sitemap.ts --outDir=dist` | Builds `sitemap.xml` and `robots.txt` dynamically into `dist/` |
 | `npm run preview` | `vite preview` | Locally serves the compiled production build |
 | `npm run lint` | `tsc --noEmit` | Runs the TypeScript compiler in strict typecheck mode |
-| `npm run clean` | `rm -rf dist server.js` | Cleans up previous build artifacts |
+| `npm run clean` | `rm -rf dist public/sitemap.xml` | Cleans up previous build artifacts |
 
 ---
 

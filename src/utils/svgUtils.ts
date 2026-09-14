@@ -15,16 +15,33 @@ export interface SvgRenderOptions {
 }
 
 /**
+ * Determines whether an icon body is composed of filled vector geometries (e.g. Remix, Material)
+ * rather than pure stroke paths (e.g. Lucide, Tabler).
+ */
+export function isFillBasedIcon(body: string, style?: string): boolean {
+  if (style === 'filled') return true;
+  return /fill=["'](?!none)/i.test(body);
+}
+
+/**
  * Generates a clean, valid standalone static SVG document string
  */
 export function generateStaticSvg(
-  icon: Pick<IconItem, 'name' | 'slug' | 'body' | 'viewBox'>,
+  icon: Pick<IconItem, 'name' | 'slug' | 'body' | 'viewBox'> & { style?: string },
   options: SvgRenderOptions = {}
 ): string {
   const size = options.size ?? 24;
   const color = options.color ?? 'currentColor';
   const strokeWidth = options.strokeWidth ?? 2;
   const viewBox = icon.viewBox || options.viewBox || '0 0 24 24';
+  const isFill = isFillBasedIcon(icon.body, icon.style);
+
+  if (isFill) {
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="${viewBox}" fill="${color}">
+  <!-- ${icon.name} Icon -->
+  ${icon.body}
+</svg>`;
+  }
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="${viewBox}" fill="none" stroke="${color}" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round">
   <!-- ${icon.name} Icon -->
@@ -37,7 +54,7 @@ export function generateStaticSvg(
  * showing the creation of the final icon from none.
  */
 export function generateAnimatedSvg(
-  icon: Pick<IconItem, 'name' | 'slug' | 'body' | 'viewBox' | 'animationType' | 'hasAnimation'>,
+  icon: Pick<IconItem, 'name' | 'slug' | 'body' | 'viewBox' | 'animationType' | 'hasAnimation'> & { style?: string },
   options: SvgRenderOptions = {}
 ): string {
   const size = options.size ?? 24;
@@ -46,14 +63,30 @@ export function generateAnimatedSvg(
   const viewBox = icon.viewBox || options.viewBox || '0 0 24 24';
   const speed = options.speed ?? 1;
   const durationSec = Math.max(0.6, 2.4 / Math.max(0.2, speed)).toFixed(2);
+  const isFill = isFillBasedIcon(icon.body, icon.style);
 
   const morphPaths = parseSvgBodyToMorphablePaths(icon.body, icon.slug, 14);
 
   const pathsMarkup = morphPaths.length > 0
-    ? morphPaths.map(p => `  <path d="${p.originalD}" stroke="${p.stroke || color}" stroke-width="${p.strokeWidth || strokeWidth}" fill="${p.fill || 'none'}" stroke-linecap="${p.strokeLinecap || 'round'}" stroke-linejoin="${p.strokeLinejoin || 'round'}">
+    ? morphPaths.map(p => {
+        if (isFill) {
+          const fillColor = p.fill && p.fill !== 'none' ? (p.fill === 'currentColor' ? color : p.fill) : color;
+          return `  <path d="${p.originalD}" fill="${fillColor}">
     <animate attributeName="d" dur="${durationSec}s" repeatCount="indefinite" values="${p.valuesString}" />
-  </path>`).join('\n')
+  </path>`;
+        }
+        return `  <path d="${p.originalD}" stroke="${p.stroke || color}" stroke-width="${p.strokeWidth || strokeWidth}" fill="${p.fill || 'none'}" stroke-linecap="${p.strokeLinecap || 'round'}" stroke-linejoin="${p.strokeLinejoin || 'round'}">
+    <animate attributeName="d" dur="${durationSec}s" repeatCount="indefinite" values="${p.valuesString}" />
+  </path>`;
+      }).join('\n')
     : `  <g>${icon.body}</g>`;
+
+  if (isFill) {
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="${viewBox}" fill="${color}">
+  <!-- Morphed SVG ${icon.name} Icon (Creation from None) -->
+${pathsMarkup}
+</svg>`;
+  }
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="${viewBox}" fill="none" stroke="${color}" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round">
   <!-- Morphed SVG ${icon.name} Icon (Creation from None) -->

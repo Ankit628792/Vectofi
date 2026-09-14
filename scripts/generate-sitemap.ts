@@ -7,7 +7,7 @@ import { ICON_CATEGORIES } from '../src/data/categories.ts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL = process.env.APP_URL || 'https://vectofi.vercel.app';
+const BASE_URL = process.env.VITE_SITE_URL || 'https://vectofi.vercel.app';
 const TODAY = new Date().toISOString().split('T')[0];
 
 interface SitemapUrl {
@@ -111,16 +111,23 @@ export function generateSitemapXml(): { xml: string; totalUrls: number } {
 }
 
 function run() {
-  const publicDir = path.resolve(__dirname, '../public');
-  if (!fs.existsSync(publicDir)) {
-    fs.mkdirSync(publicDir, { recursive: true });
+  // Parse command line arguments for target output directory
+  const outDirArg = process.argv.find((arg) => arg.startsWith('--outDir='));
+  const specifiedDir = outDirArg ? outDirArg.split('=')[1] : null;
+
+  // Default to dist directory for build process, or specified outDir
+  const targetDirName = specifiedDir || (fs.existsSync(path.resolve(__dirname, '../dist')) ? 'dist' : 'dist');
+  const targetDir = path.resolve(__dirname, '..', targetDirName);
+
+  if (!fs.existsSync(targetDir)) {
+    fs.mkdirSync(targetDir, { recursive: true });
   }
 
   // 1. Generate Sitemap XML
   const { xml, totalUrls } = generateSitemapXml();
-  const sitemapPath = path.join(publicDir, 'sitemap.xml');
+  const sitemapPath = path.join(targetDir, 'sitemap.xml');
   fs.writeFileSync(sitemapPath, xml, 'utf8');
-  console.log(`[sitemap] Generated sitemap.xml with ${totalUrls} indexed routes.`);
+  console.log(`[sitemap] Generated sitemap.xml with ${totalUrls} indexed routes in ${targetDirName}/.`);
 
   // 2. Generate robots.txt
   const robotsTxt = `# https://www.robotstxt.org/robotstxt.html
@@ -130,9 +137,9 @@ Allow: /
 # Sitemaps
 Sitemap: ${BASE_URL}/sitemap.xml
 `;
-  const robotsPath = path.join(publicDir, 'robots.txt');
+  const robotsPath = path.join(targetDir, 'robots.txt');
   fs.writeFileSync(robotsPath, robotsTxt, 'utf8');
-  console.log('[sitemap] Generated robots.txt pointing to sitemap.xml.');
+  console.log(`[sitemap] Generated robots.txt pointing to sitemap.xml in ${targetDirName}/.`);
 }
 
 run();

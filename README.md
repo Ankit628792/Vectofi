@@ -1,12 +1,12 @@
 # Vectofi
 
-> Developer-first SVG icon library featuring 1,000+ static and animated vector icons across 20 categories, an interactive SVG laboratory, framework code generators, and an advanced vector animation engine.
+> Developer-first SVG icon library featuring 17,000+ static and animated vector icons across 20 categories, an interactive SVG laboratory, framework code generators, and an advanced vector animation engine.
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19-cyan.svg)](https://react.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8.svg)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-6-646cff.svg)](https://vitejs.dev/)
-[![Icons](https://img.shields.io/badge/Icons-1000%2B-emerald.svg)](https://vectofi.vercel.app)
+[![Icons](https://img.shields.io/badge/Icons-17000%2B-emerald.svg)](https://vectofi.vercel.app)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub](https://img.shields.io/badge/GitHub-Ankit628792%2FVectofi-181717.svg?logo=github)](https://github.com/Ankit628792/Vectofi)
 
@@ -14,16 +14,16 @@
 
 ## Overview
 
-**Vectofi** is an open-source, developer-centric vector icon ecosystem designed for modern web applications. It provides **1,000+ carefully crafted SVG icons** (1,052 exact icons) designed on a precision $24 \times 24$ pixel grid.
+**Vectofi** is an open-source, developer-centric vector icon ecosystem designed for modern web applications. It provides **17,000+ carefully crafted SVG icons** (17,049 exact icons) designed on a precision $24 \times 24$ pixel grid.
 
-Beyond traditional static vector icons, Vectofi includes an integrated **Interactive SVG Laboratory** and **Animation Engine** featuring 900+ animated icons with native keyframe motion presets (`pulse`, `bounce`, `spin`, `shake`, `slide`, `morph`, `float`, and `draw`). Exported icons run natively in all modern browsers with zero external animation dependencies.
+Beyond traditional static vector icons, Vectofi includes an integrated **Interactive SVG Laboratory** and **Animation Engine** featuring 16,000+ animated icons with native keyframe motion presets (`pulse`, `bounce`, `spin`, `shake`, `slide`, `morph`, `float`, and `draw`). Exported icons run natively in all modern browsers with zero external animation dependencies.
 
 ---
 
 ## Key Features
 
-- **1,000+ Precision Vector Icons**: Production-grade SVG icons across 20 functional domains with unified stroke weights and geometry.
-- **900+ Animated Icons**: Native SVG and CSS motion presets with configurable loop speeds, delays, and trigger modes.
+- **17,000+ Precision Vector Icons**: Production-grade SVG icons across 20 functional domains with unified stroke weights and geometry.
+- **16,000+ Animated Icons**: Native SVG and CSS motion presets with configurable loop speeds, delays, and trigger modes.
 - **Interactive SVG Laboratory**: Real-time inspection canvas with live preview, zoom, stroke weight customizer ($0.5\text{px} \to 4.0\text{px}$), color palettes, animation speeds, and stage backdrop themes.
 - **Multi-Framework Export**: 1-click code generation for:
   - **React (TSX / JSX)**

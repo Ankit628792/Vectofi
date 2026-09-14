@@ -88,8 +88,26 @@ export const FilterBar: React.FC<FilterBarProps> = ({
           </div>
         </div>
 
-        {/* Animation Filter Pills & Global Toggle Group */}
+        {/* Style & Animation Filter Pills & Global Toggle Group */}
         <div className="flex items-center justify-between sm:justify-start gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
+          {/* Style Filter Pills */}
+          <div className="inline-flex p-1 rounded-xl bg-white/5 border border-white/10 shrink-0">
+            {(['all', 'outline', 'filled'] as const).map(styleOption => (
+              <button
+                key={styleOption}
+                type="button"
+                onClick={() => onFilterChange({ ...filters, style: styleOption })}
+                className={`px-3 py-1.5 text-xs font-mono capitalize rounded-lg transition-all min-h-[34px] cursor-pointer whitespace-nowrap ${
+                  filters.style === styleOption
+                    ? 'bg-blue-600 text-white font-semibold shadow-md shadow-blue-600/25'
+                    : 'text-white/60 hover:text-white hover:bg-white/5'
+                }`}
+              >
+                {styleOption === 'all' ? 'All Styles' : styleOption === 'outline' ? 'Outline' : 'Solid'}
+              </button>
+            ))}
+          </div>
+
           {/* Animation Filter Pills */}
           <div className="inline-flex p-1 rounded-xl bg-white/5 border border-white/10 shrink-0">
             {(['all', 'animated', 'static'] as const).map(animOption => (

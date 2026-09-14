@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { IconItem } from '../../types';
 import { parseSvgBodyToMorphablePaths } from '../../utils/animations';
+import { isFillBasedIcon } from '../../utils/svgUtils';
 
 interface AnimatedIconRendererProps {
   icon: IconItem;
@@ -30,6 +31,11 @@ export const AnimatedIconRenderer: React.FC<AnimatedIconRendererProps> = ({
 
   const shouldAnimate = !forceStatic && !isReducedMotionActive && animated && icon.hasAnimation;
 
+  // Detect whether this icon uses filled vector geometries (Remix, Material) or stroke lines (Lucide, Tabler)
+  const isFill = useMemo(() => {
+    return isFillBasedIcon(icon.body, icon.style);
+  }, [icon.body, icon.style]);
+
   // Parse SVG geometric elements into normalized morphable path descriptors
   const morphablePaths = useMemo(() => {
     return parseSvgBodyToMorphablePaths(icon.body, icon.slug, 14);
@@ -40,6 +46,22 @@ export const AnimatedIconRenderer: React.FC<AnimatedIconRendererProps> = ({
 
   // If not animating, render authentic source SVG markup with 100% fidelity
   if (!shouldAnimate) {
+    if (isFill) {
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={size}
+          height={size}
+          viewBox={icon.viewBox || '0 0 24 24'}
+          fill={color}
+          className={`transition-colors inline-block ${className}`}
+          aria-label={icon.name}
+        >
+          <g dangerouslySetInnerHTML={{ __html: icon.body }} />
+        </svg>
+      );
+    }
+
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -61,6 +83,22 @@ export const AnimatedIconRenderer: React.FC<AnimatedIconRendererProps> = ({
 
   // Fallback: If no paths could be parsed, render static SVG body safely
   if (morphablePaths.length === 0) {
+    if (isFill) {
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={size}
+          height={size}
+          viewBox={icon.viewBox || '0 0 24 24'}
+          fill={color}
+          className={`transition-colors inline-block ${className}`}
+          aria-label={icon.name}
+        >
+          <g dangerouslySetInnerHTML={{ __html: icon.body }} />
+        </svg>
+      );
+    }
+
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -76,6 +114,46 @@ export const AnimatedIconRenderer: React.FC<AnimatedIconRendererProps> = ({
         aria-label={icon.name}
       >
         <g dangerouslySetInnerHTML={{ __html: icon.body }} />
+      </svg>
+    );
+  }
+
+  if (isFill) {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={size}
+        height={size}
+        viewBox={icon.viewBox || '0 0 24 24'}
+        fill={color}
+        className={`transition-colors inline-block ${className}`}
+        aria-label={icon.name}
+      >
+        <g>
+          {morphablePaths.map(p => {
+            const fillColor =
+              p.fill && p.fill !== 'none'
+                ? p.fill === 'currentColor'
+                  ? color
+                  : p.fill
+                : color;
+            return (
+              <path
+                key={`${p.id}-anim`}
+                d={p.originalD}
+                fill={fillColor}
+                opacity={p.opacity}
+              >
+                <animate
+                  attributeName="d"
+                  dur={`${durationSec.toFixed(2)}s`}
+                  repeatCount="indefinite"
+                  values={p.valuesString}
+                />
+              </path>
+            );
+          })}
+        </g>
       </svg>
     );
   }

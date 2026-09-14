@@ -2,7 +2,7 @@ import React from 'react';
 import { IconItem, FilterState } from '../types';
 import { FilterBar } from '../components/icons/FilterBar';
 import { EmptyState } from '../components/ui/EmptyState';
-import { VectorGrid } from '../components/vectors/VectorGrid';
+import { VectorGrid } from '../components/vector/VectorGrid';
 import { VirtualizedIconGrid } from '../components/icons/VirtualizedIconGrid';
 import { UI_TEXT } from '../utils/common';
 

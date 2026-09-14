@@ -17,7 +17,7 @@ import {
 } from '../utils/svgExport';
 
 /**
- * Normalizes an IconDefinition into a complete IconItem with standalone SVG strings
+ * Normalizes an IconDefinition into a complete IconItem with standalone SVG strings (lazy-computed on demand)
  */
 function normalizeIcon(def: IconDefinition): IconItem {
   const hasAnimation = Boolean(def.hasAnimation ?? (def.animationType !== undefined));
@@ -25,7 +25,7 @@ function normalizeIcon(def: IconDefinition): IconItem {
   const license = def.license ?? 'MIT';
   const viewBox = def.viewBox ?? '0 0 24 24';
 
-  const baseItem = {
+  const baseItem: any = {
     id: def.id,
     name: def.name,
     slug: def.slug,
@@ -43,14 +43,32 @@ function normalizeIcon(def: IconDefinition): IconItem {
     isNew: def.isNew ?? false,
   };
 
-  const staticSvg = def.staticSvg || generateStaticSvg(baseItem);
-  const animatedSvg = def.animatedSvg || (hasAnimation ? generateAnimatedSvg(baseItem) : staticSvg);
+  let _staticSvg: string | null = def.staticSvg || null;
+  let _animatedSvg: string | null = def.animatedSvg || null;
 
-  return {
-    ...baseItem,
-    staticSvg,
-    animatedSvg,
-  };
+  Object.defineProperty(baseItem, 'staticSvg', {
+    get() {
+      if (!_staticSvg) {
+        _staticSvg = generateStaticSvg(baseItem);
+      }
+      return _staticSvg;
+    },
+    enumerable: true,
+    configurable: true,
+  });
+
+  Object.defineProperty(baseItem, 'animatedSvg', {
+    get() {
+      if (!_animatedSvg) {
+        _animatedSvg = hasAnimation ? generateAnimatedSvg(baseItem) : baseItem.staticSvg;
+      }
+      return _animatedSvg;
+    },
+    enumerable: true,
+    configurable: true,
+  });
+
+  return baseItem as IconItem;
 }
 
 /**
