@@ -1,5 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { VectorStars, VectorOrbit, VectorDots } from './VectorDecorations';
+import { VectorStars } from './VectorStars';
+import { VectorOrbit } from './VectorOrbit';
+import { VectorDots } from './VectorDots';
 import { calculateCreationFromNoneFrames } from '../../utils/animations';
 
 interface VectorHeroIllustrationProps {
